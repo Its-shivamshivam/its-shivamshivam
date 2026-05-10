@@ -3,1209 +3,914 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+<meta charset="UTF-8" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>
-    Research Interest | SHIVAM | IIT Roorkee
-  </title>
+<title>
+Research Interest | SHIVAM | IIT Roorkee
+</title>
 
-  <meta
-    name="description"
-    content="Research interests of SHIVAM in finite deformation mechanics, continuum mechanics, damage mechanics, composite materials, and experimental investigation."
-  />
+<meta
+name="description"
+content="Research interests of SHIVAM in finite deformation mechanics, continuum mechanics, damage mechanics, composite materials, and experimental investigation."
+/>
 
-  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="style.css" />
 
-  <!-- FONT AWESOME -->
+<!-- FONT AWESOME -->
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
-  <!-- MATHJAX -->
+<!-- MATHJAX -->
 
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-  </script>
+<script>
+window.MathJax = {
+tex: {
+inlineMath: [['$', '$'], ['\\(', '\\)']]
+}
+};
+</script>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
+<script
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 
-  <style>
-
-    /* =========================================
-       PAGE WIDTH
-    ========================================= */
-
-    .page-wrapper{
-
-      width: 94%;
-
-      max-width: 1600px;
-
-      margin: 0 auto;
-
-      padding: 0 20px;
-
-    }
-
-    /* =========================================
-       HERO
-    ========================================= */
-
-    .research-hero{
-
-      display: grid;
-
-      grid-template-columns: 1.15fr 0.85fr;
-
-      gap: 60px;
-
-      align-items: center;
-
-      padding-top: 50px;
-
-      margin-bottom: 90px;
-
-    }
-
-    .research-hero h1{
-
-      font-size: clamp(3rem,7vw,5.5rem);
-
-      line-height: 1;
-
-      margin-bottom: 24px;
-
-      letter-spacing: -0.05em;
-
-    }
-
-    .research-hero p{
-
-      font-size: 1rem;
-
-      line-height: 2;
-
-      color: var(--text-muted);
-
-    }
+<style>
 
 /* =========================================
-   HERO IMAGE
+PAGE WIDTH
+========================================= */
+
+.page-wrapper{
+
+width: 94%;
+
+max-width: 1600px;
+
+margin: 0 auto;
+
+padding: 0 20px;
+
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.research-hero{
+
+display: grid;
+
+grid-template-columns: 1.1fr 0.9fr;
+
+gap: 60px;
+
+align-items: center;
+
+padding-top: 50px;
+
+margin-bottom: 90px;
+
+}
+
+.research-hero h1{
+
+font-size: clamp(3rem,7vw,5.5rem);
+
+line-height: 1;
+
+margin-bottom: 24px;
+
+letter-spacing: -0.05em;
+
+}
+
+.research-hero p{
+
+font-size: 1rem;
+
+line-height: 2;
+
+color: var(--text-muted);
+
+}
+
+/* =========================================
+HERO IMAGE
 ========================================= */
 
 .hero-image{
 
-  display: flex;
+width: 100%;
 
-  justify-content: center;
+background: white;
 
-  align-items: center;
+border-radius: 28px;
 
-  overflow: hidden;
+border: 1px solid rgba(0,0,0,0.08);
 
-  border-radius: 28px;
+padding: 18px;
 
-  background: white;
+display: flex;
 
-  border: 1px solid rgba(0,0,0,0.08);
+justify-content: center;
 
-  padding: 24px;
+align-items: center;
+
+overflow: visible;
+
+box-shadow: 0 10px 35px rgba(0,0,0,0.05);
 
 }
 
 .hero-image img{
 
-  width: 100%;
+width: 100%;
 
-  max-height: 500px;
+height: auto;
 
-  object-fit: contain;
+object-fit: contain;
 
-  object-position: center;
-
-  display: block;
+display: block;
 
 }
 
 /* =========================================
-   RESEARCH CARD IMAGES
+GLASS CARD
+========================================= */
+
+.glass-card{
+
+background: rgba(255,255,255,0.92);
+
+border: 1px solid rgba(0,0,0,0.08);
+
+border-radius: 24px;
+
+padding: 28px;
+
+box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+
+transition: all 0.45s ease;
+
+}
+
+.glass-card:hover{
+
+transform: translateY(-6px);
+
+}
+
+/* =========================================
+SECTION TITLES
+========================================= */
+
+.section-title{
+
+font-size: 2.4rem;
+
+text-align: center;
+
+margin-bottom: 22px;
+
+}
+
+.section-sub{
+
+max-width: 1000px;
+
+margin: 0 auto 60px auto;
+
+text-align: center;
+
+line-height: 2;
+
+color: var(--text-muted);
+
+}
+
+/* =========================================
+RESEARCH GRID
+========================================= */
+
+.research-grid{
+
+display: grid;
+
+grid-template-columns: repeat(2,1fr);
+
+gap: 34px;
+
+margin-bottom: 100px;
+
+}
+
+.research-card{
+
+display: flex;
+
+flex-direction: column;
+
+}
+
+/* =========================================
+IMAGE FIX
 ========================================= */
 
 .research-card img{
 
-  width: 100%;
+width: 100%;
 
-  height: 300px;
+height: auto;
 
-  object-fit: contain;
+max-height: 500px;
 
-  object-position: center;
+object-fit: contain;
 
-  background: white;
+object-position: center;
 
-  border-radius: 18px;
+display: block;
 
-  padding: 12px;
+background: white;
 
-  margin-bottom: 22px;
+border-radius: 18px;
 
-  display: block;
+padding: 10px;
+
+margin-bottom: 22px;
+
+}
+
+.research-card h3{
+
+font-size: 1.45rem;
+
+margin-bottom: 16px;
+
+}
+
+.research-card p{
+
+line-height: 2;
+
+color: var(--text-muted);
 
 }
 
 /* =========================================
-   EQUATION GRID CENTER ALIGN
+EQUATION GRID
 ========================================= */
 
 .equation-grid{
 
-  width: 100%;
+width: 100%;
 
-  display: grid;
+display: grid;
 
-  grid-template-columns: repeat(2,minmax(500px,1fr));
+grid-template-columns: repeat(2,minmax(500px,1fr));
 
-  gap: 40px;
+gap: 40px;
 
-  justify-content: center;
+justify-content: center;
 
-  align-items: stretch;
+align-items: stretch;
 
-  margin: 70px auto 120px auto;
+margin: 70px auto 120px auto;
 
 }
 
 /* =========================================
-   EQUATION BOX
+EQUATION BOX
 ========================================= */
 
 .equation-box{
 
-  width: 100%;
+width: 100%;
 
-  min-height: 100%;
+display: flex;
 
-  display: flex;
+flex-direction: column;
 
-  flex-direction: column;
+justify-content: flex-start;
 
-  justify-content: flex-start;
+text-align: center;
 
-  text-align: center;
+padding: 42px;
 
-  padding: 42px;
+border-radius: 30px;
 
-  border-radius: 30px;
+background: white;
 
-  background: rgba(255,255,255,0.08);
+border: 1px solid rgba(0,0,0,0.07);
 
-  backdrop-filter: blur(14px);
+box-shadow: 0 10px 35px rgba(0,0,0,0.05);
 
-  border: 1px solid rgba(0,0,0,0.07);
+}
 
-  box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+.equation-box h3{
+
+font-size: 1.5rem;
+
+margin-bottom: 24px;
+
+text-align: center;
 
 }
 
 /* =========================================
-   EQUATION STYLE
+EQUATIONS
 ========================================= */
 
 .equation{
 
-  width: 100%;
+width: 100%;
 
-  overflow-x: auto;
+overflow-x: auto;
 
-  display: flex;
+display: flex;
 
-  justify-content: center;
+justify-content: center;
 
-  align-items: center;
+align-items: center;
 
-  text-align: center;
+text-align: center;
 
-  padding: 34px;
+padding: 34px;
 
-  margin: 28px 0;
+margin: 28px 0;
 
-  border-radius: 20px;
+border-radius: 20px;
 
-  background: rgba(255,255,255,0.06);
-
-  border: 1px solid rgba(0,0,0,0.05);
+background: rgba(0,0,0,0.02);
 
 }
 
 .equation mjx-container{
 
-  font-size: 155% !important;
+font-size: 150% !important;
+
+}
+
+.equation-box p{
+
+line-height: 2;
+
+text-align: center;
+
+color: var(--text-muted);
 
 }
 
 /* =========================================
-   MOBILE
+PROJECT GRID
+========================================= */
+
+.project-grid{
+
+display: grid;
+
+grid-template-columns: repeat(3,1fr);
+
+gap: 30px;
+
+margin-top: 60px;
+
+margin-bottom: 80px;
+
+}
+
+.project-card h3{
+
+text-align: center;
+
+margin-bottom: 18px;
+
+}
+
+.project-card p{
+
+line-height: 2;
+
+text-align: center;
+
+color: var(--text-muted);
+
+}
+
+/* =========================================
+REVEAL ANIMATION
+========================================= */
+
+.reveal{
+
+opacity: 0;
+
+transform: translateY(40px);
+
+transition: all 1s ease;
+
+}
+
+.reveal.active{
+
+opacity: 1;
+
+transform: translateY(0);
+
+}
+
+/* =========================================
+RESPONSIVE
 ========================================= */
 
 @media(max-width:1200px){
 
-  .equation-grid{
+.research-hero{
 
-    grid-template-columns: 1fr;
-
-  }
+grid-template-columns: 1fr;
 
 }
 
-@media(max-width:768px){
+.research-grid{
 
-  .research-card img{
-
-    height: 240px;
-
-  }
-
-  .hero-image img{
-
-    max-height: 340px;
-
-  }
+grid-template-columns: 1fr;
 
 }
 
-    /* =========================================
-       GLASS CARD
-    ========================================= */
+.equation-grid{
 
-    .glass-card{
+grid-template-columns: 1fr;
 
-      background: rgba(255,255,255,0.9);
+}
 
-      border: 1px solid rgba(0,0,0,0.08);
+.project-grid{
 
-      border-radius: 24px;
+grid-template-columns: 1fr;
 
-      padding: 28px;
+}
 
-      box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+}
 
-      transition: all 0.45s ease;
-
-    }
-
-    .glass-card:hover{
-
-      transform: translateY(-6px);
-
-    }
-
-    /* =========================================
-       TITLES
-    ========================================= */
-
-    .section-title{
-
-      font-size: 2.3rem;
-
-      text-align: center;
-
-      margin-bottom: 20px;
-
-    }
-
-    .section-sub{
-
-      max-width: 1000px;
-
-      margin: 0 auto 60px auto;
-
-      text-align: center;
-
-      line-height: 2;
-
-      color: var(--text-muted);
-
-    }
-
-    /* =========================================
-       RESEARCH GRID
-    ========================================= */
-
-    .research-grid{
-
-      display: grid;
-
-      grid-template-columns: repeat(2,1fr);
-
-      gap: 34px;
-
-      margin-bottom: 100px;
-
-    }
-
-    .research-card img{
-
-      width: 100%;
-
-      height: 280px;
-
-      object-fit: cover;
-
-      border-radius: 18px;
-
-      margin-bottom: 22px;
-
-    }
-
-    .research-card h3{
-
-      font-size: 1.45rem;
-
-      margin-bottom: 16px;
-
-    }
-
-    .research-card p{
-
-      line-height: 2;
-
-      color: var(--text-muted);
-
-    }
-
-    /* =========================================
-       EQUATION GRID
-    ========================================= */
-
-    .equation-grid{
-
-      display: grid;
-
-      grid-template-columns: repeat(2,1fr);
-
-      gap: 34px;
-
-      margin-bottom: 110px;
-
-    }
-
-    .equation-box{
-
-      background: white;
-
-      border-radius: 24px;
-
-      padding: 34px;
-
-      border: 1px solid rgba(0,0,0,0.08);
-
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-
-    }
-
-    .equation-box h3{
-
-      text-align: center;
-
-      margin-bottom: 24px;
-
-      font-size: 1.5rem;
-
-    }
-
-    .equation{
-
-      overflow-x: auto;
-
-      padding: 28px;
-
-      border-radius: 18px;
-
-      background: rgba(0,0,0,0.02);
-
-      margin-bottom: 26px;
-
-      text-align: center;
-
-    }
-
-    .equation mjx-container{
-
-      font-size: 145% !important;
-
-    }
-
-    .equation-box p{
-
-      line-height: 2;
-
-      text-align: center;
-
-      color: var(--text-muted);
-
-    }
-
-    /* =========================================
-       PROJECT GRID
-    ========================================= */
-
-    .project-grid{
-
-      display: grid;
-
-      grid-template-columns: repeat(3,1fr);
-
-      gap: 30px;
-
-      margin-top: 60px;
-
-      margin-bottom: 80px;
-
-    }
-
-    .project-card{
-
-      min-height: 260px;
-
-    }
-
-    .project-card h3{
-
-      text-align: center;
-
-      margin-bottom: 18px;
-
-    }
-
-    .project-card p{
-
-      line-height: 2;
-
-      text-align: center;
-
-      color: var(--text-muted);
-
-    }
-
-    /* =========================================
-       REVEAL ANIMATION
-    ========================================= */
-
-    .reveal{
-
-      opacity: 0;
-
-      transform: translateY(40px);
-
-      transition: all 1s ease;
-
-    }
-
-    .reveal.active{
-
-      opacity: 1;
-
-      transform: translateY(0);
-
-    }
-
-    /* =========================================
-       RESPONSIVE
-    ========================================= */
-
-    @media(max-width:1200px){
-
-      .research-hero{
-
-        grid-template-columns: 1fr;
-
-      }
-
-      .research-grid{
-
-        grid-template-columns: 1fr;
-
-      }
-
-      .equation-grid{
-
-        grid-template-columns: 1fr;
-
-      }
-
-      .project-grid{
-
-        grid-template-columns: 1fr;
-
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+<!-- NAVBAR -->
 
-  <nav class="navbar">
+<nav class="navbar">
 
-    <div class="nav-inner">
+<div class="nav-inner">
 
-      <a href="index.html" class="nav-logo">
-        SHIVAM
-      </a>
+<a href="index.html" class="nav-logo">
+SHIVAM
+</a>
 
-      <ul class="nav-links" id="navLinks">
+<ul class="nav-links" id="navLinks">
 
-        <li><a href="index.html">Home</a></li>
+<li><a href="index.html">Home</a></li>
 
-        <li><a href="about.html">About Me</a></li>
+<li><a href="about.html">About Me</a></li>
 
-        <li>
-          <a href="research.html" class="active">
-            Research Interest
-          </a>
-        </li>
+<li>
+<a href="research.html" class="active">
+Research Interest
+</a>
+</li>
 
-        <li><a href="publications.html">Publication</a></li>
+<li><a href="publications.html">Publication</a></li>
 
-        <li><a href="supervisor.html">Supervisor</a></li>
+<li><a href="supervisor.html">Supervisor</a></li>
 
-        <li><a href="gallery.html">Gallery</a></li>
+<li><a href="gallery.html">Gallery</a></li>
 
-        <li><a href="blog.html">Blog</a></li>
+<li><a href="blog.html">Blog</a></li>
 
-      </ul>
+</ul>
 
-      <button class="nav-toggle" id="navToggle">
+<button class="nav-toggle" id="navToggle">
 
-        <span></span>
-        <span></span>
-        <span></span>
+<span></span>
+<span></span>
+<span></span>
 
-      </button>
+</button>
 
-    </div>
+</div>
 
-  </nav>
+</nav>
 
-  <!-- MAIN -->
+<!-- MAIN -->
 
-  <main class="page-wrapper">
+<main class="page-wrapper">
 
-    <!-- HERO -->
+<!-- HERO -->
 
-    <section class="research-hero reveal">
+<section class="research-hero reveal">
 
-      <div>
+<div>
 
-        <div class="section-label">
-          Research
-        </div>
+<div class="section-label">
+Research
+</div>
 
-        <h1>
-          Research Interests
-        </h1>
+<h1>
+Research Interests
+</h1>
 
-        <p>
+<p>
 
-          My investigations are centered upon nonlinear continuum mechanics,
-          finite deformation kinematics, constitutive modeling,
-          and experimentally informed damage characterization
-          of advanced fiber-reinforced laminated composite systems.
+My investigations are centered upon nonlinear continuum mechanics,
+finite deformation kinematics, constitutive modeling,
+and experimentally informed damage characterization
+of advanced fiber-reinforced laminated composite systems.
 
-          The principal emphasis of my research lies in the formulation
-          of rigorous multiscale frameworks capable of describing
-          complex deformation processes, constituent-level damage evolution,
-          and geometric incompatibilities arising in composite materials
-          subjected to finite strain regimes.
+The principal emphasis of my research lies in the formulation
+of rigorous multiscale frameworks capable of describing
+complex deformation processes, constituent-level damage evolution,
+and geometric incompatibilities arising in composite materials
+subjected to finite strain regimes.
 
-        </p>
+</p>
 
-      </div>
+</div>
 
-      <div class="hero-image">
+<div class="hero-image">
 
-        <img
-          src="fig1.jpg"
-          alt="Research Interest"
-        />
+<img
+src="fig1.jpg"
+alt="Research Interest"
+/>
 
-      </div>
+</div>
 
-    </section>
+</section>
 
-    <!-- RESEARCH THEMES -->
-
-    <section class="reveal">
-
-      <h2 class="section-title">
-
-        Core Themes of My Research
-
-      </h2>
-
-      <div class="research-grid">
-
-        <!-- FINITE -->
-
-        <div class="glass-card research-card">
-
-          <img src="fig2.jpg" alt="Finite Deformation" />
-
-          <h3>
-            Finite Deformation Mechanics
-          </h3>
-
-          <p>
-
-            My work employs multicontinuum theory proposed by
-            Bedford and Stern together with the theory of multiple
-            natural configurations developed by Rajagopal and Srinivasa
-            for modeling nonlinear deformation and damage evolution
-            in fiber-reinforced composites subjected to finite strains.
-
-          </p>
-
-        </div>
-
-
-         <!-- EXPERIMENT -->
-
-        <div class="glass-card research-card">
-
-          <img src="fig5.jpg" alt="Experimental Investigation" />
-
-          <h3>
-            Experimental Investigation
-          </h3>
-
-          <p>
-
-            Experimental studies involve tensile testing,
-            mixed-mode bending experiments,
-            delamination analysis,
-            and progressive damage characterization
-            of laminated composite materials.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-        <!-- COMPOSITE -->
-
-        <div class="glass-card research-card">
-
-          <img src="fig3.jpg" alt="Composite Materials" />
-
-          <h3>
-            Composite Materials
-          </h3>
-
-          <p>
-
-            The developed framework is applicable to both stiff
-            composite systems such as CFRP and GFRP laminates,
-            as well as soft architected composite systems including
-            biological tissues, elastomeric composites,
-            and origami-inspired structures.
-
-          </p>
-
-        </div>
-
-        <!-- DAMAGE -->
-
-        <div class="glass-card research-card">
-
-          <img src="fig4.jpg" alt="Damage Characterization" />
-
-          <h3>
-            Damage Mechanics
-          </h3>
-
-          <p>
-
-            Damage evolution is characterized through matrix cracking,
-            fiber breakage, interfacial slip, debonding,
-            and delamination using incompatibility tensors,
-            relative constituent motion,
-            and differential geometric measures.
-
-          </p>
-
-        </div>
-
-       
-
-    <!-- DAMAGE EQUATIONS -->
-
-    <section class="reveal">
-
-      <h2 class="section-title">
-        Damage Characterization
-      </h2>
-
-      <div class="equation-grid">
-
-        <div class="equation-box">
-
-          <h3>
-            Matrix Cracking
-          </h3>
-
-          <div class="equation">
-
-          \[
-          \mathbf{G}_{m}
-          =
-          \frac{1}{J_{m}^{d}}
-          \mathbf{F}_{m}^{d}
-          \left(
-          \mathrm{Curl}
-          \,
-          \mathbf{F}_{m}^{d}
-          \right)
-          \]
-
-          </div>
-
-          <p>
-
-            Matrix crack density tensor representing
-            incompatibility associated with matrix damage.
-
-          </p>
-
-        </div>
-
-        <div class="equation-box">
-
-          <h3>
-            Fiber Breakage
-          </h3>
-
-          <div class="equation">
-
-          \[
-          \mathbf{G}_{f}
-          =
-          \frac{1}{J_{f}^{d}}
-          \mathbf{F}_{f}^{d}
-          \left(
-          \mathrm{Curl}
-          \,
-          \mathbf{F}_{f}^{d}
-          \right)
-          \]
-
-          </div>
-
-          <p>
-
-            Fiber breakage quantified using incompatibility
-            of the fiber configuration.
-
-          </p>
-
-        </div>
-
-        <div class="equation-box">
-
-          <h3>
-            Interfacial Slip
-          </h3>
-
-          <div class="equation">
-
-          \[
-          \lambda_{m}
-          =
-          \mathbf{F}^{d}_{m}
-          \mathbf{V}_{rel}
-          \]
-
-          </div>
-
-          <p>
-
-            Relative constituent motion governs
-            interfacial slip and debonding.
-
-          </p>
-
-        </div>
-
-        <div class="equation-box">
-
-          <h3>
-            Delamination
-          </h3>
-
-          <div class="equation">
-
-          \[
-          \tilde{\Sigma}
-          =
-          \llbracket
-          \mathbf{F}^{l}
-          \rrbracket
-          \]
-
-          </div>
-
-          <p>
-
-            Delamination represented through
-            displacement discontinuity across interfaces.
-
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-<!-- GEOMETRIC INTERPRETATION -->
+<!-- RESEARCH THEMES -->
 
 <section class="reveal">
 
-  <h2 class="section-title">
+<h2 class="section-title">
+Core Themes of My Research
+</h2>
 
-    Geometric Interpretation of Damage
+<div class="research-grid">
 
-  </h2>
+<!-- FINITE -->
 
-  <p class="section-sub">
+<div class="glass-card research-card">
 
-    Differential geometric tools are employed to establish
-    rigorous incompatibility interpretations associated with
-    constituent-level damage evolution in composite materials.
-    The torsion tensor corresponding to each natural configuration
-    provides a geometric measure of incompatibility arising due to
-    matrix cracking, fiber breakage, interfacial slip,
-    and delamination mechanisms.
+<img src="fig2.jpg" alt="Finite Deformation" />
 
-  </p>
+<h3>
+Finite Deformation Mechanics
+</h3>
 
-  <div class="equation-grid">
+<p>
 
-    <!-- MATRIX -->
+My work employs multicontinuum theory proposed by
+Bedford and Stern together with the theory of multiple
+natural configurations developed by Rajagopal and Srinivasa.
 
-    <div class="equation-box">
+</p>
 
-      <h3>
-        Matrix Configuration Torsion
-      </h3>
+</div>
 
-      <div class="equation">
+<!-- COMPOSITE -->
 
-      \[
-      T^{D}_{mAB}
-      =
-      \frac{1}{2}
-      \left(
-      \Gamma^{D}_{BA}
-      -
-      \Gamma^{D}_{AB}
-      \right)
-      =
-      \frac{1}{2}
-      \mathbf{F}^{d-1}_{m}
-      \left(
-      \partial_{B}\mathbf{F}^{d}_{mA}
-      -
-      \partial_{A}\mathbf{F}^{d}_{mB}
-      \right)
-      \neq 0
-      \]
+<div class="glass-card research-card">
 
-      </div>
+<img src="fig3.jpg" alt="Composite Materials" />
 
-      <p>
+<h3>
+Composite Materials
+</h3>
 
-        The torsion tensor associated with the matrix natural
-        configuration provides the geometric incompatibility
-        corresponding to matrix crack evolution.
+<p>
 
-      </p>
+The framework is applicable to both stiff composite systems
+such as CFRP and GFRP laminates and soft architected systems.
 
-    </div>
+</p>
 
-    <!-- FIBER -->
+</div>
 
-    <div class="equation-box">
+<!-- DAMAGE -->
 
-      <h3>
-        Fiber Configuration Torsion
-      </h3>
+<div class="glass-card research-card">
 
-      <div class="equation">
+<img src="fig4.jpg" alt="Damage Mechanics" />
 
-      \[
-      T^{D}_{fAB}
-      =
-      \frac{1}{2}
-      \left(
-      \Gamma^{D}_{BA}
-      -
-      \Gamma^{D}_{AB}
-      \right)
-      =
-      \frac{1}{2}
-      \mathbf{F}^{d-1}_{f}
-      \left(
-      \partial_{B}\mathbf{F}^{d}_{fA}
-      -
-      \partial_{A}\mathbf{F}^{d}_{fB}
-      \right)
-      \neq 0
-      \]
+<h3>
+Damage Mechanics
+</h3>
 
-      </div>
+<p>
 
-      <p>
+Damage evolution is characterized through matrix cracking,
+fiber breakage, interfacial slip, debonding, and delamination.
 
-        Fiber breakage induces torsion within the fiber
-        natural configuration and acts as a geometric
-        measure of incompatibility.
+</p>
 
-      </p>
+</div>
 
-    </div>
+<!-- EXPERIMENT -->
 
-    <!-- INTERFACE -->
+<div class="glass-card research-card">
 
-    <div class="equation-box">
+<img src="fig5.jpg" alt="Experimental Investigation" />
 
-      <h3>
-        Interface Incompatibility
-      </h3>
+<h3>
+Experimental Investigation
+</h3>
 
-      <div class="equation">
+<p>
 
-      \[
-      T^{D}_{IAB}
-      =
-      \frac{1}{2}
-      \left(
-      \mathbf{F}^{l-1}
-      \right)^{D}_{a}
-      \Delta S_{R}
-      \left(
-      n_{B}
-      \llbracket
-      F^{l}
-      \rrbracket^{a}_{A}
-      -
-      n_{A}
-      \llbracket
-      F^{l}
-      \rrbracket^{a}_{B}
-      \right)
-      \]
+Experimental studies involve tensile testing,
+mixed-mode bending experiments,
+and progressive damage characterization.
 
-      </div>
+</p>
 
-      <p>
+</div>
 
-        Interfacial incompatibility measures describe
-        the geometric discontinuity associated with
-        delamination and interfacial damage.
-
-      </p>
-
-    </div>
-
-    <!-- TOTAL -->
-
-    <div class="equation-box">
-
-      <h3>
-        Total Delamination Torsion
-      </h3>
-
-      <div class="equation">
-
-      \[
-      T^{D}_{AB}
-      =
-      h_{\xi}T^{D}_{\xi AB}
-      +
-      h_{\eta}T^{D}_{\eta AB}
-      +
-      T^{D}_{IAB}
-      \]
-
-      </div>
-
-      <p>
-
-        The total torsion field combines bulk and interface
-        incompatibility contributions corresponding to
-        delamination-induced geometric defects.
-
-      </p>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
-    <!-- PROJECTS -->
 
-    <section class="reveal">
+<!-- DAMAGE -->
 
-      <h2 class="section-title">
+<section class="reveal">
 
-        Research Activities
+<h2 class="section-title">
+Damage Characterization
+</h2>
 
-      </h2>
+<div class="equation-grid">
 
-      <div class="project-grid">
+<div class="equation-box">
 
-        <div class="glass-card project-card">
+<h3>
+Matrix Cracking
+</h3>
 
-          <h3>
-            Completed DST-SERB Project
-          </h3>
+<div class="equation">
 
-          <p>
+\[
+\mathbf{G}_{m}
+=
+\frac{1}{J_{m}^{d}}
+\mathbf{F}_{m}^{d}
+\left(
+\mathrm{Curl}
+\,
+\mathbf{F}_{m}^{d}
+\right)
+\]
 
-            Assessment and modeling of damage in
-            fiber reinforced laminated composites
-            for large deformation processes using
-            multicontinuum theory and experiments.
+</div>
 
-          </p>
+<p>
+Matrix incompatibility corresponding to crack evolution.
+</p>
 
-        </div>
+</div>
 
-        <div class="glass-card project-card">
+<div class="equation-box">
 
-          <h3>
-            Current Work
-          </h3>
+<h3>
+Fiber Breakage
+</h3>
 
-          <p>
+<div class="equation">
 
-            Current investigations focus on
-            microfiber buckling and nonlinear
-            instability mechanisms in advanced
-            composite systems.
+\[
+\mathbf{G}_{f}
+=
+\frac{1}{J_{f}^{d}}
+\mathbf{F}_{f}^{d}
+\left(
+\mathrm{Curl}
+\,
+\mathbf{F}_{f}^{d}
+\right)
+\]
 
-          </p>
+</div>
 
-        </div>
+<p>
+Fiber incompatibility governing rupture evolution.
+</p>
 
-        <div class="glass-card project-card">
+</div>
 
-          <h3>
-            Collaboration
-          </h3>
+</div>
 
-          <p>
+</section>
 
-            Open for academic collaboration in
-            continuum mechanics, finite deformation,
-            constitutive modeling, and composite materials.
+<!-- GEOMETRIC -->
 
-          </p>
+<section class="reveal">
 
-        </div>
+<h2 class="section-title">
+Geometric Interpretation
+</h2>
 
-      </div>
+<div class="equation-grid">
 
-    </section>
+<div class="equation-box">
 
-  </main>
+<h3>
+Matrix Configuration Torsion
+</h3>
 
-  <!-- FOOTER -->
+<div class="equation">
 
-  <footer>
+\[
+T^{D}_{mAB}
+=
+\frac{1}{2}
+\left(
+\Gamma^{D}_{BA}
+-
+\Gamma^{D}_{AB}
+\right)
+\neq 0
+\]
 
-    <div
-      style="
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 32px;
-    "
-    >
+</div>
 
-      <p>
+<p>
+Geometric incompatibility associated with matrix damage.
+</p>
 
-        © 2026 SHIVAM ·
+</div>
 
-        <a href="mailto:shivam1@ce.iitr.ac.in">
-          shivam1@ce.iitr.ac.in
-        </a>
+<div class="equation-box">
 
-        · IIT Roorkee
+<h3>
+Fiber Configuration Torsion
+</h3>
 
-      </p>
+<div class="equation">
 
-    </div>
+\[
+T^{D}_{fAB}
+=
+\frac{1}{2}
+\left(
+\Gamma^{D}_{BA}
+-
+\Gamma^{D}_{AB}
+\right)
+\neq 0
+\]
 
-  </footer>
+</div>
 
-  <!-- SCRIPT -->
+<p>
+Fiber torsion interpretation corresponding to fiber breakage.
+</p>
 
-  <script>
+</div>
 
-    const toggle = document.getElementById('navToggle');
+</div>
 
-    const links = document.getElementById('navLinks');
+</section>
 
-    toggle.addEventListener('click', () => {
+<!-- PROJECTS -->
 
-      links.classList.toggle('open');
+<section class="reveal">
 
-    });
+<h2 class="section-title">
+Research Activities
+</h2>
 
-    function revealElements(){
+<div class="project-grid">
 
-      const reveals = document.querySelectorAll('.reveal');
+<div class="glass-card project-card">
 
-      reveals.forEach(reveal => {
+<h3>
+Completed DST-SERB Project
+</h3>
 
-        const windowHeight = window.innerHeight;
+<p>
 
-        const revealTop = reveal.getBoundingClientRect().top;
+Assessment and modeling of damage in
+fiber reinforced laminated composites.
 
-        if(revealTop < windowHeight - 100){
+</p>
 
-          reveal.classList.add('active');
+</div>
 
-        }
+<div class="glass-card project-card">
 
-      });
+<h3>
+Current Work
+</h3>
 
-    }
+<p>
 
-    revealElements();
+Current investigations focus on microfiber buckling
+and nonlinear instability mechanisms.
 
-    window.addEventListener('scroll', revealElements);
+</p>
 
-  </script>
+</div>
+
+<div class="glass-card project-card">
+
+<h3>
+Collaboration
+</h3>
+
+<p>
+
+Open for collaboration in continuum mechanics,
+finite deformation, and composite materials.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div
+style="
+max-width: var(--max-w);
+margin: 0 auto;
+padding: 0 32px;
+"
+>
+
+<p>
+
+© 2026 SHIVAM ·
+
+<a href="mailto:shivam1@ce.iitr.ac.in">
+shivam1@ce.iitr.ac.in
+</a>
+
+· IIT Roorkee
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- SCRIPT -->
+
+<script>
+
+const toggle = document.getElementById('navToggle');
+
+const links = document.getElementById('navLinks');
+
+toggle.addEventListener('click', () => {
+
+links.classList.toggle('open');
+
+});
+
+function revealElements(){
+
+const reveals = document.querySelectorAll('.reveal');
+
+reveals.forEach(reveal => {
+
+const windowHeight = window.innerHeight;
+
+const revealTop = reveal.getBoundingClientRect().top;
+
+if(revealTop < windowHeight - 100){
+
+reveal.classList.add('active');
+
+}
+
+});
+
+}
+
+revealElements();
+
+window.addEventListener('scroll', revealElements);
+
+</script>
 
 </body>
 
