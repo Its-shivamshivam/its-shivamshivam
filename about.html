@@ -1,330 +1,916 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me — SHIVAM</title>
+
+  <title>
+    SHIVAM | About Me | IIT Roorkee
+  </title>
+
+  <meta
+    name="description"
+    content="About SHIVAM, Research Scholar at IIT Roorkee working in theoretical mechanics, continuum mechanics, finite deformation, and composite materials research."
+  />
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- FONT AWESOME -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+
+    /* =========================
+       PAGE WIDTH
+    ========================== */
+
+    .page-wrapper{
+
+      max-width: 1500px;
+
+      margin: 0 auto;
+
+      padding-left: 70px;
+
+      padding-right: 70px;
+    }
+
+    /* =========================
+       PAGE HEADER
+    ========================== */
+
+    .page-header{
+
+      padding-top: 50px;
+
+      margin-bottom: 70px;
+    }
+
+    .page-header h1{
+
+      font-size: clamp(3rem, 6vw, 5rem);
+
+      line-height: 1.05;
+
+      margin-bottom: 24px;
+
+      letter-spacing: -0.04em;
+    }
+
+    .page-header p{
+
+      max-width: 850px;
+
+      font-size: 1.12rem;
+
+      line-height: 2;
+
+      color: var(--text-muted);
+    }
+
+    /* =========================
+       ABOUT GRID
+    ========================== */
+
+    .about-grid{
+
+      display: grid;
+
+      grid-template-columns: 1.3fr 0.8fr;
+
+      gap: 80px;
+
+      align-items: start;
+    }
+
+    /* =========================
+       BIOGRAPHY
+    ========================== */
+
+    .bio-block{
+
+      padding-bottom: 20px;
+    }
+
+    .bio-block p{
+
+      font-size: 1.06rem;
+
+      line-height: 2.1;
+
+      color: var(--text-muted);
+
+      margin-bottom: 28px;
+    }
+
+    /* =========================
+       SECTION TITLES
+    ========================== */
+
+    .section-title{
+
+      font-size: 1.3rem;
+
+      margin-bottom: 28px;
+
+      padding-bottom: 14px;
+
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    /* =========================
+       EDUCATION
+    ========================== */
+
+    .edu-list{
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 32px;
+
+      margin-top: 30px;
+    }
+
+    .edu-item{
+
+      display: flex;
+
+      gap: 22px;
+    }
+
+    .edu-dot-wrap{
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+    }
+
+    .edu-dot{
+
+      width: 14px;
+
+      height: 14px;
+
+      border-radius: 50%;
+
+      background: #12385a;
+    }
+
+    .edu-line{
+
+      width: 2px;
+
+      flex: 1;
+
+      background: rgba(0,0,0,0.12);
+
+      margin-top: 6px;
+    }
+
+    .edu-degree{
+
+      font-size: 1.05rem;
+
+      font-weight: 600;
+
+      margin-bottom: 6px;
+    }
+
+    .edu-inst{
+
+      color: var(--text-muted);
+
+      line-height: 1.8;
+    }
+
+    .edu-year{
+
+      margin-top: 6px;
+
+      color: #12385a;
+
+      font-weight: 600;
+    }
+
+    /* =========================
+       TAGS
+    ========================== */
+
+    .tag-row{
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 28px;
+    }
+
+    .tag{
+
+      padding: 12px 18px;
+
+      border-radius: 999px;
+
+      background: rgba(255,255,255,0.05);
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      transition: all 0.35s ease;
+    }
+
+    .tag:hover{
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       RIGHT SECTION
+    ========================== */
+
+    .right-column{
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 28px;
+    }
+
+    /* =========================
+       PROFILE PHOTO
+    ========================== */
+
+    .about-photo{
+
+      overflow: hidden;
+
+      border-radius: 30px;
+
+      box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    }
+
+    .about-photo img{
+
+      width: 100%;
+
+      height: 620px;
+
+      object-fit: cover;
+
+      object-position: center top;
+
+      display: block;
+
+      transition: transform 0.5s ease;
+    }
+
+    .about-photo img:hover{
+
+      transform: scale(1.03);
+    }
+
+    /* =========================
+       INFO CARDS
+    ========================== */
+
+    .info-card{
+
+      background: rgba(255,255,255,0.08);
+
+      backdrop-filter: blur(14px);
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      border-radius: 24px;
+
+      padding: 28px;
+
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    }
+
+    .info-card h3{
+
+      font-size: 0.9rem;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.12em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 22px;
+    }
+
+    .info-list{
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 16px;
+    }
+
+    .info-row{
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 16px;
+
+      line-height: 1.7;
+    }
+
+    .info-label{
+
+      font-weight: 600;
+    }
+
+    .info-val{
+
+      color: var(--text-muted);
+
+      text-align: right;
+    }
+
+    /* =========================
+       LINKS
+    ========================== */
+
+    .profile-links{
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 14px;
+    }
+
+    .profile-links a{
+
+      text-decoration: none;
+
+      color: var(--text-muted);
+
+      transition: 0.3s ease;
+    }
+
+    .profile-links a:hover{
+
+      color: #12385a;
+
+      transform: translateX(5px);
+    }
+
+    /* =========================
+       REVEAL ANIMATION
+    ========================== */
+
+    .reveal{
+
+      opacity: 0;
+
+      transform: translateY(40px);
+
+      transition: all 1s ease;
+    }
+
+    .reveal.active{
+
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width: 1100px){
+
+      .about-grid{
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+      }
+
+      .about-photo img{
+
+        height: auto;
+      }
+
+    }
+
+    @media(max-width: 768px){
+
+      .page-wrapper{
+
+        padding-left: 24px;
+
+        padding-right: 24px;
+      }
+
+      .info-row{
+
+        flex-direction: column;
+
+        gap: 4px;
+      }
+
+      .info-val{
+
+        text-align: left;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 <body>
 
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
   <nav class="navbar">
+
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">SHIVAM</a>
+
+      <a href="index.html" class="nav-logo">
+        SHIVAM
+      </a>
 
       <ul class="nav-links" id="navLinks">
+
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Me</a></li>
+
+        <li>
+          <a href="about.html" class="active">
+            About Me
+          </a>
+        </li>
+
         <li><a href="research.html">Research Interest</a></li>
+
         <li><a href="publications.html">Publication</a></li>
+
         <li><a href="supervisor.html">Supervisor</a></li>
+
         <li><a href="gallery.html">Gallery</a></li>
+
         <li><a href="blog.html">Blog</a></li>
+
       </ul>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" id="navToggle">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
       </button>
+
     </div>
+
   </nav>
+
+  <!-- =========================
+       MAIN
+  ========================== -->
 
   <main class="page-wrapper">
 
-    <header class="page-header">
-      <div class="section-label">About Me</div>
-      <h1>Background & Profile</h1>
+    <!-- HEADER -->
+
+    <header class="page-header reveal">
+
+      <h1>
+        Background & Profile
+      </h1>
+
       <p>
+
         Research Scholar in Computational and Experimental Mechanics
         of Advanced Composite Materials.
+
       </p>
+
     </header>
+
+    <!-- ABOUT GRID -->
 
     <div class="about-grid">
 
-      <!-- LEFT SECTION -->
-      <div>
+      <!-- LEFT -->
 
-        <!-- Biography -->
+      <div class="reveal">
+
+        <!-- BIOGRAPHY -->
+
         <div class="bio-block">
-          <h2 class="section-title" style="font-size: 1.2rem;">Biography</h2>
+
+          <h2 class="section-title">
+            Biography
+          </h2>
 
           <p>
+
             I am SHIVAM, a Research Scholar in the Department of Civil Engineering
             at the Indian Institute of Technology Roorkee, India. I am originally
             from Ghaziabad and currently reside in Haridwar, India.
+
           </p>
 
           <p>
+
             My research focuses on computational and experimental mechanics of
             advanced composite materials, particularly fiber-reinforced laminate
             composites subjected to large deformation loading conditions. My work
             combines theoretical modeling, computational simulations, and
             experimental investigations to understand damage evolution,
             failure mechanisms, and structural behavior in advanced composite systems.
+
           </p>
 
           <p>
+
             I am deeply interested in solid mechanics, fracture and damage mechanics,
             composite materials, multi-continuum modeling, and multidisciplinary
             engineering research. My long-term goal is to contribute to the
             advancement of composite material mechanics through research that bridges
             theoretical understanding and practical experimentation.
+
           </p>
 
           <p>
+
             Outside academics and research, I enjoy gardening and playing chess,
             which help me maintain creativity, focus, and strategic thinking.
+
           </p>
+
         </div>
 
-        <!-- Education -->
-        <h2 class="section-title" style="margin-top: 48px; font-size: 1.2rem;">
+        <!-- EDUCATION -->
+
+        <h2 class="section-title" style="margin-top: 55px;">
           Education
         </h2>
 
         <ul class="edu-list">
 
           <li class="edu-item">
-            <div class="edu-dot-wrap">
-              <div class="edu-dot"></div>
-              <div class="edu-line"></div>
-            </div>
 
-            <div>
-              <div class="edu-degree">
-                Doctor of Philosophy (PhD)
-              </div>
+  <div class="edu-dot-wrap">
 
-              <div class="edu-inst">
-                Indian Institute of Technology Roorkee, India
-              </div>
+    <div class="edu-dot"></div>
 
-              <div class="edu-year">
-                2024 – Present
-              </div>
-            </div>
-          </li>
+    <div class="edu-line"></div>
 
-          <li class="edu-item">
-            <div class="edu-dot-wrap">
-              <div class="edu-dot"></div>
-              <div class="edu-line"></div>
-            </div>
+  </div>
 
-            <div>
-              <div class="edu-degree">
-                Master of Technology in Structural and Construction Engineering
-              </div>
+  <div>
 
-              <div class="edu-inst">
-                Dr. B. R. Ambedkar National Institute of Technology, Jalandhar
-              </div>
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
 
-              <div class="edu-year">
-                2018 – 2020
-              </div>
-            </div>
-          </li>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/5/57/IIT_Roorkee_logo.png"
+        alt="IIT Roorkee Logo"
+        style="width:42px; height:42px; object-fit:contain;"
+      />
 
-          <li class="edu-item">
-            <div class="edu-dot-wrap">
-              <div class="edu-dot"></div>
-            </div>
+      <div>
 
-            <div>
-              <div class="edu-degree">
-                Bachelor of Technology in Civil Engineering
-              </div>
+        <div class="edu-degree">
+          Doctor of Philosophy (PhD)
+        </div>
 
-              <div class="edu-inst">
-                Dr. A.P.J. Abdul Kalam Technical University, Lucknow
-              </div>
+        <div class="edu-inst">
+          Indian Institute of Technology Roorkee, India
+        </div>
 
-              <div class="edu-year">
-                2015 – 2018
-              </div>
-            </div>
-          </li>
-
-        </ul>
-
-        <!-- Technical Skills -->
-        <h2 class="section-title" style="margin-top: 48px; font-size: 1.2rem;">
-          Technical Skills
-        </h2>
-
-        <div class="tag-row">
-          <span class="tag">AutoCAD</span>
-          <span class="tag">STAAD.Pro</span>
-          <span class="tag">ETABS</span>
-          <span class="tag">MATLAB</span>
-          <span class="tag">ABAQUS</span>
+        <div class="edu-year">
+          2024 – Present
         </div>
 
       </div>
 
-      <!-- RIGHT SECTION -->
-      <div style="display: flex; flex-direction: column; gap: 24px;">
+    </div>
 
-        <!-- Profile Photo -->
+  </div>
+
+</li>
+          <li class="edu-item">
+
+  <div class="edu-dot-wrap">
+
+    <div class="edu-dot"></div>
+
+    <div class="edu-line"></div>
+
+  </div>
+
+  <div>
+
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/1/14/Dr_B_R_Ambedkar_NIT_Jalandhar_logo.png"
+        alt="NIT Jalandhar Logo"
+        style="width:42px; height:42px; object-fit:contain;"
+      />
+
+      <div>
+
+        <div class="edu-degree">
+          Master of Technology in Structural and Construction Engineering
+        </div>
+
+        <div class="edu-inst">
+          Dr. B. R. Ambedkar National Institute of Technology, Jalandhar
+        </div>
+
+        <div class="edu-year">
+          2018 – 2020
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</li>
+
+          <li class="edu-item">
+
+  <div class="edu-dot-wrap">
+
+    <div class="edu-dot"></div>
+
+    <div class="edu-line"></div>
+
+  </div>
+
+  <div>
+
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/4/42/Dr._A.P.J._Abdul_Kalam_Technical_University_logo.png"
+        alt="AKTU Logo"
+        style="width:42px; height:42px; object-fit:contain;"
+      />
+
+      <div>
+
+        <div class="edu-degree">
+          Bachelor of Technology in Civil Engineering
+        </div>
+
+        <div class="edu-inst">
+          Dr. A.P.J. Abdul Kalam Technical University, Lucknow
+        </div>
+
+        <div class="edu-year">
+          2015 – 2018
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</li>
+
+        <li class="edu-item">
+
+  <div class="edu-dot-wrap">
+
+    <div class="edu-dot"></div>
+
+  </div>
+
+  <div>
+
+    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+
+      <img
+        src="https://upload.wikimedia.org/wikipedia/en/0/0f/Subharti_University_logo.png"
+        alt="SVSU Logo"
+        style="width:42px; height:42px; object-fit:contain;"
+      />
+
+      <div>
+
+        <div class="edu-degree">
+          Diploma in Civil Engineering
+        </div>
+
+        <div class="edu-inst">
+          Swami Vivekanand Subharti University
+        </div>
+
+        <div class="edu-year">
+          2012 – 2015
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</li>
+        <!-- SKILLS -->
+
+        <h2 class="section-title" style="margin-top: 55px;">
+          Technical Skills
+        </h2>
+
+        <div class="tag-row">
+
+          <span class="tag">AutoCAD</span>
+
+          <span class="tag">STAAD.Pro</span>
+
+          <span class="tag">ETABS</span>
+
+          <span class="tag">MATLAB</span>
+
+          <span class="tag">ABAQUS</span>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="right-column reveal">
+
+        <!-- PHOTO -->
+
         <div class="about-photo">
 
           <img
             src="profilePhoto.jpeg"
             alt="SHIVAM"
-            style="width:100%; border-radius:12px;"
           />
 
         </div>
 
-        <!-- Quick Info -->
-        <div style="
-          background: var(--surface);
-          border: 1px solid var(--border);
-          border-radius: var(--radius);
-          padding: 24px;
-        ">
+        <!-- QUICK INFO -->
 
-          <h3 style="
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-          ">
+        <div class="info-card">
+
+          <h3>
             Quick Info
           </h3>
 
           <ul class="info-list">
 
             <li class="info-row">
-              <span class="info-label">Position</span>
-              <span class="info-val">Research Scholar</span>
-            </li>
 
-            <li class="info-row">
-              <span class="info-label">Department</span>
-              <span class="info-val">
-                Department of Civil Engineering
+              <span class="info-label">
+                Position
               </span>
+
+              <span class="info-val">
+                Research Scholar
+              </span>
+
             </li>
 
             <li class="info-row">
-              <span class="info-label">University</span>
+
+              <span class="info-label">
+                Department
+              </span>
+
+              <span class="info-val">
+                Civil Engineering
+              </span>
+
+            </li>
+
+            <li class="info-row">
+
+              <span class="info-label">
+                University
+              </span>
+
               <span class="info-val">
                 IIT Roorkee
               </span>
+
             </li>
 
             <li class="info-row">
-              <span class="info-label">Location</span>
+
+              <span class="info-label">
+                Location
+              </span>
+
               <span class="info-val">
                 Haridwar, India
               </span>
+
             </li>
 
             <li class="info-row">
-              <span class="info-label">Email</span>
+
+              <span class="info-label">
+                Email
+              </span>
 
               <span class="info-val">
+
                 <a href="mailto:shivam1@ce.iitr.ac.in">
                   shivam1@ce.iitr.ac.in
                 </a>
-              </span>
-            </li>
 
-            <li class="info-row">
-              <span class="info-label">CV</span>
-
-              <span class="info-val">
-                <a href="resume.pdf" download>
-                  Download PDF ↓
-                </a>
               </span>
+
             </li>
 
           </ul>
 
         </div>
 
-        <!-- Social Links -->
-        <div style="
-          background: var(--surface);
-          border: 1px solid var(--border);
-          border-radius: var(--radius);
-          padding: 24px;
-        ">
+        <!-- ACADEMIC LINKS -->
 
-          <h3 style="
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-          ">
+        <div class="info-card">
+
+          <h3>
             Academic Profiles
           </h3>
 
-          <ul style="display:flex; flex-direction:column; gap:12px;">
+          <div class="profile-links">
 
-            <li>
-              <a href="https://www.linkedin.com/in/shivam-shivam-954297144/" target="_blank">
-                LinkedIn
-              </a>
-            </li>
+            <a
+              href="https://www.linkedin.com/in/shivam-shivam-954297144/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
 
-            <li>
-              <a href="https://its-shivamshivam.github.io/its-shivamshivam/about.html" target="_blank">
-                GitHub
-              </a>
-            </li>
+            <a
+              href="https://scholar.google.com/citations?user=T04X1hkAAAAJ&hl=en"
+              target="_blank"
+            >
+              Google Scholar
+            </a>
 
-            <li>
-              <a href="https://scholar.google.com/citations?user=T04X1hkAAAAJ&hl=en" target="_blank">
-                Google Scholar
-              </a>
-            </li>
+            <a
+              href="https://orcid.org/0000-0003-2962-7600"
+              target="_blank"
+            >
+              ORCID
+            </a>
 
-            <li>
-              <a href="https://orcid.org/0000-0003-2962-7600" target="_blank">
-                ORCID
-              </a>
-            </li>
+            <a
+              href="https://its-shivamshivam.github.io/"
+              target="_blank"
+            >
+              Personal Website
+            </a>
 
-          </ul>
+          </div>
 
         </div>
 
-        <!-- Honors -->
-        <div style="
-          background: var(--surface);
-          border: 1px solid var(--border);
-          border-radius: var(--radius);
-          padding: 24px;
-        ">
+        <!-- AWARDS -->
 
-          <h3 style="
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-          ">
+        <div class="info-card">
+
+          <h3>
             Honors & Awards
           </h3>
 
-          <ul style="display:flex;flex-direction:column;gap:10px;">
+          <p style="line-height:1.9; color: var(--text-muted);">
 
-            <li style="font-size:0.88rem; color: var(--text-muted);">
-              <strong style="color:var(--text);">
-                Add your awards and achievements here
-              </strong>
-            </li>
+            Add your awards, achievements, certifications,
+            fellowships, and recognitions here.
 
-          </ul>
+          </p>
 
         </div>
 
@@ -334,27 +920,84 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
-    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
+
+    <div
+      style="
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 0 70px;
+    "
+    >
+
       <p>
-        © 2025 SHIVAM ·
+
+        © 2026 SHIVAM ·
+
         <a href="mailto:shivam1@ce.iitr.ac.in">
           shivam1@ce.iitr.ac.in
         </a>
+
       </p>
+
     </div>
+
   </footer>
 
-  <!-- Mobile Menu Script -->
+  <!-- =========================
+       SCRIPT
+  ========================== -->
+
   <script>
+
+    // MOBILE MENU
+
     const toggle = document.getElementById('navToggle');
-    const links  = document.getElementById('navLinks');
+
+    const links = document.getElementById('navLinks');
 
     toggle.addEventListener('click', () => {
+
       links.classList.toggle('open');
+
     });
+
+    // SCROLL REVEAL ANIMATION
+
+    function revealElements(){
+
+      const reveals = document.querySelectorAll('.reveal');
+
+      reveals.forEach(reveal => {
+
+        const windowHeight = window.innerHeight;
+
+        const revealTop = reveal.getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 100){
+
+          reveal.classList.add('active');
+
+        }
+
+      });
+
+    }
+
+    // RUN ON LOAD
+
+    revealElements();
+
+    // RUN ON SCROLL
+
+    window.addEventListener('scroll', revealElements);
+
   </script>
 
 </body>
+
 </html>
