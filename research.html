@@ -13,7 +13,7 @@
 
   <meta
     name="description"
-    content="Research interests of SHIVAM in finite deformation mechanics, composite materials, damage mechanics, continuum mechanics, and experimental investigation of advanced composite systems."
+    content="Research interests of SHIVAM in finite deformation mechanics, composite materials, damage mechanics, and experimental investigation of advanced composite systems."
   />
 
   <link rel="stylesheet" href="style.css" />
@@ -24,6 +24,20 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   />
+
+  <!-- MATHJAX -->
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 
   <style>
 
@@ -218,7 +232,28 @@
     }
 
     /* =========================
-       EQUATION SECTION
+       EQUATIONS
+    ========================== */
+
+    .equation{
+
+      overflow-x: auto;
+
+      padding: 22px;
+
+      margin-top: 22px;
+
+      margin-bottom: 10px;
+
+      background: rgba(255,255,255,0.05);
+
+      border-radius: 18px;
+
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* =========================
+       EQUATION GRID
     ========================== */
 
     .equation-grid{
@@ -254,15 +289,8 @@
       font-size: 1.2rem;
     }
 
-    .equation-box p{
-
-      line-height: 1.9;
-
-      color: var(--text-muted);
-    }
-
     /* =========================
-       PROJECT SECTION
+       PROJECT GRID
     ========================== */
 
     .project-grid{
@@ -312,7 +340,7 @@
        RESPONSIVE
     ========================== */
 
-    @media(max-width: 1100px){
+    @media(max-width:1100px){
 
       .research-hero{
 
@@ -418,35 +446,9 @@
 
           My investigations integrate multicontinuum theory,
           differential geometric formulations, computational mechanics,
-          and experimentally validated constitutive frameworks to
-          establish robust predictive methodologies for advanced
-          composite systems.
+          and experimentally validated constitutive frameworks.
 
         </p>
-
-        <div class="tag-row">
-
-          <span class="tag">
-            Finite Deformation
-          </span>
-
-          <span class="tag">
-            Composite Materials
-          </span>
-
-          <span class="tag">
-            Continuum Mechanics
-          </span>
-
-          <span class="tag">
-            Damage Mechanics
-          </span>
-
-          <span class="tag">
-            Experimental Investigation
-          </span>
-
-        </div>
 
       </div>
 
@@ -461,20 +463,13 @@
 
     </section>
 
-    <!-- RESEARCH AREAS -->
+    <!-- CORE RESEARCH -->
 
     <section class="reveal">
 
       <h2 class="section-title">
         Core Themes of My Research
       </h2>
-
-      <p class="section-sub">
-
-        Advanced mechanics-based formulations for deformation,
-        incompatibility, and damage evolution in composite systems.
-
-      </p>
 
       <div class="research-grid">
 
@@ -490,21 +485,31 @@
 
           <p>
 
-            My research in finite deformation mechanics is founded upon
-            the multicontinuum theory proposed by Bedford and Stern,
-            together with the theory of multiple natural configurations
-            developed by Rajagopal and Srinivasa.
-
-            The framework employs multiplicative decomposition of the
-            deformation gradient to characterize constituent-level
-            distortions associated with matrix deformation, fiber
-            deformation, and irreversible damage evolution.
+            My research utilizes multicontinuum theory together with
+            multiple natural configuration theory for constitutive
+            modeling of nonlinear composite systems under large strain
+            deformation regimes.
 
           </p>
 
+          <div class="equation">
           \[
-\mathbf{F}=\mathbf{F}^{e}\mathbf{F}^{r}_{\alpha}\mathbf{F}^{d}_{\alpha}
-\]
+          \mathbf{F}
+          =
+          \mathbf{F}^{e}
+          \mathbf{F}^{r}_{\alpha}
+          \mathbf{F}^{d}_{\alpha}
+          \]
+          </div>
+
+          <div class="equation">
+          \[
+          \mathbf{F}
+          =
+          \mathbf{F}^{e}
+          \mathbf{F}^{i}
+          \]
+          </div>
 
         </div>
 
@@ -520,15 +525,9 @@
 
           <p>
 
-            The constitutive framework developed in my work is applicable
-            to both stiff and soft composite systems.
-
-            Stiff composites include glass-fiber reinforced and carbon-fiber
-            reinforced laminates, whereas soft composites encompass origami-inspired,
-            biological tissue, and compliant fiber-reinforced systems.
-
-            The generalized nature of the framework permits broad applicability
-            across a wide spectrum of engineered composite materials.
+            The proposed framework is applicable to both stiff and soft
+            composite systems including CFRP, GFRP, biological tissues,
+            and origami-inspired architected composites.
 
           </p>
 
@@ -546,41 +545,16 @@
 
           <p>
 
-            The proposed framework characterizes matrix cracking,
-            fiber breakage, interfacial slip, debonding,
-            and delamination through constituent-level
-            incompatibility measures.
-
-            Damage evolution is represented through deformation-induced
-            incompatibility tensors and geometric torsion measures.
+            My work characterizes matrix cracking, fiber breakage,
+            interfacial slip, debonding, and delamination using
+            geometric incompatibility and constituent-level deformation
+            measures.
 
           </p>
 
-          <div class="tag-row">
-
-            <span class="tag">
-              Matrix Cracking
-            </span>
-
-            <span class="tag">
-              Fiber Breakage
-            </span>
-
-            <span class="tag">
-              Debonding
-            </span>
-
-            <span class="tag">
-              Delamination
-            </span>
-
-          </div>
-
         </div>
 
-       
-
-        <!-- CARD 5 -->
+        <!-- CARD 4 -->
 
         <div class="glass-card research-card">
 
@@ -592,31 +566,11 @@
 
           <p>
 
-            Experimental investigations are conducted to validate
-            the constitutive and geometric framework.
-
-            Mechanical characterization includes tensile testing,
-            mixed-mode bending (MMB) tests, and full-field
-            displacement measurements through digital image
-            correlation techniques.
+            Experimental investigations involve tensile testing,
+            mixed-mode bending (MMB) tests, and damage evolution
+            characterization in advanced laminated composites.
 
           </p>
-
-          <div class="tag-row">
-
-            <span class="tag">
-              Tensile Test
-            </span>
-
-            <span class="tag">
-              MMB Test
-            </span>
-
-            <span class="tag">
-              DIC
-            </span>
-
-          </div>
 
         </div>
 
@@ -624,22 +578,17 @@
 
     </section>
 
-    <!-- EQUATIONS -->
+    <!-- DAMAGE CHARACTERIZATION -->
 
     <section class="reveal">
 
       <h2 class="section-title">
-        Damage Characterization Equations
+        Damage Characterization
       </h2>
 
-      <p class="section-sub">
-
-        Constitutive and geometric measures governing damage
-        evolution in laminated composite systems.
-
-      </p>
-
       <div class="equation-grid">
+
+        <!-- MATRIX -->
 
         <div class="equation-box">
 
@@ -647,11 +596,32 @@
             Matrix Cracking
           </h3>
 
+          <div class="equation">
           \[
-\mathbf{G}_{m}=\frac{1}{J_{m}^{d}}\mathbf{F}_{m}^{d}(\mathrm{Curl}\,\mathbf{F}_{m}^{d})
-\]
+          \mathbf{G}_{m}
+          =
+          \frac{1}{J_{m}^{d}}
+          \mathbf{F}_{m}^{d}
+          \left(
+          \mathrm{Curl}
+          \,
+          \mathbf{F}_{m}^{d}
+          \right)
+          =
+          \frac{1}{J_{m}^{d}}
+          \mathbf{F}_{m}^{d}
+          \left(
+          \mathrm{Curl}
+          \,
+          \mathbf{F}_{m}^{d}
+          \right)
+          \mathbf{F}_{m}^{dT}
+          \]
+          </div>
 
         </div>
+
+        <!-- FIBER -->
 
         <div class="equation-box">
 
@@ -659,11 +629,32 @@
             Fiber Breakage
           </h3>
 
+          <div class="equation">
           \[
-\mathbf{G}_{f}=\frac{1}{J_{f}^{d}}\mathbf{F}_{f}^{d}(\mathrm{Curl}\,\mathbf{F}_{f}^{d})
-\]
+          \mathbf{G}_{f}
+          =
+          \frac{1}{J_{f}^{d}}
+          \mathbf{F}_{f}^{d}
+          \left(
+          \mathrm{Curl}
+          \,
+          \mathbf{F}_{f}^{d}
+          \right)
+          =
+          \frac{1}{J_{f}^{d}}
+          \mathbf{F}_{f}^{d}
+          \left(
+          \mathrm{Curl}
+          \,
+          \mathbf{F}_{f}^{d}
+          \right)
+          \mathbf{F}_{f}^{dT}
+          \]
+          </div>
 
         </div>
+
+        <!-- INTERFACE -->
 
         <div class="equation-box">
 
@@ -671,11 +662,36 @@
             Interfacial Slip & Debonding
           </h3>
 
+          <div class="equation">
           \[
-\lambda_{m}=\mathbf{F}^{d}_{m}\mathbf{V}_{rel}=\mathbf{v}^{d}_{m}-\mathbf{F}^{d}_{m}\mathbf{F}^{d-1}_{f}\mathbf{v}^{d}_{f}
-\]
+          \lambda_{m}
+          =
+          \mathbf{F}^{d}_{m}
+          \mathbf{V}_{rel}
+          =
+          \mathbf{v}^{d}_{m}
+          -
+          \mathbf{F}^{d}_{m}
+          \mathbf{F}^{d-1}_{f}
+          \mathbf{v}^{d}_{f}
+          \]
+          </div>
+
+          <div class="equation">
+          \[
+          \mathbf{V}_{rel}
+          =
+          \mathbf{F}^{d-1}_{m}
+          \mathbf{v}^{d}_{m}
+          -
+          \mathbf{F}^{d-1}_{f}
+          \mathbf{v}^{d}_{f}
+          \]
+          </div>
 
         </div>
+
+        <!-- DELAMINATION -->
 
         <div class="equation-box">
 
@@ -683,9 +699,19 @@
             Delamination
           </h3>
 
+          <div class="equation">
           \[
-\tilde{\Sigma}=\llbracket \mathbf{F}^{l}\rrbracket
-\]
+          \tilde{\Sigma}
+          =
+          \llbracket
+          \mathbf{F}^{l}
+          \rrbracket
+          =
+          \mathbf{F}^{l+}
+          -
+          \mathbf{F}^{l-}
+          \]
+          </div>
 
         </div>
 
@@ -701,14 +727,9 @@
         Geometric Interpretation of Incompatibility
       </h2>
 
-      <p class="section-sub">
-
-        Differential geometric measures associated with
-        incompatibility and configurational torsion.
-
-      </p>
-
       <div class="equation-grid">
+
+        <!-- EQ 1 -->
 
         <div class="equation-box">
 
@@ -716,11 +737,30 @@
             Matrix Configuration
           </h3>
 
+          <div class="equation">
           \[
-T^{D}_{mAB}=\frac{1}{2}(\Gamma^{D}_{BA}-\Gamma^{D}_{AB})=\frac{1}{2}\mathbf{F}^{d-1}_{m}(\partial_{B}\mathbf{F}^{d}_{mA}-\partial_{A}\mathbf{F}^{d}_{mB})
-\]
+          T^{D}_{mAB}
+          =
+          \frac{1}{2}
+          \left(
+          \Gamma^{D}_{BA}
+          -
+          \Gamma^{D}_{AB}
+          \right)
+          =
+          \frac{1}{2}
+          \mathbf{F}^{d-1}_{m}
+          \left(
+          \partial_{B}\mathbf{F}^{d}_{mA}
+          -
+          \partial_{A}\mathbf{F}^{d}_{mB}
+          \right)
+          \]
+          </div>
 
         </div>
+
+        <!-- EQ 2 -->
 
         <div class="equation-box">
 
@@ -728,11 +768,30 @@ T^{D}_{mAB}=\frac{1}{2}(\Gamma^{D}_{BA}-\Gamma^{D}_{AB})=\frac{1}{2}\mathbf{F}^{
             Fiber Configuration
           </h3>
 
+          <div class="equation">
           \[
-T^{D}_{fAB}=\frac{1}{2}(\Gamma^{D}_{BA}-\Gamma^{D}_{AB})=\frac{1}{2}\mathbf{F}^{d-1}_{f}(\partial_{B}\mathbf{F}^{d}_{fA}-\partial_{A}\mathbf{F}^{d}_{fB})
-\]
+          T^{D}_{fAB}
+          =
+          \frac{1}{2}
+          \left(
+          \Gamma^{D}_{BA}
+          -
+          \Gamma^{D}_{AB}
+          \right)
+          =
+          \frac{1}{2}
+          \mathbf{F}^{d-1}_{f}
+          \left(
+          \partial_{B}\mathbf{F}^{d}_{fA}
+          -
+          \partial_{A}\mathbf{F}^{d}_{fB}
+          \right)
+          \]
+          </div>
 
         </div>
+
+        <!-- EQ 3 -->
 
         <div class="equation-box">
 
@@ -740,11 +799,24 @@ T^{D}_{fAB}=\frac{1}{2}(\Gamma^{D}_{BA}-\Gamma^{D}_{AB})=\frac{1}{2}\mathbf{F}^{
             Interface Contribution
           </h3>
 
+          <div class="equation">
           \[
-T^{D}_{IAB}=\frac{1}{2}(\mathbf{F}^{l-1})\Delta S_{R}(n_{B}[F^{l}]^{a}_{A}-n_{A}[F^{l}]^{a}_{B})
-\]
+          T^{D}_{IAB}
+          =
+          \frac{1}{2}
+          (\mathbf{F}^{l-1})
+          \Delta S_{R}
+          \left(
+          n_{B}[F^{l}]^{a}_{A}
+          -
+          n_{A}[F^{l}]^{a}_{B}
+          \right)
+          \]
+          </div>
 
         </div>
+
+        <!-- EQ 4 -->
 
         <div class="equation-box">
 
@@ -752,9 +824,19 @@ T^{D}_{IAB}=\frac{1}{2}(\mathbf{F}^{l-1})\Delta S_{R}(n_{B}[F^{l}]^{a}_{A}-n_{A}
             Total Torsion
           </h3>
 
+          <div class="equation">
           \[
-T^{D}_{AB}=h_{\xi}T^{D}_{\xi AB}+h_{\eta}T^{D}_{\eta AB}+T^{D}_{IAB}
-\]
+          T^{D}_{AB}
+          =
+          h_{\xi}
+          T^{D}_{\xi AB}
+          +
+          h_{\eta}
+          T^{D}_{\eta AB}
+          +
+          T^{D}_{IAB}
+          \]
+          </div>
 
         </div>
 
@@ -786,9 +868,6 @@ T^{D}_{AB}=h_{\xi}T^{D}_{\xi AB}+h_{\eta}T^{D}_{\eta AB}+T^{D}_{IAB}
             laminated composites for large deformation processes
             using multicontinuum theory and experiments.
 
-            The project integrated constitutive modeling,
-            computational mechanics, and experimental validation.
-
           </p>
 
         </div>
@@ -804,12 +883,8 @@ T^{D}_{AB}=h_{\xi}T^{D}_{\xi AB}+h_{\eta}T^{D}_{\eta AB}+T^{D}_{IAB}
           <p>
 
             Current investigations focus on microfiber buckling
-            phenomena in advanced composite systems under finite
-            deformation loading conditions.
-
-            The work combines theoretical stability analysis,
-            nonlinear computational mechanics,
-            and experimental characterization.
+            phenomena in advanced composite systems subjected to
+            finite deformation loading conditions.
 
           </p>
 
@@ -825,12 +900,9 @@ T^{D}_{AB}=h_{\xi}T^{D}_{\xi AB}+h_{\eta}T^{D}_{\eta AB}+T^{D}_{IAB}
 
           <p>
 
-            I am actively interested in collaborative research
-            involving continuum mechanics,
-            constitutive modeling,
-            finite deformation,
-            composite materials,
-            and experimental mechanics.
+            Open for collaborative research in continuum mechanics,
+            constitutive modeling, finite deformation, composite
+            materials, and experimental mechanics.
 
           </p>
 
@@ -886,7 +958,7 @@ T^{D}_{AB}=h_{\xi}T^{D}_{\xi AB}+h_{\eta}T^{D}_{\eta AB}+T^{D}_{IAB}
 
     });
 
-    // SCROLL REVEAL
+    // REVEAL ANIMATION
 
     function revealElements(){
 
