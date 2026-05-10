@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://its-shivamshivam.github.io/sitemap.xml
