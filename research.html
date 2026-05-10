@@ -287,19 +287,17 @@ EQUATION GRID
 
 .equation-grid{
 
-width: 100%;
+  width: 100%;
 
-display: grid;
+  display: grid;
 
-grid-template-columns: repeat(2,minmax(500px,1fr));
+  grid-template-columns: repeat(2,1fr);
 
-gap: 40px;
+  gap: 24px;
 
-justify-content: center;
+  align-items: stretch;
 
-align-items: stretch;
-
-margin: 70px auto 120px auto;
+  margin: 40px auto 70px auto;
 
 }
 
@@ -309,25 +307,25 @@ EQUATION BOX
 
 .equation-box{
 
-width: 100%;
+  width: 100%;
 
-display: flex;
+  display: flex;
 
-flex-direction: column;
+  flex-direction: column;
 
-justify-content: flex-start;
+  justify-content: center;
 
-text-align: center;
+  text-align: center;
 
-padding: 42px;
+  padding: 26px;
 
-border-radius: 30px;
+  border-radius: 24px;
 
-background: white;
+  background: rgba(255,255,255,0.92);
 
-border: 1px solid rgba(0,0,0,0.07);
+  border: 1px solid rgba(0,0,0,0.07);
 
-box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.04);
 
 }
 
@@ -347,41 +345,41 @@ EQUATIONS
 
 .equation{
 
-width: 100%;
+  width: 100%;
 
-overflow-x: auto;
+  overflow-x: auto;
 
-display: flex;
+  display: flex;
 
-justify-content: center;
+  justify-content: center;
 
-align-items: center;
+  align-items: center;
 
-text-align: center;
+  text-align: center;
 
-padding: 34px;
+  padding: 18px;
 
-margin: 28px 0;
+  margin: 16px 0;
 
-border-radius: 20px;
+  border-radius: 16px;
 
-background: rgba(0,0,0,0.02);
+  background: rgba(0,0,0,0.025);
 
 }
 
 .equation mjx-container{
 
-font-size: 150% !important;
+  font-size: 125% !important;
 
 }
 
 .equation-box p{
 
-line-height: 2;
+  line-height: 1.7;
 
-text-align: center;
+  font-size: 0.95rem;
 
-color: var(--text-muted);
+  color: var(--text-muted);
 
 }
 
