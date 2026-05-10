@@ -102,35 +102,187 @@
 
     }
 
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image{
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: white;
+
+  border: 1px solid rgba(0,0,0,0.08);
+
+  padding: 24px;
+
+}
+
 .hero-image img{
 
   width: 100%;
 
-  height: 420px;
+  max-height: 500px;
 
   object-fit: contain;
 
-  background: white;
+  object-position: center;
 
   display: block;
 
 }
 
+/* =========================================
+   RESEARCH CARD IMAGES
+========================================= */
+
 .research-card img{
 
   width: 100%;
 
-  height: 280px;
+  height: 300px;
 
   object-fit: contain;
+
+  object-position: center;
 
   background: white;
 
   border-radius: 18px;
 
+  padding: 12px;
+
   margin-bottom: 22px;
 
-  padding: 10px;
+  display: block;
+
+}
+
+/* =========================================
+   EQUATION GRID CENTER ALIGN
+========================================= */
+
+.equation-grid{
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2,minmax(500px,1fr));
+
+  gap: 40px;
+
+  justify-content: center;
+
+  align-items: stretch;
+
+  margin: 70px auto 120px auto;
+
+}
+
+/* =========================================
+   EQUATION BOX
+========================================= */
+
+.equation-box{
+
+  width: 100%;
+
+  min-height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  text-align: center;
+
+  padding: 42px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(0,0,0,0.07);
+
+  box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+
+}
+
+/* =========================================
+   EQUATION STYLE
+========================================= */
+
+.equation{
+
+  width: 100%;
+
+  overflow-x: auto;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 34px;
+
+  margin: 28px 0;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(0,0,0,0.05);
+
+}
+
+.equation mjx-container{
+
+  font-size: 155% !important;
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:1200px){
+
+  .equation-grid{
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .research-card img{
+
+    height: 240px;
+
+  }
+
+  .hero-image img{
+
+    max-height: 340px;
+
+  }
 
 }
 
