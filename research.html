@@ -131,7 +131,13 @@ box-shadow: 0 10px 35px rgba(0,0,0,0.05);
 
 width: 100%;
 
-height: auto;
+max-height: 340px;
+
+object-fit: contain;
+
+display: block;
+
+}
 
 object-fit: contain;
 
@@ -225,9 +231,23 @@ IMAGE FIX
 
 width: 100%;
 
-height: auto;
+height: 240px;
 
-max-height: 500px;
+object-fit: contain;
+
+object-position: center;
+
+display: block;
+
+background: white;
+
+border-radius: 18px;
+
+padding: 8px;
+
+margin-bottom: 20px;
+
+}
 
 object-fit: contain;
 
@@ -645,13 +665,25 @@ and progressive damage characterization.
 
 <!-- DAMAGE -->
 
+<!-- DAMAGE CHARACTERIZATION -->
+
 <section class="reveal">
 
 <h2 class="section-title">
 Damage Characterization
 </h2>
 
+<p class="section-sub">
+
+Constituent-level damage evolution is characterized through
+finite deformation kinematics, incompatibility measures,
+relative constituent motion, and interface discontinuity tensors.
+
+</p>
+
 <div class="equation-grid">
+
+<!-- MATRIX -->
 
 <div class="equation-box">
 
@@ -676,10 +708,15 @@ Matrix Cracking
 </div>
 
 <p>
-Matrix incompatibility corresponding to crack evolution.
+
+Matrix crack density tensor representing incompatibility
+associated with matrix damage evolution.
+
 </p>
 
 </div>
+
+<!-- FIBER -->
 
 <div class="equation-box">
 
@@ -704,7 +741,95 @@ Fiber Breakage
 </div>
 
 <p>
-Fiber incompatibility governing rupture evolution.
+
+Fiber rupture mechanisms characterized through
+fiber incompatibility tensors.
+
+</p>
+
+</div>
+
+<!-- INTERFACE -->
+
+<div class="equation-box">
+
+<h3>
+Interfacial Slip & Debonding
+</h3>
+
+<div class="equation">
+
+\[
+\lambda_{m}
+=
+\mathbf{F}^{d}_{m}
+\mathbf{V}_{rel}
+=
+\mathbf{v}^{d}_{m}
+-
+\mathbf{F}^{d}_{m}
+\mathbf{F}^{d-1}_{f}
+\mathbf{v}^{d}_{f}
+\]
+
+</div>
+
+<div class="equation">
+
+\[
+\mathbf{V}_{rel}
+=
+\mathbf{F}^{d-1}_{m}
+\mathbf{v}^{d}_{m}
+-
+\mathbf{F}^{d-1}_{f}
+\mathbf{v}^{d}_{f}
+\]
+
+</div>
+
+<p>
+
+Relative constituent motion governs interface slip,
+debonding, and constituent separation mechanisms.
+
+</p>
+
+</div>
+
+<!-- DELAMINATION -->
+
+<div class="equation-box">
+
+<h3>
+Delamination
+</h3>
+
+<div class="equation">
+
+\[
+\tilde{\Sigma}
+=
+\llbracket
+\mathbf{F}^{l}
+\rrbracket,
+\qquad
+\tilde{\Sigma}_{\delta}
+=
+\Sigma^{T}
+\vartheta^{l}_{\delta}
+=
+\sigma^{T}
+\vartheta^{e}_{\delta}
+\]
+
+</div>
+
+<p>
+
+Delamination is represented through displacement
+discontinuity measures across the interface manifold.
+
 </p>
 
 </div>
@@ -715,13 +840,26 @@ Fiber incompatibility governing rupture evolution.
 
 <!-- GEOMETRIC -->
 
+<!-- GEOMETRIC INTERPRETATION -->
+
 <section class="reveal">
 
 <h2 class="section-title">
-Geometric Interpretation
+Geometric Interpretation of Damage
 </h2>
 
+<p class="section-sub">
+
+Differential geometric tools are employed to establish
+rigorous incompatibility interpretations associated with
+matrix cracking, fiber breakage, interfacial slip,
+and delamination in composite systems.
+
+</p>
+
 <div class="equation-grid">
+
+<!-- MATRIX -->
 
 <div class="equation-box">
 
@@ -740,16 +878,30 @@ T^{D}_{mAB}
 -
 \Gamma^{D}_{AB}
 \right)
+=
+\frac{1}{2}
+\mathbf{F}^{d-1}_{m}
+\left(
+\partial_{B}\mathbf{F}^{d}_{mA}
+-
+\partial_{A}\mathbf{F}^{d}_{mB}
+\right)
 \neq 0
 \]
 
 </div>
 
 <p>
-Geometric incompatibility associated with matrix damage.
+
+The torsion tensor associated with the matrix natural
+configuration provides the geometric incompatibility
+corresponding to matrix crack evolution.
+
 </p>
 
 </div>
+
+<!-- FIBER -->
 
 <div class="equation-box">
 
@@ -768,13 +920,100 @@ T^{D}_{fAB}
 -
 \Gamma^{D}_{AB}
 \right)
+=
+\frac{1}{2}
+\mathbf{F}^{d-1}_{f}
+\left(
+\partial_{B}\mathbf{F}^{d}_{fA}
+-
+\partial_{A}\mathbf{F}^{d}_{fB}
+\right)
 \neq 0
 \]
 
 </div>
 
 <p>
-Fiber torsion interpretation corresponding to fiber breakage.
+
+Fiber breakage induces torsion within the fiber
+natural configuration and acts as a geometric
+measure of incompatibility.
+
+</p>
+
+</div>
+
+<!-- INTERFACE -->
+
+<div class="equation-box">
+
+<h3>
+Interface Incompatibility
+</h3>
+
+<div class="equation">
+
+\[
+T^{D}_{IAB}
+=
+\frac{1}{2}
+\left(
+\mathbf{F}^{l-1}
+\right)^{D}_{a}
+\Delta S_{R}
+\left(
+n_{B}
+\llbracket
+F^{l}
+\rrbracket^{a}_{A}
+-
+n_{A}
+\llbracket
+F^{l}
+\rrbracket^{a}_{B}
+\right)
+\]
+
+</div>
+
+<p>
+
+Interface incompatibility describes the geometric
+discontinuity associated with delamination
+and interfacial damage.
+
+</p>
+
+</div>
+
+<!-- TOTAL -->
+
+<div class="equation-box">
+
+<h3>
+Total Delamination Torsion
+</h3>
+
+<div class="equation">
+
+\[
+T^{D}_{AB}
+=
+h_{\xi}T^{D}_{\xi AB}
++
+h_{\eta}T^{D}_{\eta AB}
++
+T^{D}_{IAB}
+\]
+
+</div>
+
+<p>
+
+The total torsion field combines bulk and interface
+incompatibility contributions corresponding to
+delamination-induced geometric defects.
+
 </p>
 
 </div>
