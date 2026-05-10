@@ -919,16 +919,35 @@ measure of incompatibility.
 
 <!-- INTERFACE -->
 
-<div class="equation-box">
-
-<h3>
-Interface Incompatibility
-</h3>
-
 <div class="equation">
 
 \[
-\nabla_X\mathbf{V}\big|^i_J&=h_m\,\partial_J V^{\,i}_m+h_f\,\partial_J V^{\,i}_f+(\partial_J h_m)\,V^{\,i}_m+(\partial_J h_f)\,V^{\,i}_f\\&=\underbrace{h_m\nabla_X\mathbf{V}_m\big|^i_J\,+\,h_f\nabla_X\mathbf{V}_f\big|^i_J}_{\text{bulk}}\,+\,\underbrace{(V^i_m-V^i_f)}_{\llbracket\mathbf{V}\rrbracket^i}\,{N}_J\,\Delta_{S_p}.
+\begin{aligned}
+
+\nabla_X\mathbf{V}\big|^i_J
+&=
+h_m\,\partial_J V^{\,i}_m
++
+h_f\,\partial_J V^{\,i}_f
++
+(\partial_J h_m)\,V^{\,i}_m
++
+(\partial_J h_f)\,V^{\,i}_f
+\\[10pt]
+
+&=
+\underbrace{
+h_m\nabla_X\mathbf{V}_m\big|^i_J
++
+h_f\nabla_X\mathbf{V}_f\big|^i_J
+}_{\text{bulk}}
++
+\underbrace{
+(V^i_m-V^i_f)
+}_{\llbracket\mathbf{V}\rrbracket^i}
+N_J\,\Delta_{S_p}
+
+\end{aligned}
 \]
 
 </div>
@@ -959,6 +978,14 @@ Delamination
 
 </div>
 
+
+ <div class="equation">
+
+\[
+    T^D_{AB}\Bigg|_{S_R}=\frac{1}{2}({F}^{i^{-1}})^D_a\,\Delta_{S_R}\Bigg(\,\,n_B\,[[{F}^{i}]]\,^a_A-\,n_A\,[[{F}^{i}]]\,^a_B\,\Bigg).
+\]
+
+</div> 
 <p>
 
 The total torsion field combines bulk and interface
