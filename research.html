@@ -364,6 +364,107 @@
 
     }
 
+    .equal-box{
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  min-height: 420px;
+
+}
+
+.equation-grid{
+
+  display: grid;
+
+  grid-template-columns: repeat(2,1fr);
+
+  gap: 34px;
+
+  align-items: stretch;
+
+  margin-top: 50px;
+
+  margin-bottom: 90px;
+
+}
+
+.equation-box{
+
+  padding: 34px;
+
+  border-radius: 28px;
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(0,0,0,0.08);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+
+  transition: all 0.4s ease;
+
+}
+
+.equation-box:hover{
+
+  transform: translateY(-8px);
+
+}
+
+.equation-box h3{
+
+  font-size: 1.3rem;
+
+  margin-bottom: 22px;
+
+}
+
+.equation-box p{
+
+  line-height: 1.9;
+
+  color: var(--text-muted);
+
+  margin-top: 22px;
+
+}
+
+.equation{
+
+  overflow-x: auto;
+
+  padding: 24px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  margin-bottom: 18px;
+
+}
+
+@media(max-width:1100px){
+
+  .equation-grid{
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .equal-box{
+
+    min-height: auto;
+
+  }
+
+}
   </style>
 
 </head>
@@ -580,269 +681,550 @@
 
     <!-- DAMAGE CHARACTERIZATION -->
 
-    <section class="reveal">
+<section class="reveal">
 
-      <h2 class="section-title">
-        Damage Characterization
-      </h2>
+  <h2 class="section-title">
 
-      <div class="equation-grid">
+    Damage Characterization
 
-        <!-- MATRIX -->
+  </h2>
 
-        <div class="equation-box">
+  <p class="section-sub">
 
-          <h3>
-            Matrix Cracking
-          </h3>
+    Constituent-level damage evolution is characterized through
 
-          <div class="equation">
-          \[
-          \mathbf{G}_{m}
-          =
-          \frac{1}{J_{m}^{d}}
-          \mathbf{F}_{m}^{d}
-          \left(
-          \mathrm{Curl}
-          \,
-          \mathbf{F}_{m}^{d}
-          \right)
-          =
-          \frac{1}{J_{m}^{d}}
-          \mathbf{F}_{m}^{d}
-          \left(
-          \mathrm{Curl}
-          \,
-          \mathbf{F}_{m}^{d}
-          \right)
-          \mathbf{F}_{m}^{dT}
-          \]
-          </div>
+    finite deformation kinematics, incompatibility measures,
 
-        </div>
+    and multicontinuum constitutive descriptors.
 
-        <!-- FIBER -->
+  </p>
 
-        <div class="equation-box">
+  <div class="equation-grid">
 
-          <h3>
-            Fiber Breakage
-          </h3>
+    <!-- MATRIX -->
 
-          <div class="equation">
-          \[
-          \mathbf{G}_{f}
-          =
-          \frac{1}{J_{f}^{d}}
-          \mathbf{F}_{f}^{d}
-          \left(
-          \mathrm{Curl}
-          \,
-          \mathbf{F}_{f}^{d}
-          \right)
-          =
-          \frac{1}{J_{f}^{d}}
-          \mathbf{F}_{f}^{d}
-          \left(
-          \mathrm{Curl}
-          \,
-          \mathbf{F}_{f}^{d}
-          \right)
-          \mathbf{F}_{f}^{dT}
-          \]
-          </div>
+    <div class="equation-box equal-box">
 
-        </div>
+      <h3>
 
-        <!-- INTERFACE -->
+        Matrix Cracking
 
-        <div class="equation-box">
+      </h3>
 
-          <h3>
-            Interfacial Slip & Debonding
-          </h3>
+      <div class="equation">
 
-          <div class="equation">
-          \[
-          \lambda_{m}
-          =
-          \mathbf{F}^{d}_{m}
-          \mathbf{V}_{rel}
-          =
-          \mathbf{v}^{d}_{m}
-          -
-          \mathbf{F}^{d}_{m}
-          \mathbf{F}^{d-1}_{f}
-          \mathbf{v}^{d}_{f}
-          \]
-          </div>
+      \[
 
-          <div class="equation">
-          \[
-          \mathbf{V}_{rel}
-          =
-          \mathbf{F}^{d-1}_{m}
-          \mathbf{v}^{d}_{m}
-          -
-          \mathbf{F}^{d-1}_{f}
-          \mathbf{v}^{d}_{f}
-          \]
-          </div>
+      \mathbf{G}_{m}
 
-        </div>
+      =
 
-        <!-- DELAMINATION -->
+      \frac{1}{J_{m}^{d}}
 
-        <div class="equation-box">
+      \mathbf{F}_{m}^{d}
 
-          <h3>
-            Delamination
-          </h3>
+      \left(
 
-          <div class="equation">
-          \[
-          \tilde{\Sigma}
-          =
-          \llbracket
-          \mathbf{F}^{l}
-          \rrbracket
-          =
-          \mathbf{F}^{l+}
-          -
-          \mathbf{F}^{l-}
-          \]
-          </div>
+      \mathrm{Curl}
 
-        </div>
+      \,
+
+      \mathbf{F}_{m}^{d}
+
+      \right)
+
+      =
+
+      J^{-1}_{m}
+
+      \mathbf{F}^{d}_{m}
+
+      \,
+
+      \mathrm{curl}
+
+      \left(
+
+      \mathbf{F}^{d-1}_{m}
+
+      \right)
+
+      \]
 
       </div>
 
-    </section>
+      <p>
+
+        Matrix cracking evolution is quantified through the
+
+        incompatibility tensor associated with matrix deformation.
+
+      </p>
+
+    </div>
+
+    <!-- FIBER -->
+
+    <div class="equation-box equal-box">
+
+      <h3>
+
+        Fiber Breakage
+
+      </h3>
+
+      <div class="equation">
+
+      \[
+
+      \mathbf{G}_{f}
+
+      =
+
+      \frac{1}{J_{f}^{d}}
+
+      \mathbf{F}_{f}^{d}
+
+      \left(
+
+      \mathrm{Curl}
+
+      \,
+
+      \mathbf{F}_{f}^{d}
+
+      \right)
+
+      =
+
+      J^{-1}_{f}
+
+      \mathbf{F}^{d}_{f}
+
+      \,
+
+      \mathrm{curl}
+
+      \left(
+
+      \mathbf{F}^{d-1}_{f}
+
+      \right)
+
+      \]
+
+      </div>
+
+      <p>
+
+        Fiber rupture mechanisms are characterized through
+
+        incompatibility measures associated with fiber deformation.
+
+      </p>
+
+    </div>
+
+    <!-- INTERFACIAL -->
+
+    <div class="equation-box equal-box">
+
+      <h3>
+
+        Interfacial Slip
+
+      </h3>
+
+      <div class="equation">
+
+      \[
+
+      \lambda_{m}
+
+      =
+
+      \mathbf{F}^{d}_{m}
+
+      \mathbf{V}_{rel}
+
+      =
+
+      \mathbf{v}^{d}_{m}
+
+      -
+
+      \mathbf{F}^{d}_{m}
+
+      \mathbf{F}^{d-1}_{f}
+
+      \mathbf{v}^{d}_{f}
+
+      \]
+
+      </div>
+
+      <div class="equation">
+
+      \[
+
+      \mathbf{V}_{rel}
+
+      =
+
+      \mathbf{F}^{d-1}_{m}
+
+      \mathbf{v}^{d}_{m}
+
+      -
+
+      \mathbf{F}^{d-1}_{f}
+
+      \mathbf{v}^{d}_{f}
+
+      \]
+
+      </div>
+
+      <p>
+
+        Relative constituent motion governs interfacial slip
+
+        and debonding evolution in laminated composites.
+
+      </p>
+
+    </div>
+
+    <!-- DELAMINATION -->
+
+    <div class="equation-box equal-box">
+
+      <h3>
+
+        Delamination
+
+      </h3>
+
+      <div class="equation">
+
+      \[
+
+      \tilde{\Sigma}
+
+      =
+
+      \llbracket
+
+      \mathbf{F}^{l}
+
+      \rrbracket,
+
+      \qquad
+
+      \tilde{\Sigma}_{\delta}
+
+      =
+
+      \Sigma^{T}
+
+      \vartheta^{l}_{\delta}
+
+      =
+
+      \sigma^{T}
+
+      \vartheta^{e}_{\delta},
+
+      \qquad
+
+      \delta = \xi,\eta
+
+      \]
+
+      </div>
+
+      <p>
+
+        Delamination is represented through displacement
+
+        discontinuity measures across the interface manifold.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
     <!-- GEOMETRIC INTERPRETATION -->
+<section class="reveal">
 
-    <section class="reveal">
+  <h2 class="section-title">
 
-      <h2 class="section-title">
-        Geometric Interpretation of Incompatibility
-      </h2>
+    Geometric Interpretation of Incompatibility
 
-      <div class="equation-grid">
+  </h2>
 
-        <!-- EQ 1 -->
+  <p class="section-sub">
 
-        <div class="equation-box">
+    Differential geometric measures are employed to establish
 
-          <h3>
-            Matrix Configuration
-          </h3>
+    rigorous incompatibility interpretations associated with
 
-          <div class="equation">
-          \[
-          T^{D}_{mAB}
-          =
-          \frac{1}{2}
-          \left(
-          \Gamma^{D}_{BA}
-          -
-          \Gamma^{D}_{AB}
-          \right)
-          =
-          \frac{1}{2}
-          \mathbf{F}^{d-1}_{m}
-          \left(
-          \partial_{B}\mathbf{F}^{d}_{mA}
-          -
-          \partial_{A}\mathbf{F}^{d}_{mB}
-          \right)
-          \]
-          </div>
+    constituent-level damage mechanisms in finite deformation
 
-        </div>
+    composite systems.
 
-        <!-- EQ 2 -->
+  </p>
 
-        <div class="equation-box">
+  <div class="equation-grid">
 
-          <h3>
-            Fiber Configuration
-          </h3>
+    <!-- MATRIX -->
 
-          <div class="equation">
-          \[
-          T^{D}_{fAB}
-          =
-          \frac{1}{2}
-          \left(
-          \Gamma^{D}_{BA}
-          -
-          \Gamma^{D}_{AB}
-          \right)
-          =
-          \frac{1}{2}
-          \mathbf{F}^{d-1}_{f}
-          \left(
-          \partial_{B}\mathbf{F}^{d}_{fA}
-          -
-          \partial_{A}\mathbf{F}^{d}_{fB}
-          \right)
-          \]
-          </div>
+    <div class="equation-box equal-box">
 
-        </div>
+      <h3>
 
-        <!-- EQ 3 -->
+        Matrix Configuration
 
-        <div class="equation-box">
+      </h3>
 
-          <h3>
-            Interface Contribution
-          </h3>
+      <div class="equation">
 
-          <div class="equation">
-          \[
-          T^{D}_{IAB}
-          =
-          \frac{1}{2}
-          (\mathbf{F}^{l-1})
-          \Delta S_{R}
-          \left(
-          n_{B}[F^{l}]^{a}_{A}
-          -
-          n_{A}[F^{l}]^{a}_{B}
-          \right)
-          \]
-          </div>
+      \[
 
-        </div>
+      T^{D}_{mAB}
 
-        <!-- EQ 4 -->
+      =
 
-        <div class="equation-box">
+      \frac{1}{2}
 
-          <h3>
-            Total Torsion
-          </h3>
+      \left(
 
-          <div class="equation">
-          \[
-          T^{D}_{AB}
-          =
-          h_{\xi}
-          T^{D}_{\xi AB}
-          +
-          h_{\eta}
-          T^{D}_{\eta AB}
-          +
-          T^{D}_{IAB}
-          \]
-          </div>
+      \Gamma^{D}_{BA}
 
-        </div>
+      -
+
+      \Gamma^{D}_{AB}
+
+      \right)
+
+      =
+
+      \frac{1}{2}
+
+      \mathbf{F}^{d-1}_{m}
+
+      \left(
+
+      \partial_{B}\mathbf{F}^{d}_{mA}
+
+      -
+
+      \partial_{A}\mathbf{F}^{d}_{mB}
+
+      \right)
+
+      \neq 0
+
+      \]
 
       </div>
 
-    </section>
+      <p>
+
+        The torsion tensor associated with the matrix natural
+
+        configuration provides the incompatibility measure
+
+        corresponding to matrix crack evolution.
+
+      </p>
+
+    </div>
+
+    <!-- FIBER -->
+
+    <div class="equation-box equal-box">
+
+      <h3>
+
+        Fiber Configuration
+
+      </h3>
+
+      <div class="equation">
+
+      \[
+
+      T^{D}_{fAB}
+
+      =
+
+      \frac{1}{2}
+
+      \left(
+
+      \Gamma^{D}_{BA}
+
+      -
+
+      \Gamma^{D}_{AB}
+
+      \right)
+
+      =
+
+      \frac{1}{2}
+
+      \mathbf{F}^{d-1}_{f}
+
+      \left(
+
+      \partial_{B}\mathbf{F}^{d}_{fA}
+
+      -
+
+      \partial_{A}\mathbf{F}^{d}_{fB}
+
+      \right)
+
+      \neq 0
+
+      \]
+
+      </div>
+
+      <p>
+
+        Fiber breakage is characterized through the torsion
+
+        generated in the fiber natural configuration arising
+
+        from local incompatibility.
+
+      </p>
+
+    </div>
+
+    <!-- INTERFACE -->
+
+    <div class="equation-box equal-box">
+
+      <h3>
+
+        Interface Contribution
+
+      </h3>
+
+      <div class="equation">
+
+      \[
+
+      T^{D}_{IAB}
+
+      =
+
+      \frac{1}{2}
+
+      \left(
+
+      \mathbf{F}^{l-1}
+
+      \right)^{D}_{a}
+
+      \Delta S_{R}
+
+      \left(
+
+      n_{B}
+
+      \llbracket
+
+      F^{l}
+
+      \rrbracket^{a}_{A}
+
+      -
+
+      n_{A}
+
+      \llbracket
+
+      F^{l}
+
+      \rrbracket^{a}_{B}
+
+      \right)
+
+      \]
+
+      </div>
+
+      <p>
+
+        The interface incompatibility term represents the
+
+        geometric measure corresponding to delamination and
+
+        interfacial discontinuities.
+
+      </p>
+
+    </div>
+
+    <!-- DELAMINATION -->
+
+    <div class="equation-box equal-box">
+
+      <h3>
+
+        Delamination Torsion Measure
+
+      </h3>
+
+      <div class="equation">
+
+      \[
+
+      T^{D}_{AB}
+
+      =
+
+      h_{\xi}
+
+      T^{D}_{\xi AB}
+
+      +
+
+      h_{\eta}
+
+      T^{D}_{\eta AB}
+
+      +
+
+      T^{D}_{IAB}
+
+      \]
+
+      </div>
+
+      <p>
+
+        The total torsion field incorporates bulk and interface
+
+        incompatibility contributions to fully characterize
+
+        delamination-induced geometric defects.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
     <!-- PROJECTS -->
 
