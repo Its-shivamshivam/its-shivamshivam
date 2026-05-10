@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Post Title — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .post-body {
+      max-width: 680px;
+    }
+    .post-body h2 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 36px 0 12px;
+      color: var(--text);
+    }
+    .post-body p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+    .post-body blockquote {
+      border-left: 3px solid var(--accent);
+      margin: 24px 0;
+      padding: 12px 20px;
+      background: var(--accent-light);
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      color: var(--text-muted);
+    }
+    .post-body ul, .post-body ol {
+      list-style: disc;
+      padding-left: 24px;
+      margin-bottom: 18px;
+    }
+    .post-body li {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      line-height: 1.8;
+    }
+    .post-body code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.88rem;
+      background: var(--border-light);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--text);
+    }
+    .post-body pre {
+      background: #1a1a2e;
+      color: #e0e0e0;
+      padding: 20px 24px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.875rem;
+      line-height: 1.65;
+      margin: 24px 0;
+    }
+    .post-body pre code { background: none; padding: 0; color: inherit; }
+    .post-header-meta { font-size: 0.85rem; color: var(--text-light); margin-bottom: 24px; display: flex; gap: 12px; }
+    .post-title { font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+    .back-link { font-size: 0.85rem; color: var(--text-muted); display: inline-flex; align-items: center; gap: 4px; margin-bottom: 40px; }
+    .back-link:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Interest</a></li>
+        <li><a href="publications.html">Publication</a></li>
+        <li><a href="supervisor.html">Supervisor</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <a href="blog.html" class="back-link">← Back to Blog</a>
+
+    <!-- POST HEADER -->
+    <div class="post-header-meta">
+      <span>May 10, 2025</span>
+      <span>·</span>
+      <span>Research</span>
+      <span>·</span>
+      <span>6 min read</span>
+    </div>
+    <h1 class="post-title">What I Learned from My First Conference Submission</h1>
+
+    <hr style="border: none; border-top: 1px solid var(--border); margin: 32px 0;" />
+
+    <!-- POST BODY -->
+    <div class="post-body">
+
+      <p>
+        Replace everything below with your actual blog post content. This is just a sample to show
+        you the layout and formatting options available.
+      </p>
+
+      <h2>The Submission Process</h2>
+      <p>
+        Write about your experience here. Use clear, natural language. Blog posts work best when
+        they feel personal and specific — share what actually happened, not a generic summary.
+      </p>
+      <p>
+        You can reference your paper, your supervisors, or the feedback you got. Be honest and helpful.
+      </p>
+
+      <blockquote>
+        A memorable quote or key insight from your experience can go here. Pull out the most useful
+        or surprising thing you learned.
+      </blockquote>
+
+      <h2>What Surprised Me</h2>
+      <p>
+        Specific detail about what surprised you — good or bad. This section is where you build
+        trust with your readers by being concrete and honest.
+      </p>
+      <ul>
+        <li>First surprising thing you learned</li>
+        <li>Second point — try to make these actionable</li>
+        <li>Third point with a specific example</li>
+      </ul>
+
+      <h2>Code Example (if applicable)</h2>
+      <pre><code># Example Python snippet
+import numpy as np
+
+def your_function(x):
+    """Describe what this does."""
+    return np.mean(x)
+</code></pre>
+
+      <h2>Final Thoughts</h2>
+      <p>
+        Wrap up with your main takeaway. What would you tell a student facing the same situation?
+        End with something actionable or encouraging.
+      </p>
+
+    </div>
+
+    <!-- Tags -->
+    <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border);">
+      <div class="tag-row">
+        <span class="tag">Research</span>
+        <span class="tag">Conferences</span>
+        <span class="tag">PhD Life</span>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
+      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>

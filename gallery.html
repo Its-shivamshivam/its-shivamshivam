@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 20, 35, 0.88);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(6px);
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-content {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 640px;
+      width: 90%;
+      position: relative;
+    }
+    .lightbox-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #dce8f5 0%, #b8d0e8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      margin-bottom: 14px;
+    }
+    .lightbox-caption { font-size: 0.9rem; color: var(--text-muted); }
+    .lightbox-close {
+      position: absolute;
+      top: 12px; right: 16px;
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-muted);
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    .lightbox-close:hover { background: var(--border-light); }
+    .gallery-section-title {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 16px;
+      margin-top: 48px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Interest</a></li>
+        <li><a href="publications.html">Publication</a></li>
+        <li><a href="supervisor.html">Supervisor</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <header class="page-header">
+      <div class="section-label">Gallery</div>
+      <h1>Photos & Memories</h1>
+      <p>Conferences, fieldwork, collaborations, and moments along the research journey.</p>
+    </header>
+
+    <!-- INSTRUCTIONS: Replace the emoji placeholders with real <img> tags like:
+         <img src="images/conf1.jpg" alt="Description" style="width:100%;height:100%;object-fit:cover;" />
+         Place your images in an "images" folder next to your HTML files. -->
+
+    <!-- Section: Conferences -->
+    <div class="gallery-section-title">Conferences & Events</div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide" data-caption="[Conference Name 2025] — Presenting my paper on [Topic]" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">🎤</div>
+        <div class="gallery-caption">[Conference Name 2025] — Presenting on [Topic]</div>
+      </div>
+      <div class="gallery-item" data-caption="Poster session at [Conference 2024]" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">📋</div>
+        <div class="gallery-caption">Poster session at [Conference 2024]</div>
+      </div>
+      <div class="gallery-item" data-caption="Workshop on [Topic], [City], 2024" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">🏛️</div>
+        <div class="gallery-caption">Workshop on [Topic], 2024</div>
+      </div>
+      <div class="gallery-item" data-caption="Networking with collaborators" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">🤝</div>
+        <div class="gallery-caption">Collaborators from [Institution]</div>
+      </div>
+    </div>
+
+    <!-- Section: Lab & Research -->
+    <div class="gallery-section-title">Lab & Research</div>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-caption="Working in the lab — data collection phase" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">🔬</div>
+        <div class="gallery-caption">Lab session — data collection</div>
+      </div>
+      <div class="gallery-item tall" data-caption="Our research group — [Year]" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">👥</div>
+        <div class="gallery-caption">Research group — [Year]</div>
+      </div>
+      <div class="gallery-item" data-caption="Fieldwork at [Location]" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">🌍</div>
+        <div class="gallery-caption">Fieldwork at [Location]</div>
+      </div>
+      <div class="gallery-item" data-caption="Paper writing session at [Place]" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">✍️</div>
+        <div class="gallery-caption">Writing session at [Place]</div>
+      </div>
+      <div class="gallery-item" data-caption="Group meeting with Prof. [Name]" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">💡</div>
+        <div class="gallery-caption">Group meeting with Prof. [Name]</div>
+      </div>
+    </div>
+
+    <!-- Section: Personal / Travels -->
+    <div class="gallery-section-title">Travels & Life</div>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-caption="Visiting [University / City]" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">✈️</div>
+        <div class="gallery-caption">Visiting [University / City]</div>
+      </div>
+      <div class="gallery-item" data-caption="[City / Country] — Trip during [Year]" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">🗺️</div>
+        <div class="gallery-caption">[City] — [Year]</div>
+      </div>
+      <div class="gallery-item" data-caption="Graduation day — [University, Year]" onclick="openLightbox(this)">
+        <div class="gallery-item-inner">🎓</div>
+        <div class="gallery-caption">Graduation — [University, Year]</div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">✕</button>
+      <div class="lightbox-img" id="lbImg">🖼️</div>
+      <div class="lightbox-caption" id="lbCaption"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
+      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    function openLightbox(el) {
+      const lb = document.getElementById('lightbox');
+      const cap = el.dataset.caption;
+      const emoji = el.querySelector('.gallery-item-inner').textContent.trim();
+      document.getElementById('lbImg').textContent = emoji;
+      document.getElementById('lbCaption').textContent = cap;
+      lb.classList.add('open');
+    }
+    function closeLightbox(e) {
+      if (e.target.id === 'lightbox') {
+        document.getElementById('lightbox').classList.remove('open');
+      }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
+    });
+  </script>
+</body>
+</html>

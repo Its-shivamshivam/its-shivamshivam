@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supervisor — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Interest</a></li>
+        <li><a href="publications.html">Publication</a></li>
+        <li><a href="supervisor.html" class="active">Supervisor</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <header class="page-header">
+      <div class="section-label">Supervision</div>
+      <h1>Supervisors & Mentors</h1>
+      <p>The faculty members and researchers who guide my academic journey.</p>
+    </header>
+
+    <!-- Primary Supervisor -->
+    <section style="margin-bottom: 56px;">
+      <h2 class="section-title">Primary Supervisor</h2>
+
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; display: grid; grid-template-columns: 100px 1fr; gap: 32px; align-items: start;">
+        <div class="supervisor-avatar" style="width:100px; height:100px; font-size:2rem;">
+          <!-- Replace initials with an <img> tag if you have their photo -->
+          AB
+        </div>
+        <div>
+          <div class="section-label" style="margin-bottom: 4px;">Primary Supervisor</div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; margin-bottom: 6px;">Prof. [Full Name]</h3>
+          <p style="font-size: 0.95rem; color: var(--accent); font-weight: 500; margin-bottom: 4px;">[Designation / Title]</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">[Department], [University Name], [Country]</p>
+          <p style="font-size: 0.925rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+            Write 2–3 sentences about your supervisor's research focus, expertise, and lab. This helps
+            visitors understand the academic environment you work in and your supervisor's standing in
+            the field.
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="#" class="btn btn-outline" style="padding: 7px 16px; font-size:0.8rem;" target="_blank">Personal Website ↗</a>
+            <a href="#" class="btn btn-outline" style="padding: 7px 16px; font-size:0.8rem;" target="_blank">Google Scholar ↗</a>
+            <a href="mailto:supervisor@univ.edu" class="btn btn-outline" style="padding: 7px 16px; font-size:0.8rem;">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Co-supervisor / Second Supervisor -->
+    <section style="margin-bottom: 56px;">
+      <h2 class="section-title">Co-Supervisor</h2>
+
+      <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; display: grid; grid-template-columns: 100px 1fr; gap: 32px; align-items: start;">
+        <div class="supervisor-avatar" style="width:100px; height:100px; font-size:2rem;">CD</div>
+        <div>
+          <div class="section-label" style="margin-bottom: 4px;">Co-Supervisor</div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; margin-bottom: 6px;">Dr. [Full Name]</h3>
+          <p style="font-size: 0.95rem; color: var(--accent); font-weight: 500; margin-bottom: 4px;">[Designation / Title]</p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">[Department], [University Name], [Country]</p>
+          <p style="font-size: 0.925rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px;">
+            A brief description of your co-supervisor's expertise and how their work complements
+            the primary supervisor's direction in the context of your research.
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="#" class="btn btn-outline" style="padding: 7px 16px; font-size:0.8rem;" target="_blank">Personal Website ↗</a>
+            <a href="#" class="btn btn-outline" style="padding: 7px 16px; font-size:0.8rem;" target="_blank">Google Scholar ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Mentors / Collaborators -->
+    <section>
+      <h2 class="section-title">Collaborators & Mentors</h2>
+      <div class="supervisor-grid">
+
+        <div class="supervisor-card">
+          <div class="supervisor-avatar">EF</div>
+          <div class="supervisor-name">Prof. [Name]</div>
+          <div class="supervisor-role">[Designation]</div>
+          <div class="supervisor-inst">[University, Country]</div>
+          <p>Brief note on how you know them or collaborate — e.g., joint project or visiting supervision.</p>
+          <div style="margin-top: 14px;"><a href="#" style="font-size:0.8rem;" target="_blank">Website ↗</a></div>
+        </div>
+
+        <div class="supervisor-card">
+          <div class="supervisor-avatar">GH</div>
+          <div class="supervisor-name">Dr. [Name]</div>
+          <div class="supervisor-role">[Designation]</div>
+          <div class="supervisor-inst">[University, Country]</div>
+          <p>Brief note on your collaboration or mentorship relationship with this person.</p>
+          <div style="margin-top: 14px;"><a href="#" style="font-size:0.8rem;" target="_blank">Website ↗</a></div>
+        </div>
+
+        <div class="supervisor-card">
+          <div class="supervisor-avatar">IJ</div>
+          <div class="supervisor-name">Prof. [Name]</div>
+          <div class="supervisor-role">[Designation]</div>
+          <div class="supervisor-inst">[University, Country]</div>
+          <p>Brief note about this mentor and how they contribute to your academic development.</p>
+          <div style="margin-top: 14px;"><a href="#" style="font-size:0.8rem;" target="_blank">Website ↗</a></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
+      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>

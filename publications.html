@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Interest</a></li>
+        <li><a href="publications.html" class="active">Publication</a></li>
+        <li><a href="supervisor.html">Supervisor</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <header class="page-header">
+      <div class="section-label">Publications</div>
+      <h1>Academic Publications</h1>
+      <p>Peer-reviewed papers, conference proceedings, and preprints.</p>
+    </header>
+
+    <!-- Stats row -->
+    <div style="display: flex; gap: 32px; margin-bottom: 40px; flex-wrap: wrap;">
+      <div style="text-align: center;">
+        <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--accent);">12</div>
+        <div style="font-size: 0.8rem; color: var(--text-muted);">Publications</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--accent);">84</div>
+        <div style="font-size: 0.8rem; color: var(--text-muted);">Citations</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--accent);">5</div>
+        <div style="font-size: 0.8rem; color: var(--text-muted);">h-index</div>
+      </div>
+      <div style="margin-left: auto; align-self: center; display: flex; gap: 10px; flex-wrap: wrap;">
+        <a href="https://scholar.google.com" class="btn btn-outline" target="_blank" style="font-size:0.8rem; padding: 8px 16px;">Google Scholar ↗</a>
+        <a href="cv.pdf" class="btn btn-outline" download style="font-size:0.8rem; padding: 8px 16px;">Download CV ↓</a>
+      </div>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="pub-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="journal">Journal</button>
+      <button class="filter-btn" data-filter="conference">Conference</button>
+      <button class="filter-btn" data-filter="preprint">Preprint</button>
+    </div>
+
+    <!-- Publication list -->
+    <ul class="pub-list" id="pubList">
+
+      <li class="pub-item" data-type="conference">
+        <span class="pub-year">2025</span>
+        <div>
+          <div class="pub-title">Your Most Recent Paper Title Goes Here</div>
+          <div class="pub-authors"><strong>Your Name</strong>, Co-author One, Co-author Two</div>
+          <div class="pub-venue">Proceedings of [Top Conference 2025] (Oral)</div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">Paper</a>
+            <a href="#" class="pub-link">arXiv</a>
+            <a href="#" class="pub-link">Code</a>
+            <a href="#" class="pub-link">Slides</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item" data-type="journal">
+        <span class="pub-year">2024</span>
+        <div>
+          <div class="pub-title">A Journal Article Title on Your Research Topic</div>
+          <div class="pub-authors"><strong>Your Name</strong>, Co-author One, Supervisor Name</div>
+          <div class="pub-venue">Nature / IEEE Transactions / Journal of [Field], Vol. X, pp. XX–XX</div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">Paper</a>
+            <a href="#" class="pub-link">DOI</a>
+            <a href="#" class="pub-link">Code</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item" data-type="conference">
+        <span class="pub-year">2024</span>
+        <div>
+          <div class="pub-title">Another Conference Paper Title Here</div>
+          <div class="pub-authors"><strong>Your Name</strong>, Co-author Two, Co-author Three</div>
+          <div class="pub-venue">Proceedings of [Conference Name 2024]</div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">Paper</a>
+            <a href="#" class="pub-link">Poster</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item" data-type="preprint">
+        <span class="pub-year">2024</span>
+        <div>
+          <div class="pub-title">Preprint: Interesting Findings on [Topic]</div>
+          <div class="pub-authors"><strong>Your Name</strong>, Co-author One</div>
+          <div class="pub-venue">arXiv preprint arXiv:XXXX.XXXXX</div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">arXiv</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item" data-type="journal">
+        <span class="pub-year">2023</span>
+        <div>
+          <div class="pub-title">Earlier Journal Paper Title</div>
+          <div class="pub-authors"><strong>Your Name</strong>, Supervisor Name</div>
+          <div class="pub-venue">IEEE Access / PLoS ONE / [Journal], 2023</div>
+          <div class="pub-links">
+            <a href="#" class="pub-link">Paper</a>
+            <a href="#" class="pub-link">DOI</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Add more publications following the same pattern -->
+
+    </ul>
+
+  </main>
+
+  <footer>
+    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
+      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    // Publication filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const pubItems   = document.querySelectorAll('.pub-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        pubItems.forEach(item => {
+          item.style.display = (filter === 'all' || item.dataset.type === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

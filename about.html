@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="research.html">Research Interest</a></li>
+        <li><a href="publications.html">Publication</a></li>
+        <li><a href="supervisor.html">Supervisor</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <header class="page-header">
+      <div class="section-label">About Me</div>
+      <h1>Background & Profile</h1>
+      <p>A little more about who I am, where I'm from, and what I do.</p>
+    </header>
+
+    <div class="about-grid">
+
+      <!-- LEFT: Bio text -->
+      <div>
+        <div class="bio-block">
+          <h2 class="section-title" style="font-size: 1.2rem;">Biography</h2>
+          <p>
+            Write a short paragraph about yourself here — where you grew up, what sparked your interest
+            in your field, and how your journey led to your current research. Keep it genuine and personal.
+          </p>
+          <p>
+            Describe your academic path: undergraduate institution, master's (if applicable), and your
+            current PhD program. Mention what excites you most about your work, and what you hope to
+            contribute to your field.
+          </p>
+          <p>
+            You can also mention interests outside of research — teaching, mentoring, open science,
+            or hobbies that give you a different perspective.
+          </p>
+        </div>
+
+        <!-- Education Timeline -->
+        <h2 class="section-title" style="margin-top: 48px; font-size: 1.2rem;">Education</h2>
+        <ul class="edu-list">
+          <li class="edu-item">
+            <div class="edu-dot-wrap"><div class="edu-dot"></div><div class="edu-line"></div></div>
+            <div>
+              <div class="edu-degree">PhD in [Your Field]</div>
+              <div class="edu-inst">[University Name], [Country]</div>
+              <div class="edu-year">2024 – Present</div>
+            </div>
+          </li>
+          <li class="edu-item">
+            <div class="edu-dot-wrap"><div class="edu-dot"></div><div class="edu-line"></div></div>
+            <div>
+              <div class="edu-degree">M.Tech / M.Sc. in [Subject]</div>
+              <div class="edu-inst">[University Name], [Country]</div>
+              <div class="edu-year">2022 – 2024</div>
+            </div>
+          </li>
+          <li class="edu-item">
+            <div class="edu-dot-wrap"><div class="edu-dot"></div></div>
+            <div>
+              <div class="edu-degree">B.Tech / B.Sc. in [Subject]</div>
+              <div class="edu-inst">[University Name], [Country]</div>
+              <div class="edu-year">2018 – 2022</div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Skills / Interests -->
+        <h2 class="section-title" style="margin-top: 48px; font-size: 1.2rem;">Technical Skills</h2>
+        <div class="tag-row">
+          <span class="tag">Python</span>
+          <span class="tag">MATLAB</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">LaTeX</span>
+          <span class="tag">Git</span>
+          <span class="tag">Linux</span>
+          <span class="tag">R</span>
+          <!-- Add / remove as appropriate -->
+        </div>
+      </div>
+
+      <!-- RIGHT: Photo + Info card -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="about-photo">
+          <!-- Replace with your actual photo -->
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="1.5" opacity="0.4">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+          <!-- Example: <img src="images/photo.jpg" alt="Your Name" style="width:100%;border-radius:12px;" /> -->
+        </div>
+
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px;">
+          <h3 style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 16px;">Quick Info</h3>
+          <ul class="info-list">
+            <li class="info-row">
+              <span class="info-label">Position</span>
+              <span class="info-val">PhD Researcher</span>
+            </li>
+            <li class="info-row">
+              <span class="info-label">Department</span>
+              <span class="info-val">[Your Department]</span>
+            </li>
+            <li class="info-row">
+              <span class="info-label">University</span>
+              <span class="info-val">[University Name]</span>
+            </li>
+            <li class="info-row">
+              <span class="info-label">Location</span>
+              <span class="info-val">[City, Country]</span>
+            </li>
+            <li class="info-row">
+              <span class="info-label">Email</span>
+              <span class="info-val"><a href="mailto:your@email.com">your@email.com</a></span>
+            </li>
+            <li class="info-row">
+              <span class="info-label">CV</span>
+              <span class="info-val"><a href="cv.pdf" download>Download PDF ↓</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Honors -->
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px;">
+          <h3 style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 16px;">Honors & Awards</h3>
+          <ul style="display:flex;flex-direction:column;gap:10px;">
+            <li style="font-size:0.88rem; color: var(--text-muted);">
+              <strong style="color:var(--text);">[Award Name]</strong><br>[Institution, Year]
+            </li>
+            <li style="font-size:0.88rem; color: var(--text-muted);">
+              <strong style="color:var(--text);">[Scholarship Name]</strong><br>[Institution, Year]
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
+      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>

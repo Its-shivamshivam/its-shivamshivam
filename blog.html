@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Interest</a></li>
+        <li><a href="publications.html">Publication</a></li>
+        <li><a href="supervisor.html">Supervisor</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <header class="page-header">
+      <div class="section-label">Blog</div>
+      <h1>Writing & Thoughts</h1>
+      <p>Reflections on research, academia, and things I find worth sharing.</p>
+    </header>
+
+    <!-- Category filter -->
+    <div class="pub-filters" style="margin-bottom: 40px;">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="research">Research</button>
+      <button class="filter-btn" data-filter="academia">Academia</button>
+      <button class="filter-btn" data-filter="tutorial">Tutorial</button>
+      <button class="filter-btn" data-filter="life">Life</button>
+    </div>
+
+    <!-- Blog list -->
+    <div class="blog-grid" id="blogList">
+
+      <article class="blog-card" data-cat="research">
+        <div class="blog-meta">
+          <span>May 10, 2025</span><span class="blog-dot">·</span>
+          <span>Research</span><span class="blog-dot">·</span>
+          <span>6 min read</span>
+        </div>
+        <h2>What I Learned from My First Conference Submission</h2>
+        <p>
+          Submitting to [Conference Name] was a crash course in the peer review process. Here I share
+          the feedback I received, what surprised me, and how I revised the paper before it was finally accepted.
+        </p>
+        <a href="blog-post.html" class="read-more">Read more →</a>
+      </article>
+
+      <article class="blog-card" data-cat="tutorial">
+        <div class="blog-meta">
+          <span>April 2, 2025</span><span class="blog-dot">·</span>
+          <span>Tutorial</span><span class="blog-dot">·</span>
+          <span>10 min read</span>
+        </div>
+        <h2>A Practical Guide to [Method / Tool] for Beginners</h2>
+        <p>
+          Step-by-step walkthrough of [technique or tool] that I wish I had when I started.
+          Includes code snippets, common pitfalls, and links to further reading.
+        </p>
+        <a href="#" class="read-more">Read more →</a>
+      </article>
+
+      <article class="blog-card" data-cat="academia">
+        <div class="blog-meta">
+          <span>February 20, 2025</span><span class="blog-dot">·</span>
+          <span>Academia</span><span class="blog-dot">·</span>
+          <span>4 min read</span>
+        </div>
+        <h2>How to Read Research Papers Efficiently</h2>
+        <p>
+          After reading hundreds of papers, I've developed a workflow that helps me extract the
+          key ideas quickly without losing depth. This is my annotated reading method.
+        </p>
+        <a href="#" class="read-more">Read more →</a>
+      </article>
+
+      <article class="blog-card" data-cat="research">
+        <div class="blog-meta">
+          <span>January 8, 2025</span><span class="blog-dot">·</span>
+          <span>Research</span><span class="blog-dot">·</span>
+          <span>8 min read</span>
+        </div>
+        <h2>Why [Research Topic] Matters More Than People Think</h2>
+        <p>
+          An accessible argument for why your research area is underrated, with concrete examples
+          and pointers to key literature that every curious reader should know about.
+        </p>
+        <a href="#" class="read-more">Read more →</a>
+      </article>
+
+      <article class="blog-card" data-cat="life">
+        <div class="blog-meta">
+          <span>December 15, 2024</span><span class="blog-dot">·</span>
+          <span>Life</span><span class="blog-dot">·</span>
+          <span>3 min read</span>
+        </div>
+        <h2>Reflections on My First Year as a PhD Student</h2>
+        <p>
+          A candid look at the highs and lows of starting a PhD — what no one tells you before
+          you begin, what I'd do differently, and what has genuinely surprised me.
+        </p>
+        <a href="#" class="read-more">Read more →</a>
+      </article>
+
+      <article class="blog-card" data-cat="tutorial">
+        <div class="blog-meta">
+          <span>October 30, 2024</span><span class="blog-dot">·</span>
+          <span>Tutorial</span><span class="blog-dot">·</span>
+          <span>12 min read</span>
+        </div>
+        <h2>Setting Up Your Academic Website on GitHub Pages</h2>
+        <p>
+          A step-by-step guide for researchers who want a free, clean personal website without
+          paying for hosting. Covers custom domains, Google Scholar links, and publication pages.
+        </p>
+        <a href="#" class="read-more">Read more →</a>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
+      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    // Category filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const blogCards  = document.querySelectorAll('.blog-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        blogCards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.cat === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

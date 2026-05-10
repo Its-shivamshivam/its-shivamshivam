@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Interest — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html" class="active">Research Interest</a></li>
+        <li><a href="publications.html">Publication</a></li>
+        <li><a href="supervisor.html">Supervisor</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <header class="page-header">
+      <div class="section-label">Research</div>
+      <h1>Research Interests</h1>
+      <p>The core themes and questions that drive my academic work.</p>
+    </header>
+
+    <!-- Overview paragraph -->
+    <div style="margin-bottom: 48px;">
+      <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.85; max-width: 680px;">
+        Write a brief overview of your research here — the big problem you're tackling, your approach,
+        and why it matters. This paragraph sets the stage for the specific areas listed below.
+      </p>
+    </div>
+
+    <!-- Research areas -->
+    <div class="research-grid">
+
+      <div class="research-card">
+        <h3>Research Area 1 — e.g., Deep Learning for Medical Imaging</h3>
+        <p>
+          Describe this research area: what problem it addresses, the methods you use, and what
+          breakthroughs or contributions your work aims to make. Be specific enough to be credible,
+          clear enough for a broad audience.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Convolutional Neural Networks</span>
+          <span class="tag">Image Segmentation</span>
+          <span class="tag">Clinical Data</span>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <h3>Research Area 2 — e.g., Natural Language Processing</h3>
+        <p>
+          Describe your second research focus. Mention specific subtopics such as transformer models,
+          low-resource languages, domain adaptation, or any novel methodology you are developing.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Transformers</span>
+          <span class="tag">Transfer Learning</span>
+          <span class="tag">Text Classification</span>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <h3>Research Area 3 — e.g., Explainable AI & Fairness</h3>
+        <p>
+          Describe this area — e.g., how you are working to make AI systems more interpretable,
+          fair, and accountable. Mention specific techniques (SHAP, LIME, attention analysis)
+          or application domains you focus on.
+        </p>
+        <div class="tag-row">
+          <span class="tag">XAI</span>
+          <span class="tag">Bias Detection</span>
+          <span class="tag">Model Interpretability</span>
+        </div>
+      </div>
+
+      <div class="research-card">
+        <h3>Research Area 4 — e.g., Federated Learning &amp; Privacy</h3>
+        <p>
+          Describe your fourth research interest. Explain why privacy-preserving machine learning
+          matters in your application domain and what your specific contributions are.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Federated Learning</span>
+          <span class="tag">Differential Privacy</span>
+          <span class="tag">Distributed Systems</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Ongoing Projects -->
+    <section style="margin-top: 64px;">
+      <h2 class="section-title">Ongoing Projects</h2>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start;">
+          <div>
+            <div class="section-label" style="margin-bottom: 6px;">Ongoing · 2024 – Present</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Project Title One</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Short description of the project — its goal, your role, funding source, and expected outcomes.
+              Mention any collaborators or institutions involved.
+            </p>
+          </div>
+          <div><span class="tag">Funded</span></div>
+        </div>
+
+        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start;">
+          <div>
+            <div class="section-label" style="margin-bottom: 6px;">Ongoing · 2025 – Present</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Project Title Two</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Another project description. Keep it concise — 2–3 sentences that give the reader a clear sense
+              of what the project does and why it matters.
+            </p>
+          </div>
+          <div><span class="tag">In Progress</span></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
+      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Home</title>
+  <meta name="description" content="Academic personal website of [Your Name], Researcher at [University]." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="research.html">Research Interest</a></li>
+        <li><a href="publications.html">Publication</a></li>
+        <li><a href="supervisor.html">Supervisor</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MAIN ===== -->
+  <main class="page-wrapper">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="section-label">Welcome</div>
+        <h1 class="hero-name">Your Full Name</h1>
+        <p class="hero-title">PhD Researcher · Department of [Your Field] · [University Name]</p>
+        <p class="hero-bio">
+          Brief introduction about yourself — your research focus, institution, and what drives your work.
+          Keep it warm, clear, and human. Mention 1–2 key projects or achievements. You can also add
+          your position, funding, or collaborators here.
+        </p>
+        <div class="hero-links">
+          <a href="about.html" class="btn btn-primary">About Me</a>
+          <a href="publications.html" class="btn btn-outline">Publications</a>
+          <a href="mailto:your@email.com" class="btn btn-outline">Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <!-- Replace the placeholder below with an <img> tag pointing to your photo -->
+        <div class="hero-photo-placeholder">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+          </svg>
+        </div>
+        <!-- Example: <img src="images/photo.jpg" alt="Your Name" class="hero-photo" /> -->
+
+        <div class="social-icons">
+          <a href="https://scholar.google.com" target="_blank" title="Google Scholar">GS</a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+          <a href="https://twitter.com" target="_blank" title="Twitter / X">𝕏</a>
+          <a href="https://github.com" target="_blank" title="GitHub">GH</a>
+          <a href="mailto:your@email.com" title="Email">✉</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS & UPDATES -->
+    <section style="margin-top: 16px;">
+      <h2 class="section-title">News & Updates</h2>
+      <ul class="news-list">
+        <li class="news-item">
+          <span class="news-date">May 2025</span>
+          <span class="news-text"><strong>Paper accepted</strong> at [Conference Name 2025] — "Your Paper Title Here".</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Mar 2025</span>
+          <span class="news-text"><strong>Talk given</strong> at [Workshop / Event] on [Topic].</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Jan 2025</span>
+          <span class="news-text">Started PhD at <strong>[University Name]</strong> under <a href="supervisor.html">Prof. [Supervisor Name]</a>.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Nov 2024</span>
+          <span class="news-text"><strong>Preprint released</strong>: "Your Preprint Title" — available on <a href="#">arXiv</a>.</span>
+        </li>
+        <li class="news-item">
+          <span class="news-date">Sep 2024</span>
+          <span class="news-text">Received <strong>[Scholarship / Grant Name]</strong> for research in [Field].</span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
+      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a> &nbsp;·&nbsp; [University, Department]</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+  </script>
+
+</body>
+</html>
