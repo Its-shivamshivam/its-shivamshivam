@@ -1,150 +1,946 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research Interest — Your Name</title>
+
+  <title>
+    Research Interest | SHIVAM | IIT Roorkee
+  </title>
+
+  <meta
+    name="description"
+    content="Research interests of SHIVAM in finite deformation mechanics, composite materials, damage mechanics, continuum mechanics, and experimental investigation of advanced composite systems."
+  />
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- FONT AWESOME -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+
+    /* =========================
+       PAGE WIDTH
+    ========================== */
+
+    .page-wrapper{
+
+      max-width: var(--max-w);
+
+      margin: 0 auto;
+
+      padding: 0 32px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .research-hero{
+
+      display: grid;
+
+      grid-template-columns: 1.1fr 0.9fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+      padding-top: 50px;
+
+      margin-bottom: 90px;
+    }
+
+    .research-hero h1{
+
+      font-size: clamp(3.2rem, 7vw, 5.5rem);
+
+      line-height: 1;
+
+      margin-bottom: 28px;
+
+      letter-spacing: -0.05em;
+    }
+
+    .research-hero p{
+
+      font-size: 1.05rem;
+
+      line-height: 2;
+
+      color: var(--text-muted);
+    }
+
+    .hero-image{
+
+      overflow: hidden;
+
+      border-radius: 28px;
+
+      background: rgba(255,255,255,0.08);
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    }
+
+    .hero-image img{
+
+      width: 100%;
+
+      display: block;
+    }
+
+    /* =========================
+       GLASS CARD
+    ========================== */
+
+    .glass-card{
+
+      background: rgba(255,255,255,0.08);
+
+      backdrop-filter: blur(14px);
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      border-radius: 28px;
+
+      padding: 28px;
+
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+
+      transition: all 0.4s ease;
+    }
+
+    .glass-card:hover{
+
+      transform: translateY(-8px);
+    }
+
+    /* =========================
+       SECTION TITLE
+    ========================== */
+
+    .section-title{
+
+      font-size: 2rem;
+
+      margin-bottom: 20px;
+
+      text-align: center;
+    }
+
+    .section-sub{
+
+      text-align: center;
+
+      color: var(--text-muted);
+
+      margin-bottom: 60px;
+
+      line-height: 1.8;
+    }
+
+    /* =========================
+       RESEARCH GRID
+    ========================== */
+
+    .research-grid{
+
+      display: grid;
+
+      grid-template-columns: repeat(2,1fr);
+
+      gap: 34px;
+
+      margin-bottom: 90px;
+    }
+
+    .research-card img{
+
+      width: 100%;
+
+      border-radius: 18px;
+
+      margin-bottom: 22px;
+    }
+
+    .research-card h3{
+
+      font-size: 1.4rem;
+
+      margin-bottom: 16px;
+    }
+
+    .research-card p{
+
+      line-height: 1.95;
+
+      color: var(--text-muted);
+
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       TAGS
+    ========================== */
+
+    .tag-row{
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 18px;
+    }
+
+    .tag{
+
+      padding: 10px 16px;
+
+      border-radius: 999px;
+
+      background: rgba(255,255,255,0.08);
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       EQUATION SECTION
+    ========================== */
+
+    .equation-grid{
+
+      display: grid;
+
+      grid-template-columns: repeat(2,1fr);
+
+      gap: 30px;
+
+      margin-top: 50px;
+
+      margin-bottom: 90px;
+    }
+
+    .equation-box{
+
+      padding: 30px;
+
+      border-radius: 28px;
+
+      background: rgba(255,255,255,0.08);
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+    }
+
+    .equation-box h3{
+
+      margin-bottom: 18px;
+
+      font-size: 1.2rem;
+    }
+
+    .equation-box p{
+
+      line-height: 1.9;
+
+      color: var(--text-muted);
+    }
+
+    /* =========================
+       PROJECT SECTION
+    ========================== */
+
+    .project-grid{
+
+      display: grid;
+
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 28px;
+
+      margin-top: 40px;
+    }
+
+    .project-card h3{
+
+      margin-bottom: 16px;
+    }
+
+    .project-card p{
+
+      line-height: 1.95;
+
+      color: var(--text-muted);
+    }
+
+    /* =========================
+       REVEAL
+    ========================== */
+
+    .reveal{
+
+      opacity: 0;
+
+      transform: translateY(40px);
+
+      transition: all 1s ease;
+    }
+
+    .reveal.active{
+
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media(max-width: 1100px){
+
+      .research-hero{
+
+        grid-template-columns: 1fr;
+      }
+
+      .research-grid{
+
+        grid-template-columns: 1fr;
+      }
+
+      .equation-grid{
+
+        grid-template-columns: 1fr;
+      }
+
+      .project-grid{
+
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 <body>
 
+  <!-- NAVBAR -->
+
   <nav class="navbar">
+
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Your Name</a>
+
+      <a href="index.html" class="nav-logo">
+        SHIVAM
+      </a>
+
       <ul class="nav-links" id="navLinks">
+
         <li><a href="index.html">Home</a></li>
+
         <li><a href="about.html">About Me</a></li>
-        <li><a href="research.html" class="active">Research Interest</a></li>
+
+        <li>
+          <a href="research.html" class="active">
+            Research Interest
+          </a>
+        </li>
+
         <li><a href="publications.html">Publication</a></li>
+
         <li><a href="supervisor.html">Supervisor</a></li>
+
         <li><a href="gallery.html">Gallery</a></li>
+
         <li><a href="blog.html">Blog</a></li>
+
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+
+      <button class="nav-toggle" id="navToggle">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
       </button>
+
     </div>
+
   </nav>
+
+  <!-- MAIN -->
 
   <main class="page-wrapper">
 
-    <header class="page-header">
-      <div class="section-label">Research</div>
-      <h1>Research Interests</h1>
-      <p>The core themes and questions that drive my academic work.</p>
-    </header>
+    <!-- HERO -->
 
-    <!-- Overview paragraph -->
-    <div style="margin-bottom: 48px;">
-      <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.85; max-width: 680px;">
-        Write a brief overview of your research here — the big problem you're tackling, your approach,
-        and why it matters. This paragraph sets the stage for the specific areas listed below.
+    <section class="research-hero reveal">
+
+      <div>
+
+        <div class="section-label">
+          Research
+        </div>
+
+        <h1>
+          Research Interests
+        </h1>
+
+        <p>
+
+          My research endeavors are situated at the intersection of
+          theoretical mechanics, finite deformation kinematics,
+          constitutive modeling, and experimental mechanics of advanced
+          composite materials.
+
+          The principal objective of my work is the rigorous
+          characterization of nonlinear deformation and damage evolution
+          in fiber-reinforced laminated composites subjected to finite
+          strain regimes.
+
+          My investigations integrate multicontinuum theory,
+          differential geometric formulations, computational mechanics,
+          and experimentally validated constitutive frameworks to
+          establish robust predictive methodologies for advanced
+          composite systems.
+
+        </p>
+
+        <div class="tag-row">
+
+          <span class="tag">
+            Finite Deformation
+          </span>
+
+          <span class="tag">
+            Composite Materials
+          </span>
+
+          <span class="tag">
+            Continuum Mechanics
+          </span>
+
+          <span class="tag">
+            Damage Mechanics
+          </span>
+
+          <span class="tag">
+            Experimental Investigation
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img
+          src="fig4.png"
+          alt="Finite Deformation Framework"
+        />
+
+      </div>
+
+    </section>
+
+    <!-- RESEARCH AREAS -->
+
+    <section class="reveal">
+
+      <h2 class="section-title">
+        Core Themes of My Research
+      </h2>
+
+      <p class="section-sub">
+
+        Advanced mechanics-based formulations for deformation,
+        incompatibility, and damage evolution in composite systems.
+
       </p>
-    </div>
 
-    <!-- Research areas -->
-    <div class="research-grid">
+      <div class="research-grid">
 
-      <div class="research-card">
-        <h3>Research Area 1 — e.g., Deep Learning for Medical Imaging</h3>
-        <p>
-          Describe this research area: what problem it addresses, the methods you use, and what
-          breakthroughs or contributions your work aims to make. Be specific enough to be credible,
-          clear enough for a broad audience.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Convolutional Neural Networks</span>
-          <span class="tag">Image Segmentation</span>
-          <span class="tag">Clinical Data</span>
+        <!-- CARD 1 -->
+
+        <div class="glass-card research-card">
+
+          <img src="fig1.png" alt="Finite Deformation" />
+
+          <h3>
+            Finite Deformation Mechanics
+          </h3>
+
+          <p>
+
+            My research in finite deformation mechanics is founded upon
+            the multicontinuum theory proposed by Bedford and Stern,
+            together with the theory of multiple natural configurations
+            developed by Rajagopal and Srinivasa.
+
+            The framework employs multiplicative decomposition of the
+            deformation gradient to characterize constituent-level
+            distortions associated with matrix deformation, fiber
+            deformation, and irreversible damage evolution.
+
+          </p>
+
+          \[
+\mathbf{F}=\mathbf{F}^{e}\mathbf{F}^{r}_{\alpha}\mathbf{F}^{d}_{\alpha}
+\]
+
         </div>
-      </div>
 
-      <div class="research-card">
-        <h3>Research Area 2 — e.g., Natural Language Processing</h3>
-        <p>
-          Describe your second research focus. Mention specific subtopics such as transformer models,
-          low-resource languages, domain adaptation, or any novel methodology you are developing.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Transformers</span>
-          <span class="tag">Transfer Learning</span>
-          <span class="tag">Text Classification</span>
+        <!-- CARD 2 -->
+
+        <div class="glass-card research-card">
+
+          <img src="fig5.png" alt="Composite Materials" />
+
+          <h3>
+            Composite Materials
+          </h3>
+
+          <p>
+
+            The constitutive framework developed in my work is applicable
+            to both stiff and soft composite systems.
+
+            Stiff composites include glass-fiber reinforced and carbon-fiber
+            reinforced laminates, whereas soft composites encompass origami-inspired,
+            biological tissue, and compliant fiber-reinforced systems.
+
+            The generalized nature of the framework permits broad applicability
+            across a wide spectrum of engineered composite materials.
+
+          </p>
+
         </div>
-      </div>
 
-      <div class="research-card">
-        <h3>Research Area 3 — e.g., Explainable AI & Fairness</h3>
-        <p>
-          Describe this area — e.g., how you are working to make AI systems more interpretable,
-          fair, and accountable. Mention specific techniques (SHAP, LIME, attention analysis)
-          or application domains you focus on.
-        </p>
-        <div class="tag-row">
-          <span class="tag">XAI</span>
-          <span class="tag">Bias Detection</span>
-          <span class="tag">Model Interpretability</span>
-        </div>
-      </div>
+        <!-- CARD 3 -->
 
-      <div class="research-card">
-        <h3>Research Area 4 — e.g., Federated Learning &amp; Privacy</h3>
-        <p>
-          Describe your fourth research interest. Explain why privacy-preserving machine learning
-          matters in your application domain and what your specific contributions are.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Federated Learning</span>
-          <span class="tag">Differential Privacy</span>
-          <span class="tag">Distributed Systems</span>
-        </div>
-      </div>
+        <div class="glass-card research-card">
 
-    </div>
+          <img src="fig6.png" alt="Damage Mechanics" />
 
-    <!-- Ongoing Projects -->
-    <section style="margin-top: 64px;">
-      <h2 class="section-title">Ongoing Projects</h2>
-      <div style="display: flex; flex-direction: column; gap: 24px;">
+          <h3>
+            Damage Mechanics
+          </h3>
 
-        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start;">
-          <div>
-            <div class="section-label" style="margin-bottom: 6px;">Ongoing · 2024 – Present</div>
-            <h3 style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Project Title One</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">
-              Short description of the project — its goal, your role, funding source, and expected outcomes.
-              Mention any collaborators or institutions involved.
-            </p>
+          <p>
+
+            The proposed framework characterizes matrix cracking,
+            fiber breakage, interfacial slip, debonding,
+            and delamination through constituent-level
+            incompatibility measures.
+
+            Damage evolution is represented through deformation-induced
+            incompatibility tensors and geometric torsion measures.
+
+          </p>
+
+          <div class="tag-row">
+
+            <span class="tag">
+              Matrix Cracking
+            </span>
+
+            <span class="tag">
+              Fiber Breakage
+            </span>
+
+            <span class="tag">
+              Debonding
+            </span>
+
+            <span class="tag">
+              Delamination
+            </span>
+
           </div>
-          <div><span class="tag">Funded</span></div>
+
         </div>
 
-        <div style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start;">
-          <div>
-            <div class="section-label" style="margin-bottom: 6px;">Ongoing · 2025 – Present</div>
-            <h3 style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; margin-bottom: 8px;">Project Title Two</h3>
-            <p style="font-size: 0.9rem; color: var(--text-muted);">
-              Another project description. Keep it concise — 2–3 sentences that give the reader a clear sense
-              of what the project does and why it matters.
-            </p>
+        <!-- CARD 4 -->
+
+        <div class="glass-card research-card">
+
+          <h3>
+            Geometric Interpretation
+          </h3>
+
+          <p>
+
+            Differential geometric tools are employed to establish
+            rigorous geometric interpretations for damage measures.
+
+            The incompatibility associated with constituent distortions
+            is represented through torsion tensors derived from
+            nonsymmetric connection coefficients.
+
+          </p>
+
+          \[
+T^{D}_{mAB}=\frac{1}{2}(\Gamma^{D}_{BA}-\Gamma^{D}_{AB})
+\]
+
+          \[
+T^{D}_{fAB}=\frac{1}{2}(\Gamma^{D}_{BA}-\Gamma^{D}_{AB})
+\]
+
+        </div>
+
+        <!-- CARD 5 -->
+
+        <div class="glass-card research-card">
+
+          <img src="fig5.png" alt="Experimental Investigation" />
+
+          <h3>
+            Experimental Investigation
+          </h3>
+
+          <p>
+
+            Experimental investigations are conducted to validate
+            the constitutive and geometric framework.
+
+            Mechanical characterization includes tensile testing,
+            mixed-mode bending (MMB) tests, and full-field
+            displacement measurements through digital image
+            correlation techniques.
+
+          </p>
+
+          <div class="tag-row">
+
+            <span class="tag">
+              Tensile Test
+            </span>
+
+            <span class="tag">
+              MMB Test
+            </span>
+
+            <span class="tag">
+              DIC
+            </span>
+
           </div>
-          <div><span class="tag">In Progress</span></div>
+
         </div>
 
       </div>
+
+    </section>
+
+    <!-- EQUATIONS -->
+
+    <section class="reveal">
+
+      <h2 class="section-title">
+        Damage Characterization Equations
+      </h2>
+
+      <p class="section-sub">
+
+        Constitutive and geometric measures governing damage
+        evolution in laminated composite systems.
+
+      </p>
+
+      <div class="equation-grid">
+
+        <div class="equation-box">
+
+          <h3>
+            Matrix Cracking
+          </h3>
+
+          \[
+\mathbf{G}_{m}=\frac{1}{J_{m}^{d}}\mathbf{F}_{m}^{d}(\mathrm{Curl}\,\mathbf{F}_{m}^{d})
+\]
+
+        </div>
+
+        <div class="equation-box">
+
+          <h3>
+            Fiber Breakage
+          </h3>
+
+          \[
+\mathbf{G}_{f}=\frac{1}{J_{f}^{d}}\mathbf{F}_{f}^{d}(\mathrm{Curl}\,\mathbf{F}_{f}^{d})
+\]
+
+        </div>
+
+        <div class="equation-box">
+
+          <h3>
+            Interfacial Slip & Debonding
+          </h3>
+
+          \[
+\lambda_{m}=\mathbf{F}^{d}_{m}\mathbf{V}_{rel}=\mathbf{v}^{d}_{m}-\mathbf{F}^{d}_{m}\mathbf{F}^{d-1}_{f}\mathbf{v}^{d}_{f}
+\]
+
+        </div>
+
+        <div class="equation-box">
+
+          <h3>
+            Delamination
+          </h3>
+
+          \[
+\tilde{\Sigma}=\llbracket \mathbf{F}^{l}\rrbracket
+\]
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- GEOMETRIC INTERPRETATION -->
+
+    <section class="reveal">
+
+      <h2 class="section-title">
+        Geometric Interpretation of Incompatibility
+      </h2>
+
+      <p class="section-sub">
+
+        Differential geometric measures associated with
+        incompatibility and configurational torsion.
+
+      </p>
+
+      <div class="equation-grid">
+
+        <div class="equation-box">
+
+          <h3>
+            Matrix Configuration
+          </h3>
+
+          \[
+T^{D}_{mAB}=\frac{1}{2}(\Gamma^{D}_{BA}-\Gamma^{D}_{AB})=\frac{1}{2}\mathbf{F}^{d-1}_{m}(\partial_{B}\mathbf{F}^{d}_{mA}-\partial_{A}\mathbf{F}^{d}_{mB})
+\]
+
+        </div>
+
+        <div class="equation-box">
+
+          <h3>
+            Fiber Configuration
+          </h3>
+
+          \[
+T^{D}_{fAB}=\frac{1}{2}(\Gamma^{D}_{BA}-\Gamma^{D}_{AB})=\frac{1}{2}\mathbf{F}^{d-1}_{f}(\partial_{B}\mathbf{F}^{d}_{fA}-\partial_{A}\mathbf{F}^{d}_{fB})
+\]
+
+        </div>
+
+        <div class="equation-box">
+
+          <h3>
+            Interface Contribution
+          </h3>
+
+          \[
+T^{D}_{IAB}=\frac{1}{2}(\mathbf{F}^{l-1})\Delta S_{R}(n_{B}[F^{l}]^{a}_{A}-n_{A}[F^{l}]^{a}_{B})
+\]
+
+        </div>
+
+        <div class="equation-box">
+
+          <h3>
+            Total Torsion
+          </h3>
+
+          \[
+T^{D}_{AB}=h_{\xi}T^{D}_{\xi AB}+h_{\eta}T^{D}_{\eta AB}+T^{D}_{IAB}
+\]
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="reveal">
+
+      <h2 class="section-title">
+        Research Activities
+      </h2>
+
+      <div class="project-grid">
+
+        <!-- PROJECT -->
+
+        <div class="glass-card project-card">
+
+          <h3>
+            Completed DST-SERB Project
+          </h3>
+
+          <p>
+
+            Assessment and modeling of damage in fiber reinforced
+            laminated composites for large deformation processes
+            using multicontinuum theory and experiments.
+
+            The project integrated constitutive modeling,
+            computational mechanics, and experimental validation.
+
+          </p>
+
+        </div>
+
+        <!-- CURRENT -->
+
+        <div class="glass-card project-card">
+
+          <h3>
+            Currently Working On
+          </h3>
+
+          <p>
+
+            Current investigations focus on microfiber buckling
+            phenomena in advanced composite systems under finite
+            deformation loading conditions.
+
+            The work combines theoretical stability analysis,
+            nonlinear computational mechanics,
+            and experimental characterization.
+
+          </p>
+
+        </div>
+
+        <!-- COLLAB -->
+
+        <div class="glass-card project-card">
+
+          <h3>
+            Open for Collaboration
+          </h3>
+
+          <p>
+
+            I am actively interested in collaborative research
+            involving continuum mechanics,
+            constitutive modeling,
+            finite deformation,
+            composite materials,
+            and experimental mechanics.
+
+          </p>
+
+        </div>
+
+      </div>
+
     </section>
 
   </main>
 
+  <!-- FOOTER -->
+
   <footer>
-    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
-      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a></p>
+
+    <div
+      style="
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 32px;
+    "
+    >
+
+      <p>
+
+        © 2026 SHIVAM ·
+
+        <a href="mailto:shivam1@ce.iitr.ac.in">
+          shivam1@ce.iitr.ac.in
+        </a>
+
+        · IIT Roorkee
+
+      </p>
+
     </div>
+
   </footer>
 
+  <!-- SCRIPT -->
+
   <script>
+
+    // MOBILE MENU
+
     const toggle = document.getElementById('navToggle');
-    const links  = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    const links = document.getElementById('navLinks');
+
+    toggle.addEventListener('click', () => {
+
+      links.classList.toggle('open');
+
+    });
+
+    // SCROLL REVEAL
+
+    function revealElements(){
+
+      const reveals = document.querySelectorAll('.reveal');
+
+      reveals.forEach(reveal => {
+
+        const windowHeight = window.innerHeight;
+
+        const revealTop = reveal.getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 100){
+
+          reveal.classList.add('active');
+
+        }
+
+      });
+
+    }
+
+    revealElements();
+
+    window.addEventListener('scroll', revealElements);
+
   </script>
+
 </body>
+
 </html>
