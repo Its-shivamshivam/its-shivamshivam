@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -15,21 +17,23 @@
 
   <style>
 
-    /* ===== HERO SECTION ===== */
+    /* =========================
+       HERO SECTION
+    ========================== */
 
     .hero {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 64px;
+      gap: 70px;
       align-items: center;
       min-height: 85vh;
-      padding-top: 40px;
+      padding-top: 30px;
     }
 
     .hero-name {
-      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-size: clamp(3.2rem, 8vw, 5.8rem);
       line-height: 1;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       letter-spacing: -0.05em;
     }
 
@@ -38,27 +42,36 @@
       color: var(--text-muted);
       margin-bottom: 24px;
       line-height: 1.8;
+      font-weight: 500;
     }
 
     .hero-bio {
       font-size: 1rem;
-      line-height: 1.95;
+      line-height: 2;
       color: var(--text-muted);
       max-width: 760px;
     }
 
-    /* ===== GLASS CARD ===== */
+    /* =========================
+       GLASS CARD
+    ========================== */
 
     .glass-card {
       background: rgba(255,255,255,0.08);
       backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,0.15);
+
+      border: 1px solid rgba(255,255,255,0.14);
+
       border-radius: 24px;
-      padding: 26px;
+
+      padding: 24px;
+
       box-shadow: 0 10px 40px rgba(0,0,0,0.08);
     }
 
-    /* ===== PHOTO ===== */
+    /* =========================
+       HERO PHOTO
+    ========================== */
 
     .hero-photo-wrap {
       display: flex;
@@ -72,8 +85,11 @@
       max-width: 360px;
       border-radius: 28px;
       object-fit: cover;
+
       border: 1px solid rgba(255,255,255,0.15);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
       transition: transform 0.5s ease;
     }
 
@@ -81,7 +97,9 @@
       transform: translateY(-8px);
     }
 
-    /* ===== BUTTONS ===== */
+    /* =========================
+       BUTTONS
+    ========================== */
 
     .hero-links {
       display: flex;
@@ -93,76 +111,98 @@
     .btn {
       padding: 13px 22px;
       border-radius: 12px;
+
       text-decoration: none;
       font-weight: 600;
+
       transition: all 0.35s ease;
     }
 
     .btn-primary {
-      background: #15395b;
+      background: #143453;
       color: white;
     }
 
     .btn-primary:hover {
+      background: #0d2740;
       transform: translateY(-3px);
-      background: #0f2d49;
     }
 
     .btn-outline {
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.16);
+
       color: var(--text);
-      background: rgba(255,255,255,0.05);
+
+      background: rgba(255,255,255,0.04);
     }
 
     .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
       transform: translateY(-3px);
-      background: rgba(255,255,255,0.12);
     }
 
-    /* ===== SOCIALS ===== */
+    /* =========================
+       SOCIAL ICONS
+    ========================== */
 
     .social-icons {
       display: flex;
       gap: 14px;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     .social-icons a {
       width: 42px;
       height: 42px;
-      border-radius: 50%;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
+      border-radius: 50%;
+
       text-decoration: none;
-      background: rgba(255,255,255,0.08);
+
+      background: rgba(255,255,255,0.06);
+
       border: 1px solid rgba(255,255,255,0.15);
+
       color: var(--text);
-      transition: 0.3s ease;
+
+      transition: all 0.3s ease;
+
       font-weight: 600;
     }
 
     .social-icons a:hover {
       transform: translateY(-4px);
-      background: rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.14);
     }
 
-    /* ===== KEYWORDS ===== */
+    /* =========================
+       KEYWORDS
+    ========================== */
 
     .keyword-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 22px;
+
+      margin-top: 26px;
     }
 
     .keyword {
       padding: 12px 18px;
+
       border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.15);
+
+      background: rgba(255,255,255,0.06);
+
+      border: 1px solid rgba(255,255,255,0.14);
+
       font-size: 0.9rem;
+
       transition: 0.3s ease;
     }
 
@@ -170,24 +210,53 @@
       transform: translateY(-3px);
     }
 
-    /* ===== NEWS ===== */
+    /* =========================
+       FEATURED PAPER
+    ========================== */
+
+    .featured-paper {
+      margin-top: 90px;
+    }
+
+    .paper-title {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    /* =========================
+       NEWS SECTION
+    ========================== */
 
     .news-section {
-      margin-top: 80px;
+      margin-top: 90px;
     }
 
     .news-list {
       display: flex;
       flex-direction: column;
       gap: 18px;
-      margin-top: 30px;
+
+      margin-top: 28px;
     }
 
     .news-item {
-      padding: 22px;
-      border-radius: 18px;
+
+      display: grid;
+      grid-template-columns: 140px 1fr;
+
+      gap: 26px;
+
+      align-items: start;
+
+      padding: 24px;
+
+      border-radius: 20px;
+
       background: rgba(255,255,255,0.05);
+
       border: 1px solid rgba(255,255,255,0.12);
+
       transition: 0.35s ease;
     }
 
@@ -196,29 +265,28 @@
     }
 
     .news-date {
-      font-size: 0.85rem;
+      font-size: 0.92rem;
+      font-weight: 600;
       color: var(--text-muted);
-      display: block;
-      margin-bottom: 8px;
+
+      white-space: nowrap;
+
+      padding-top: 3px;
     }
 
-    /* ===== FEATURED PAPER ===== */
-
-    .featured-paper {
-      margin-top: 80px;
+    .news-content {
+      line-height: 1.95;
+      color: var(--text);
     }
 
-    .paper-title {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      margin-bottom: 12px;
-    }
-
-    /* ===== SCROLL ANIMATION ===== */
+    /* =========================
+       REVEAL ANIMATION
+    ========================== */
 
     .reveal {
       opacity: 0;
       transform: translateY(40px);
+
       transition: all 1s ease;
     }
 
@@ -227,7 +295,9 @@
       transform: translateY(0);
     }
 
-    /* ===== RESPONSIVE ===== */
+    /* =========================
+       RESPONSIVE
+    ========================== */
 
     @media(max-width: 900px){
 
@@ -244,16 +314,29 @@
         margin: 0 auto;
       }
 
+      .news-item{
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .news-date{
+        margin-bottom: 6px;
+      }
+
     }
 
   </style>
+
 </head>
 
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- =========================
+       NAVBAR
+  ========================== -->
 
   <nav class="navbar">
+
     <div class="nav-inner">
 
       <a href="index.html" class="nav-logo">
@@ -261,6 +344,7 @@
       </a>
 
       <ul class="nav-links" id="navLinks">
+
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="research.html">Research Interest</a></li>
@@ -268,6 +352,7 @@
         <li><a href="supervisor.html">Supervisor</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
+
       </ul>
 
       <button class="nav-toggle" id="navToggle">
@@ -275,21 +360,20 @@
       </button>
 
     </div>
+
   </nav>
 
-  <!-- ===== MAIN ===== -->
+  <!-- =========================
+       MAIN
+  ========================== -->
 
   <main class="page-wrapper">
 
-    <!-- ===== HERO ===== -->
+    <!-- HERO -->
 
     <section class="hero reveal">
 
       <div>
-
-        <div class="section-label">
-          Welcome
-        </div>
 
         <h1 class="hero-name">
           SHIVAM
@@ -302,24 +386,27 @@
 
         <p class="hero-bio">
 
-          I am a research scholar at the Indian Institute of Technology Roorkee
-          engaged in advanced research in the domains of theoretical mechanics
-          and high-performance composite materials.
+          I am a research scholar at the Indian Institute of Technology
+          Roorkee engaged in advanced research in the domains of
+          theoretical mechanics and high-performance composite materials.
 
           My research principally concentrates on constitutive modeling,
           damage characterization, and the mechanical response of
           fiber-reinforced laminated composites subjected to finite
           deformation regimes.
 
-          My work integrates theoretical formulations, computational simulations,
-          and experimental methodologies to investigate nonlinear structural
-          behavior and complex failure mechanisms in advanced composite systems.
+          My work integrates theoretical formulations,
+          computational simulations, and experimental methodologies
+          to investigate nonlinear structural behavior and complex
+          failure mechanisms in advanced composite systems.
 
-          Through my research, I aspire to contribute toward robust multiscale
-          frameworks for predictive damage analysis and mechanics-based
-          modeling of composite materials.
+          Through my research, I aspire to contribute toward
+          robust multiscale frameworks for predictive damage
+          analysis and mechanics-based modeling of composite materials.
 
         </p>
+
+        <!-- BUTTONS -->
 
         <div class="hero-links">
 
@@ -341,10 +428,21 @@
 
         <div class="keyword-grid">
 
-          <div class="keyword">Finite Deformation</div>
-          <div class="keyword">Composite Materials</div>
-          <div class="keyword">Continuum Mechanics</div>
-          <div class="keyword">Damage Mechanics</div>
+          <div class="keyword">
+            Finite Deformation
+          </div>
+
+          <div class="keyword">
+            Composite Materials
+          </div>
+
+          <div class="keyword">
+            Continuum Mechanics
+          </div>
+
+          <div class="keyword">
+            Damage Mechanics
+          </div>
 
         </div>
 
@@ -364,7 +462,7 @@
 
         </div>
 
-        <!-- SOCIALS -->
+        <!-- SOCIAL LINKS -->
 
         <div class="social-icons">
 
@@ -401,7 +499,7 @@
 
     </section>
 
-    <!-- ===== FEATURED PAPER ===== -->
+    <!-- FEATURED PAPER -->
 
     <section class="featured-paper reveal">
 
@@ -413,17 +511,25 @@
 
         <div class="paper-title">
 
-          “A novel large-strain kinematic framework for
-          fiber-reinforced laminated composites and its
-          application in the characterization of damage”
+          <strong>
+            Large-Strain Kinematic Framework for
+            Fiber-Reinforced Laminated Composites
+          </strong>
+
+          <br>
+
+          Application in Damage Characterization
 
         </div>
 
-        <p style="color: var(--text-muted); line-height:1.9;">
+        <p style="line-height:1.9; color: var(--text-muted);">
 
           Published in the
-          <strong>International Journal of Engineering Science</strong>,
-          March 2026.
+          <strong>
+            International Journal of Engineering Science
+          </strong>
+
+          · March 2026
 
         </p>
 
@@ -440,7 +546,7 @@
 
     </section>
 
-    <!-- ===== NEWS ===== -->
+    <!-- NEWS -->
 
     <section class="news-section reveal">
 
@@ -451,44 +557,66 @@
       <div class="news-list">
 
         <div class="news-item">
-          <span class="news-date">
+
+          <div class="news-date">
             March 2026
-          </span>
+          </div>
 
-          Published paper titled
-          <strong>
-            “A novel large-strain kinematic framework for
-            fiber-reinforced laminated composites and its
-            application in the characterization of damage”
-          </strong>
-          in the International Journal of Engineering Science.
+          <div class="news-content">
+
+            Published paper titled
+
+            <strong>
+              “Large-Strain Kinematic Framework for
+              Fiber-Reinforced Laminated Composites”
+            </strong>
+
+            in the International Journal of Engineering Science.
+
+          </div>
+
         </div>
 
         <div class="news-item">
-          <span class="news-date">
+
+          <div class="news-date">
             October 2025
-          </span>
+          </div>
 
-          Presented research work titled
-          <strong>
-            “A novel kinematic framework for composite materials
-            undergoing damage using multiple natural configurations”
-          </strong>
-          at IMPLAST 2025.
+          <div class="news-content">
+
+            Presented research work titled
+
+            <strong>
+              “A novel kinematic framework for composite materials
+              undergoing damage using multiple natural configurations”
+            </strong>
+
+            at IMPLAST 2025.
+
+          </div>
+
         </div>
 
         <div class="news-item">
-          <span class="news-date">
-            January 2024
-          </span>
 
-          Joined IIT Roorkee as a Junior Research Fellow
-          under the DST-SERB funded project:
-          <strong>
-            “Assessment and modeling of damage in fiber reinforced
-            laminated composites for large deformation processes
-            using multicontinuum theory and experiments.”
-          </strong>
+          <div class="news-date">
+            January 2024
+          </div>
+
+          <div class="news-content">
+
+            Joined IIT Roorkee as a Junior Research Fellow under
+            the DST-SERB funded project:
+
+            <strong>
+              “Assessment and modeling of damage in fiber reinforced
+              laminated composites for large deformation processes
+              using multicontinuum theory and experiments.”
+            </strong>
+
+          </div>
+
         </div>
 
       </div>
@@ -497,11 +625,19 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
-    <div style="max-width: var(--max-w); margin:0 auto; padding:0 32px;">
+    <div
+      style="
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 32px;
+    "
+    >
 
       <p>
 
@@ -511,7 +647,7 @@
           shivam1@ce.iitr.ac.in
         </a>
 
-        · Indian Institute of Technology Roorkee
+        · IIT Roorkee
 
       </p>
 
@@ -519,11 +655,13 @@
 
   </footer>
 
-  <!-- ===== SCRIPT ===== -->
+  <!-- =========================
+       SCRIPT
+  ========================== -->
 
   <script>
 
-    // MOBILE NAV
+    // MOBILE MENU
 
     const toggle = document.getElementById('navToggle');
     const links  = document.getElementById('navLinks');
@@ -532,15 +670,16 @@
       links.classList.toggle('open');
     });
 
-    // SCROLL REVEAL
+    // REVEAL ANIMATION
 
-    const reveals = document.querySelectorAll('.reveal');
+    function revealElements(){
 
-    window.addEventListener('scroll', () => {
+      const reveals = document.querySelectorAll('.reveal');
 
       reveals.forEach(reveal => {
 
         const windowHeight = window.innerHeight;
+
         const revealTop = reveal.getBoundingClientRect().top;
 
         if(revealTop < windowHeight - 100){
@@ -549,9 +688,18 @@
 
       });
 
-    });
+    }
+
+    // RUN ON PAGE LOAD
+
+    revealElements();
+
+    // RUN ON SCROLL
+
+    window.addEventListener('scroll', revealElements);
 
   </script>
 
 </body>
+
 </html>
