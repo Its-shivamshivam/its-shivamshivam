@@ -33,13 +33,13 @@
 
     .page-wrapper{
 
-      max-width: 1500px;
+      max-width: 1380px;
 
       margin: 0 auto;
 
-      padding-left: 70px;
+      padding-left: 50px;
 
-      padding-right: 70px;
+      padding-right: 50px;
     }
 
     /* =========================
@@ -83,9 +83,9 @@
 
       display: grid;
 
-      grid-template-columns: 1.3fr 0.8fr;
+      grid-template-columns: 1.2fr 0.8fr;
 
-      gap: 80px;
+      gap: 70px;
 
       align-items: start;
     }
@@ -94,14 +94,9 @@
        BIOGRAPHY
     ========================== */
 
-    .bio-block{
-
-      padding-bottom: 20px;
-    }
-
     .bio-block p{
 
-      font-size: 1.06rem;
+      font-size: 1.05rem;
 
       line-height: 2.1;
 
@@ -135,9 +130,9 @@
 
       flex-direction: column;
 
-      gap: 32px;
+      gap: 34px;
 
-      margin-top: 30px;
+      margin-top: 28px;
     }
 
     .edu-item{
@@ -180,7 +175,7 @@
 
     .edu-degree{
 
-      font-size: 1.05rem;
+      font-size: 1.04rem;
 
       font-weight: 600;
 
@@ -215,7 +210,7 @@
 
       gap: 14px;
 
-      margin-top: 28px;
+      margin-top: 24px;
     }
 
     .tag{
@@ -224,7 +219,7 @@
 
       border-radius: 999px;
 
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.06);
 
       border: 1px solid rgba(0,0,0,0.08);
 
@@ -236,7 +231,7 @@
     }
 
     /* =========================
-       RIGHT SECTION
+       RIGHT COLUMN
     ========================== */
 
     .right-column{
@@ -245,7 +240,7 @@
 
       flex-direction: column;
 
-      gap: 28px;
+      gap: 26px;
     }
 
     /* =========================
@@ -265,7 +260,7 @@
 
       width: 100%;
 
-      height: 620px;
+      height: 600px;
 
       object-fit: cover;
 
@@ -445,9 +440,7 @@
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
+  <!-- NAVBAR -->
 
   <nav class="navbar">
 
@@ -491,9 +484,7 @@
 
   </nav>
 
-  <!-- =========================
-       MAIN
-  ========================== -->
+  <!-- MAIN -->
 
   <main class="page-wrapper">
 
@@ -576,170 +567,182 @@
 
         <ul class="edu-list">
 
-          <li class="edu-item">
-
-  <div class="edu-dot-wrap">
-
-    <div class="edu-dot"></div>
-
-    <div class="edu-line"></div>
-
-  </div>
-
-  <div>
-
-    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
-
-      <img
-        src="https://upload.wikimedia.org/wikipedia/en/5/57/IIT_Roorkee_logo.png"
-        alt="IIT Roorkee Logo"
-        style="width:42px; height:42px; object-fit:contain;"
-      />
-
-      <div>
-
-        <div class="edu-degree">
-          Doctor of Philosophy (PhD)
-        </div>
-
-        <div class="edu-inst">
-          Indian Institute of Technology Roorkee, India
-        </div>
-
-        <div class="edu-year">
-          2024 – Present
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</li>
-          <li class="edu-item">
-
-  <div class="edu-dot-wrap">
-
-    <div class="edu-dot"></div>
-
-    <div class="edu-line"></div>
-
-  </div>
-
-  <div>
-
-    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
-
-      <img
-        src="https://upload.wikimedia.org/wikipedia/en/1/14/Dr_B_R_Ambedkar_NIT_Jalandhar_logo.png"
-        alt="NIT Jalandhar Logo"
-        style="width:42px; height:42px; object-fit:contain;"
-      />
-
-      <div>
-
-        <div class="edu-degree">
-          Master of Technology in Structural and Construction Engineering
-        </div>
-
-        <div class="edu-inst">
-          Dr. B. R. Ambedkar National Institute of Technology, Jalandhar
-        </div>
-
-        <div class="edu-year">
-          2018 – 2020
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</li>
+          <!-- IIT -->
 
           <li class="edu-item">
 
-  <div class="edu-dot-wrap">
+            <div class="edu-dot-wrap">
 
-    <div class="edu-dot"></div>
+              <div class="edu-dot"></div>
 
-    <div class="edu-line"></div>
+              <div class="edu-line"></div>
 
-  </div>
+            </div>
 
-  <div>
+            <div>
 
-    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+              <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
 
-      <img
-        src="https://upload.wikimedia.org/wikipedia/en/4/42/Dr._A.P.J._Abdul_Kalam_Technical_University_logo.png"
-        alt="AKTU Logo"
-        style="width:42px; height:42px; object-fit:contain;"
-      />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/5/57/IIT_Roorkee_logo.png"
+                  alt="IIT Roorkee Logo"
+                  style="width:42px; height:42px; object-fit:contain;"
+                />
 
-      <div>
+                <div>
 
-        <div class="edu-degree">
-          Bachelor of Technology in Civil Engineering
-        </div>
+                  <div class="edu-degree">
+                    Doctor of Philosophy (PhD)
+                  </div>
 
-        <div class="edu-inst">
-          Dr. A.P.J. Abdul Kalam Technical University, Lucknow
-        </div>
+                  <div class="edu-inst">
+                    Indian Institute of Technology Roorkee, India
+                  </div>
 
-        <div class="edu-year">
-          2015 – 2018
-        </div>
+                  <div class="edu-year">
+                    2024 – Present
+                  </div>
 
-      </div>
+                </div>
 
-    </div>
+              </div>
 
-  </div>
+            </div>
 
-</li>
+          </li>
 
-        <li class="edu-item">
+          <!-- NIT -->
 
-  <div class="edu-dot-wrap">
+          <li class="edu-item">
 
-    <div class="edu-dot"></div>
+            <div class="edu-dot-wrap">
 
-  </div>
+              <div class="edu-dot"></div>
 
-  <div>
+              <div class="edu-line"></div>
 
-    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+            </div>
 
-      <img
-        src="https://upload.wikimedia.org/wikipedia/en/0/0f/Subharti_University_logo.png"
-        alt="SVSU Logo"
-        style="width:42px; height:42px; object-fit:contain;"
-      />
+            <div>
 
-      <div>
+              <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
 
-        <div class="edu-degree">
-          Diploma in Civil Engineering
-        </div>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/1/14/Dr_B_R_Ambedkar_NIT_Jalandhar_logo.png"
+                  alt="NIT Jalandhar Logo"
+                  style="width:42px; height:42px; object-fit:contain;"
+                />
 
-        <div class="edu-inst">
-          Swami Vivekanand Subharti University
-        </div>
+                <div>
 
-        <div class="edu-year">
-          2012 – 2015
-        </div>
+                  <div class="edu-degree">
+                    Master of Technology in Structural and Construction Engineering
+                  </div>
 
-      </div>
+                  <div class="edu-inst">
+                    Dr. B. R. Ambedkar National Institute of Technology, Jalandhar
+                  </div>
 
-    </div>
+                  <div class="edu-year">
+                    2018 – 2020
+                  </div>
 
-  </div>
+                </div>
 
-</li>
+              </div>
+
+            </div>
+
+          </li>
+
+          <!-- AKTU -->
+
+          <li class="edu-item">
+
+            <div class="edu-dot-wrap">
+
+              <div class="edu-dot"></div>
+
+              <div class="edu-line"></div>
+
+            </div>
+
+            <div>
+
+              <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/4/42/Dr._A.P.J._Abdul_Kalam_Technical_University_logo.png"
+                  alt="AKTU Logo"
+                  style="width:42px; height:42px; object-fit:contain;"
+                />
+
+                <div>
+
+                  <div class="edu-degree">
+                    Bachelor of Technology in Civil Engineering
+                  </div>
+
+                  <div class="edu-inst">
+                    Dr. A.P.J. Abdul Kalam Technical University, Lucknow
+                  </div>
+
+                  <div class="edu-year">
+                    2015 – 2018
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </li>
+
+          <!-- DIPLOMA -->
+
+          <li class="edu-item">
+
+            <div class="edu-dot-wrap">
+
+              <div class="edu-dot"></div>
+
+            </div>
+
+            <div>
+
+              <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/0/0f/Subharti_University_logo.png"
+                  alt="SVSU Logo"
+                  style="width:42px; height:42px; object-fit:contain;"
+                />
+
+                <div>
+
+                  <div class="edu-degree">
+                    Diploma in Civil Engineering
+                  </div>
+
+                  <div class="edu-inst">
+                    Swami Vivekanand Subharti University
+                  </div>
+
+                  <div class="edu-year">
+                    2012 – 2015
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </li>
+
+        </ul>
+
         <!-- SKILLS -->
 
         <h2 class="section-title" style="margin-top: 55px;">
@@ -855,82 +858,21 @@
 
         </div>
 
-        <!-- ACADEMIC LINKS -->
-
-        <div class="info-card">
-
-          <h3>
-            Academic Profiles
-          </h3>
-
-          <div class="profile-links">
-
-            <a
-              href="https://www.linkedin.com/in/shivam-shivam-954297144/"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-
-            <a
-              href="https://scholar.google.com/citations?user=T04X1hkAAAAJ&hl=en"
-              target="_blank"
-            >
-              Google Scholar
-            </a>
-
-            <a
-              href="https://orcid.org/0000-0003-2962-7600"
-              target="_blank"
-            >
-              ORCID
-            </a>
-
-            <a
-              href="https://its-shivamshivam.github.io/"
-              target="_blank"
-            >
-              Personal Website
-            </a>
-
-          </div>
-
-        </div>
-
-        <!-- AWARDS -->
-
-        <div class="info-card">
-
-          <h3>
-            Honors & Awards
-          </h3>
-
-          <p style="line-height:1.9; color: var(--text-muted);">
-
-            Add your awards, achievements, certifications,
-            fellowships, and recognitions here.
-
-          </p>
-
-        </div>
-
       </div>
 
     </div>
 
   </main>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer>
 
     <div
       style="
-      max-width: 1500px;
+      max-width: 1380px;
       margin: 0 auto;
-      padding: 0 70px;
+      padding: 0 50px;
     "
     >
 
@@ -948,9 +890,7 @@
 
   </footer>
 
-  <!-- =========================
-       SCRIPT
-  ========================== -->
+  <!-- SCRIPT -->
 
   <script>
 
@@ -966,7 +906,7 @@
 
     });
 
-    // SCROLL REVEAL ANIMATION
+    // SCROLL REVEAL
 
     function revealElements(){
 
@@ -988,11 +928,7 @@
 
     }
 
-    // RUN ON LOAD
-
     revealElements();
-
-    // RUN ON SCROLL
 
     window.addEventListener('scroll', revealElements);
 
