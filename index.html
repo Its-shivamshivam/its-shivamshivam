@@ -15,7 +15,7 @@
 
   <link rel="stylesheet" href="style.css"/>
 
-  <!-- FONT AWESOME -->
+  <!-- FONT AWESOME ICONS -->
 
   <link
     rel="stylesheet"
@@ -25,92 +25,69 @@
   <style>
 
     /* =========================
-       PAGE WIDTH
-    ========================== */
-
-    .page-wrapper{
-
-      max-width: 1550px;
-
-      margin: 0 auto;
-
-      padding-left: 70px;
-
-      padding-right: 70px;
-    }
-
-    /* =========================
        HERO SECTION
     ========================== */
 
     .hero {
 
-      display: flex;
+  display: flex;
 
-      justify-content: space-between;
+  justify-content: space-between;
 
-      align-items: flex-start;
+  align-items: flex-start;
 
-      gap: 90px;
+  gap: 70px;
 
-      padding-top: 50px;
+  padding-top: 40px;
 
-      width: 100%;
-    }
+  flex-wrap: wrap;
+
+}
 
     .hero-left {
-
-      flex: 1.2;
-
+      flex: 1;
       min-width: 320px;
     }
 
     .hero-right {
-
-      flex: 1;
-
+      flex: 0.9;
       display: flex;
-
-      justify-content: flex-end;
+      justify-content: center;
     }
-
-    /* =========================
-       HERO TEXT
-    ========================== */
 
     .hero-name {
 
-      font-size: clamp(4rem, 9vw, 7rem);
+      font-size: clamp(3.4rem, 8vw, 5.8rem);
 
       line-height: 1;
 
-      margin-bottom: 24px;
+      margin-bottom: 20px;
 
-      letter-spacing: -0.06em;
+      letter-spacing: -0.05em;
     }
 
     .hero-title {
 
-      font-size: 1.2rem;
+      font-size: 1.1rem;
 
       color: var(--text-muted);
 
       line-height: 1.9;
 
-      margin-bottom: 30px;
+      margin-bottom: 24px;
 
-      max-width: 780px;
+      max-width: 700px;
     }
 
     .hero-bio {
 
-      font-size: 1.08rem;
+      font-size: 1rem;
 
-      line-height: 2.15;
+      line-height: 2;
 
       color: var(--text-muted);
 
-      max-width: 920px;
+      max-width: 760px;
     }
 
     /* =========================
@@ -121,40 +98,34 @@
 
       background: rgba(255,255,255,0.08);
 
-      backdrop-filter: blur(16px);
+      backdrop-filter: blur(14px);
 
       border: 1px solid rgba(255,255,255,0.14);
 
-      border-radius: 34px;
+      border-radius: 28px;
 
-      padding: 30px;
+      padding: 24px;
 
-      box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
     }
 
     /* =========================
-       PROFILE PHOTO
+       HERO PHOTO
     ========================== */
 
     .hero-photo {
 
       width: 100%;
 
-      max-width: 560px;
+      max-width: 360px;
 
-      min-width: 500px;
-
-      height: 620px;
+      border-radius: 24px;
 
       object-fit: cover;
 
-      object-position: center top;
-
-      border-radius: 30px;
-
       border: 1px solid rgba(255,255,255,0.15);
 
-      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 
       transition: transform 0.5s ease;
     }
@@ -171,18 +142,18 @@
 
       display: flex;
 
-      gap: 18px;
+      gap: 16px;
 
       flex-wrap: wrap;
 
-      margin-top: 40px;
+      margin-top: 34px;
     }
 
     .btn {
 
-      padding: 15px 26px;
+      padding: 13px 22px;
 
-      border-radius: 14px;
+      border-radius: 12px;
 
       text-decoration: none;
 
@@ -231,21 +202,18 @@
 
       justify-content: center;
 
-      gap: 18px;
+      gap: 16px;
 
-      margin-top: 28px;
+      margin-top: 22px;
     }
 
     .social-icons a {
 
-      width: 52px;
-
-      height: 52px;
+      width: 46px;
+      height: 46px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       border-radius: 50%;
@@ -258,7 +226,7 @@
 
       color: var(--text);
 
-      font-size: 1.1rem;
+      font-size: 1rem;
 
       transition: all 0.35s ease;
     }
@@ -280,14 +248,14 @@
 
       flex-wrap: wrap;
 
-      gap: 16px;
+      gap: 14px;
 
-      margin-top: 32px;
+      margin-top: 28px;
     }
 
     .keyword {
 
-      padding: 13px 20px;
+      padding: 12px 18px;
 
       border-radius: 999px;
 
@@ -295,7 +263,7 @@
 
       border: 1px solid rgba(255,255,255,0.15);
 
-      font-size: 0.95rem;
+      font-size: 0.92rem;
 
       transition: all 0.35s ease;
     }
@@ -309,16 +277,16 @@
     ========================== */
 
     .featured-paper {
-      margin-top: 110px;
+      margin-top: 90px;
     }
 
     .paper-title {
 
-      font-size: 1.15rem;
+      font-size: 1.12rem;
 
-      line-height: 2;
+      line-height: 1.9;
 
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
     /* =========================
@@ -326,7 +294,7 @@
     ========================== */
 
     .news-section {
-      margin-top: 110px;
+      margin-top: 90px;
     }
 
     .news-list {
@@ -335,24 +303,24 @@
 
       flex-direction: column;
 
-      gap: 24px;
+      gap: 18px;
 
-      margin-top: 32px;
+      margin-top: 28px;
     }
 
     .news-item {
 
       display: grid;
 
-      grid-template-columns: 170px 1fr;
+      grid-template-columns: 140px 1fr;
 
-      gap: 30px;
+      gap: 24px;
 
       align-items: start;
 
-      padding: 30px;
+      padding: 24px;
 
-      border-radius: 24px;
+      border-radius: 20px;
 
       background: rgba(255,255,255,0.05);
 
@@ -367,7 +335,7 @@
 
     .news-date {
 
-      font-size: 0.96rem;
+      font-size: 0.92rem;
 
       color: var(--text-muted);
 
@@ -375,12 +343,12 @@
 
       white-space: nowrap;
 
-      padding-top: 5px;
+      padding-top: 4px;
     }
 
     .news-content {
 
-      line-height: 2;
+      line-height: 1.95;
 
       color: var(--text);
     }
@@ -409,83 +377,28 @@
        RESPONSIVE
     ========================== */
 
-    @media(max-width: 1200px){
+    @media(max-width: 950px){
 
       .hero{
-
         flex-direction: column-reverse;
-
-        gap: 60px;
-      }
-
-      .hero-right{
-
-        justify-content: center;
-
-        width: 100%;
-      }
-
-      .hero-left{
-
-        width: 100%;
-      }
-
-      .hero-photo{
-
-        max-width: 520px;
-
-        min-width: auto;
-
-        height: auto;
-      }
-
-    }
-
-    @media(max-width: 768px){
-
-      .page-wrapper{
-
-        padding-left: 24px;
-
-        padding-right: 24px;
-      }
-
-      .hero{
-
         text-align: center;
       }
 
       .hero-links{
-
-        justify-content: center;
-      }
-
-      .keyword-grid{
-
         justify-content: center;
       }
 
       .hero-bio{
-
         margin: 0 auto;
       }
 
-      .news-item{
-
-        grid-template-columns: 1fr;
-
-        gap: 10px;
+      .keyword-grid{
+        justify-content: center;
       }
 
-      .hero-photo{
-
-        width: 100%;
-
-        max-width: 100%;
-
-        min-width: auto;
-
-        height: auto;
+      .news-item{
+        grid-template-columns: 1fr;
+        gap: 10px;
       }
 
     }
@@ -629,7 +542,7 @@
             class="hero-photo"
           />
 
-          <!-- SOCIAL ICONS -->
+          <!-- SOCIALS -->
 
           <div class="social-icons">
 
@@ -638,7 +551,7 @@
               target="_blank"
               title="Google Scholar"
             >
-              <i class="fa-solid fa-graduation-cap"></i>
+              <i class="fa-brands fa-google-scholar"></i>
             </a>
 
             <a
@@ -672,7 +585,7 @@
 
     </section>
 
-    <!-- FEATURED PUBLICATION -->
+    <!-- FEATURED PAPER -->
 
     <section class="featured-paper reveal">
 
@@ -694,7 +607,7 @@
 
         </div>
 
-        <p style="line-height:2; color: var(--text-muted);">
+        <p style="line-height:1.9; color: var(--text-muted);">
 
           Published in the
           <strong>
@@ -810,9 +723,9 @@
 
     <div
       style="
-      max-width: 1550px;
+      max-width: var(--max-w);
       margin: 0 auto;
-      padding: 0 70px;
+      padding: 0 32px;
     "
     >
 
@@ -866,7 +779,7 @@
 
     }
 
-    // RUN ON PAGE LOAD
+    // RUN ON LOAD
 
     revealElements();
 
