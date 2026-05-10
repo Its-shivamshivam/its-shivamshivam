@@ -5,7 +5,10 @@
 
   <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
   <title>
     Research Interest | SHIVAM | IIT Roorkee
@@ -13,7 +16,7 @@
 
   <meta
     name="description"
-    content="Research interests of SHIVAM in finite deformation mechanics, composite materials, damage mechanics, and experimental investigation of advanced composite systems."
+    content="Research interests of SHIVAM in finite deformation mechanics, continuum mechanics, damage mechanics, composite materials, and experimental investigation."
   />
 
   <link rel="stylesheet" href="style.css" />
@@ -41,9 +44,9 @@
 
   <style>
 
-    /* =========================
+    /* =========================================
        PAGE WIDTH
-    ========================== */
+    ========================================= */
 
     .page-wrapper{
 
@@ -54,15 +57,15 @@
       padding: 0 32px;
     }
 
-    /* =========================
+    /* =========================================
        HERO
-    ========================== */
+    ========================================= */
 
     .research-hero{
 
       display: grid;
 
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.15fr 0.85fr;
 
       gap: 70px;
 
@@ -70,23 +73,23 @@
 
       padding-top: 50px;
 
-      margin-bottom: 90px;
+      margin-bottom: 110px;
     }
 
     .research-hero h1{
 
-      font-size: clamp(3.2rem, 7vw, 5.5rem);
+      font-size: clamp(3.2rem,7vw,5.7rem);
 
       line-height: 1;
 
-      margin-bottom: 28px;
+      margin-bottom: 26px;
 
       letter-spacing: -0.05em;
     }
 
     .research-hero p{
 
-      font-size: 1.05rem;
+      font-size: 1.04rem;
 
       line-height: 2;
 
@@ -97,13 +100,13 @@
 
       overflow: hidden;
 
-      border-radius: 28px;
+      border-radius: 30px;
 
       background: rgba(255,255,255,0.08);
 
       border: 1px solid rgba(0,0,0,0.08);
 
-      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
     }
 
     .hero-image img{
@@ -113,9 +116,9 @@
       display: block;
     }
 
-    /* =========================
+    /* =========================================
        GLASS CARD
-    ========================== */
+    ========================================= */
 
     .glass-card{
 
@@ -125,13 +128,13 @@
 
       border: 1px solid rgba(0,0,0,0.08);
 
-      border-radius: 28px;
+      border-radius: 30px;
 
-      padding: 28px;
+      padding: 34px;
 
-      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+      box-shadow: 0 12px 45px rgba(0,0,0,0.05);
 
-      transition: all 0.4s ease;
+      transition: all 0.45s ease;
     }
 
     .glass-card:hover{
@@ -139,33 +142,35 @@
       transform: translateY(-8px);
     }
 
-    /* =========================
-       SECTION TITLE
-    ========================== */
+    /* =========================================
+       TITLES
+    ========================================= */
 
     .section-title{
 
-      font-size: 2rem;
-
-      margin-bottom: 20px;
+      font-size: 2.5rem;
 
       text-align: center;
+
+      margin-bottom: 24px;
     }
 
     .section-sub{
 
+      max-width: 1050px;
+
+      margin: 0 auto 70px auto;
+
       text-align: center;
 
+      line-height: 2;
+
       color: var(--text-muted);
-
-      margin-bottom: 60px;
-
-      line-height: 1.8;
     }
 
-    /* =========================
+    /* =========================================
        RESEARCH GRID
-    ========================== */
+    ========================================= */
 
     .research-grid{
 
@@ -173,125 +178,141 @@
 
       grid-template-columns: repeat(2,1fr);
 
-      gap: 34px;
+      gap: 38px;
 
-      margin-bottom: 90px;
+      margin-bottom: 110px;
     }
 
     .research-card img{
 
       width: 100%;
 
-      border-radius: 18px;
+      border-radius: 20px;
 
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
     .research-card h3{
 
-      font-size: 1.4rem;
+      font-size: 1.5rem;
 
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .research-card p{
 
-      line-height: 1.95;
+      line-height: 2;
 
       color: var(--text-muted);
-
-      margin-bottom: 20px;
     }
 
-    /* =========================
-       TAGS
-    ========================== */
-
-    .tag-row{
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 18px;
-    }
-
-    .tag{
-
-      padding: 10px 16px;
-
-      border-radius: 999px;
-
-      background: rgba(255,255,255,0.08);
-
-      border: 1px solid rgba(0,0,0,0.08);
-
-      font-size: 0.9rem;
-    }
-
-    /* =========================
-       EQUATIONS
-    ========================== */
-
-    .equation{
-
-      overflow-x: auto;
-
-      padding: 22px;
-
-      margin-top: 22px;
-
-      margin-bottom: 10px;
-
-      background: rgba(255,255,255,0.05);
-
-      border-radius: 18px;
-
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-
-    /* =========================
+    /* =========================================
        EQUATION GRID
-    ========================== */
+    ========================================= */
 
     .equation-grid{
 
       display: grid;
 
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2,minmax(0,1fr));
 
-      gap: 30px;
+      gap: 42px;
 
-      margin-top: 50px;
+      width: 100%;
 
-      margin-bottom: 90px;
+      align-items: stretch;
+
+      margin: 70px auto 120px auto;
+    }
+
+    .equal-box{
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-height: 650px;
     }
 
     .equation-box{
 
-      padding: 30px;
+      padding: 42px;
 
-      border-radius: 28px;
+      border-radius: 30px;
 
       background: rgba(255,255,255,0.08);
 
-      border: 1px solid rgba(0,0,0,0.08);
+      backdrop-filter: blur(16px);
 
-      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.07);
+
+      box-shadow: 0 12px 45px rgba(0,0,0,0.05);
+
+      transition: all 0.45s ease;
+
+      overflow: hidden;
+    }
+
+    .equation-box:hover{
+
+      transform: translateY(-7px);
     }
 
     .equation-box h3{
 
-      margin-bottom: 18px;
+      font-size: 1.5rem;
 
-      font-size: 1.2rem;
+      text-align: center;
+
+      margin-bottom: 28px;
     }
 
-    /* =========================
+    .equation{
+
+      width: 100%;
+
+      overflow-x: auto;
+
+      overflow-y: hidden;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      text-align: center;
+
+      padding: 42px 30px;
+
+      border-radius: 24px;
+
+      background: rgba(255,255,255,0.05);
+
+      border: 1px solid rgba(0,0,0,0.05);
+
+      margin-bottom: 30px;
+    }
+
+    .equation mjx-container{
+
+      font-size: 135% !important;
+    }
+
+    .equation-box p{
+
+      text-align: center;
+
+      line-height: 2;
+
+      color: var(--text-muted);
+
+      margin-top: auto;
+    }
+
+    /* =========================================
        PROJECT GRID
-    ========================== */
+    ========================================= */
 
     .project-grid{
 
@@ -299,26 +320,41 @@
 
       grid-template-columns: repeat(3,1fr);
 
-      gap: 28px;
+      gap: 34px;
 
-      margin-top: 40px;
+      margin-top: 60px;
+
+      margin-bottom: 80px;
+    }
+
+    .project-card{
+
+      min-height: 330px;
+
+      display: flex;
+
+      flex-direction: column;
     }
 
     .project-card h3{
 
-      margin-bottom: 16px;
+      text-align: center;
+
+      margin-bottom: 22px;
     }
 
     .project-card p{
 
-      line-height: 1.95;
+      text-align: center;
+
+      line-height: 2;
 
       color: var(--text-muted);
     }
 
-    /* =========================
+    /* =========================================
        REVEAL
-    ========================== */
+    ========================================= */
 
     .reveal{
 
@@ -336,11 +372,11 @@
       transform: translateY(0);
     }
 
-    /* =========================
+    /* =========================================
        RESPONSIVE
-    ========================== */
+    ========================================= */
 
-    @media(max-width:1100px){
+    @media(max-width:1200px){
 
       .research-hero{
 
@@ -362,322 +398,13 @@
         grid-template-columns: 1fr;
       }
 
+      .equal-box{
+
+        min-height: auto;
+      }
+
     }
 
-    .equal-box{
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: space-between;
-
-  min-height: 420px;
-
-}
-
-.equation-grid{
-
-  display: grid;
-
-  grid-template-columns: repeat(2,1fr);
-
-  gap: 34px;
-
-  align-items: stretch;
-
-  margin-top: 50px;
-
-  margin-bottom: 90px;
-
-}
-
-.equation-box{
-
-  padding: 34px;
-
-  border-radius: 28px;
-
-  background: rgba(255,255,255,0.08);
-
-  backdrop-filter: blur(14px);
-
-  border: 1px solid rgba(0,0,0,0.08);
-
-  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
-
-  transition: all 0.4s ease;
-
-}
-
-.equation-box:hover{
-
-  transform: translateY(-8px);
-
-}
-
-.equation-box h3{
-
-  font-size: 1.3rem;
-
-  margin-bottom: 22px;
-
-}
-
-.equation-box p{
-
-  line-height: 1.9;
-
-  color: var(--text-muted);
-
-  margin-top: 22px;
-
-}
-
-.equation{
-
-  overflow-x: auto;
-
-  padding: 24px;
-
-  border-radius: 20px;
-
-  background: rgba(255,255,255,0.06);
-
-  border: 1px solid rgba(0,0,0,0.06);
-
-  margin-bottom: 18px;
-
-}
-
-@media(max-width:1100px){
-
-  .equation-grid{
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .equal-box{
-
-    min-height: auto;
-
-  }
-
-}
-    /* =========================================
-FIX ALIGNMENT OF ALL SECTIONS
-========================================= */
-
-.section-title{
-
-  text-align: center;
-
-  margin-bottom: 22px;
-}
-
-.section-sub{
-
-  max-width: 900px;
-
-  margin: 0 auto 60px auto;
-
-  text-align: center;
-
-  line-height: 1.9;
-}
-
-/* =========================================
-CENTER ALL GRID ITEMS
-========================================= */
-
-.equation-grid{
-
-  display: grid;
-
-  grid-template-columns: repeat(2,minmax(0,1fr));
-
-  gap: 34px;
-
-  width: 100%;
-
-  align-items: stretch;
-
-  justify-content: center;
-
-  margin: 60px auto 100px auto;
-}
-
-/* =========================================
-MAKE ALL BOXES SAME SIZE
-========================================= */
-
-.equal-box{
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: flex-start;
-
-  min-height: 470px;
-
-  width: 100%;
-}
-
-/* =========================================
-BOX DESIGN
-========================================= */
-
-.equation-box{
-
-  padding: 36px;
-
-  border-radius: 28px;
-
-  background: rgba(255,255,255,0.08);
-
-  backdrop-filter: blur(14px);
-
-  border: 1px solid rgba(0,0,0,0.07);
-
-  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-
-  transition: all 0.4s ease;
-
-  display: flex;
-
-  flex-direction: column;
-}
-
-.equation-box:hover{
-
-  transform: translateY(-6px);
-}
-
-/* =========================================
-CENTER EQUATIONS
-========================================= */
-
-.equation{
-
-  width: 100%;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  text-align: center;
-
-  overflow-x: auto;
-
-  padding: 34px 20px;
-
-  border-radius: 22px;
-
-  background: rgba(255,255,255,0.05);
-
-  border: 1px solid rgba(0,0,0,0.06);
-
-  margin-top: 20px;
-
-  margin-bottom: 28px;
-}
-
-/* =========================================
-HEADINGS
-========================================= */
-
-.equation-box h3{
-
-  font-size: 1.45rem;
-
-  margin-bottom: 14px;
-
-  text-align: center;
-}
-
-/* =========================================
-TEXT
-========================================= */
-
-.equation-box p{
-
-  text-align: center;
-
-  line-height: 2;
-
-  color: var(--text-muted);
-
-  margin-top: auto;
-}
-
-/* =========================================
-RESEARCH ACTIVITY ALIGNMENT
-========================================= */
-
-.project-grid{
-
-  display: grid;
-
-  grid-template-columns: repeat(3,minmax(0,1fr));
-
-  gap: 34px;
-
-  margin-top: 60px;
-
-  align-items: stretch;
-}
-
-.project-card{
-
-  min-height: 320px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: flex-start;
-}
-
-.project-card h3{
-
-  text-align: center;
-
-  margin-bottom: 20px;
-}
-
-.project-card p{
-
-  text-align: center;
-
-  line-height: 2;
-}
-
-/* =========================================
-MOBILE
-========================================= */
-
-@media(max-width:1100px){
-
-  .equation-grid{
-
-    grid-template-columns: 1fr;
-  }
-
-  .project-grid{
-
-    grid-template-columns: 1fr;
-  }
-
-  .equal-box{
-
-    min-height: auto;
-  }
-
-}
   </style>
 
 </head>
@@ -750,17 +477,21 @@ MOBILE
 
           My research endeavors are situated at the intersection of
           theoretical mechanics, finite deformation kinematics,
-          constitutive modeling, and experimental mechanics of advanced
-          composite materials.
+          constitutive modeling, continuum mechanics,
+          and experimental mechanics of advanced composite materials.
 
-          The principal objective of my work is the rigorous
+          The principal objective of my investigations is the rigorous
           characterization of nonlinear deformation and damage evolution
           in fiber-reinforced laminated composites subjected to finite
           strain regimes.
 
-          My investigations integrate multicontinuum theory,
-          differential geometric formulations, computational mechanics,
-          and experimentally validated constitutive frameworks.
+          My work integrates multicontinuum theory,
+          differential geometric formulations,
+          constitutive frameworks,
+          computational mechanics,
+          and experimentally validated methodologies
+          for understanding the complex failure behavior
+          of advanced composite systems.
 
         </p>
 
@@ -770,24 +501,24 @@ MOBILE
 
         <img
           src="fig4.png"
-          alt="Finite Deformation Framework"
+          alt="Finite Deformation"
         />
 
       </div>
 
     </section>
 
-    <!-- CORE RESEARCH -->
+    <!-- CORE THEMES -->
 
     <section class="reveal">
 
       <h2 class="section-title">
+
         Core Themes of My Research
+
       </h2>
 
       <div class="research-grid">
-
-        <!-- CARD 1 -->
 
         <div class="glass-card research-card">
 
@@ -806,28 +537,7 @@ MOBILE
 
           </p>
 
-          <div class="equation">
-          \[
-          \mathbf{F}
-          =
-          \mathbf{F}^{e}
-          \mathbf{F}^{r}_{\alpha}
-          \mathbf{F}^{d}_{\alpha}
-          \]
-          </div>
-
-          <div class="equation">
-          \[
-          \mathbf{F}
-          =
-          \mathbf{F}^{e}
-          \mathbf{F}^{i}
-          \]
-          </div>
-
         </div>
-
-        <!-- CARD 2 -->
 
         <div class="glass-card research-card">
 
@@ -839,15 +549,14 @@ MOBILE
 
           <p>
 
-            The proposed framework is applicable to both stiff and soft
-            composite systems including CFRP, GFRP, biological tissues,
+            The developed framework is applicable to both stiff and soft
+            composite systems including CFRP, GFRP,
+            biological tissues,
             and origami-inspired architected composites.
 
           </p>
 
         </div>
-
-        <!-- CARD 3 -->
 
         <div class="glass-card research-card">
 
@@ -859,16 +568,16 @@ MOBILE
 
           <p>
 
-            My work characterizes matrix cracking, fiber breakage,
-            interfacial slip, debonding, and delamination using
-            geometric incompatibility and constituent-level deformation
-            measures.
+            My work characterizes matrix cracking,
+            fiber breakage,
+            interfacial slip,
+            debonding,
+            and delamination using geometric incompatibility
+            and constituent-level deformation measures.
 
           </p>
 
         </div>
-
-        <!-- CARD 4 -->
 
         <div class="glass-card research-card">
 
@@ -881,8 +590,9 @@ MOBILE
           <p>
 
             Experimental investigations involve tensile testing,
-            mixed-mode bending (MMB) tests, and damage evolution
-            characterization in advanced laminated composites.
+            mixed-mode bending tests,
+            and damage evolution characterization
+            in advanced laminated composites.
 
           </p>
 
@@ -892,564 +602,392 @@ MOBILE
 
     </section>
 
-    <!-- DAMAGE CHARACTERIZATION -->
+    <!-- DAMAGE -->
 
-<section class="reveal">
+    <section class="reveal">
 
-  <h2 class="section-title">
+      <h2 class="section-title">
 
-    Damage Characterization
+        Damage Characterization
 
-  </h2>
+      </h2>
 
-  <p class="section-sub">
+      <p class="section-sub">
 
-    Constituent-level damage evolution is characterized through
-
-    finite deformation kinematics, incompatibility measures,
-
-    and multicontinuum constitutive descriptors.
-
-  </p>
-
-  <div class="equation-grid">
-
-    <!-- MATRIX -->
-
-    <div class="equation-box equal-box">
-
-      <h3>
-
-        Matrix Cracking
-
-      </h3>
-
-      <div class="equation">
-
-      \[
-
-      \mathbf{G}_{m}
-
-      =
-
-      \frac{1}{J_{m}^{d}}
-
-      \mathbf{F}_{m}^{d}
-
-      \left(
-
-      \mathrm{Curl}
-
-      \,
-
-      \mathbf{F}_{m}^{d}
-
-      \right)
-
-      =
-
-      J^{-1}_{m}
-
-      \mathbf{F}^{d}_{m}
-
-      \,
-
-      \mathrm{curl}
-
-      \left(
-
-      \mathbf{F}^{d-1}_{m}
-
-      \right)
-
-      \]
-
-      </div>
-
-      <p>
-
-        Matrix cracking evolution is quantified through the
-
-        incompatibility tensor associated with matrix deformation.
+        Constituent-level damage evolution is characterized
+        through finite deformation kinematics,
+        incompatibility measures,
+        and multicontinuum constitutive descriptors.
 
       </p>
 
-    </div>
+      <div class="equation-grid">
 
-    <!-- FIBER -->
+        <!-- MATRIX -->
 
-    <div class="equation-box equal-box">
+        <div class="equation-box equal-box">
 
-      <h3>
+          <h3>
+            Matrix Cracking
+          </h3>
 
-        Fiber Breakage
+          <div class="equation">
 
-      </h3>
+          \[
+          \mathbf{G}_{m}
+          =
+          \frac{1}{J_{m}^{d}}
+          \mathbf{F}_{m}^{d}
+          \left(
+          \mathrm{Curl}
+          \,
+          \mathbf{F}_{m}^{d}
+          \right)
+          =
+          J^{-1}_{m}
+          \mathbf{F}^{d}_{m}
+          \,
+          \mathrm{curl}
+          \left(
+          \mathbf{F}^{d-1}_{m}
+          \right)
+          \]
 
-      <div class="equation">
+          </div>
 
-      \[
+          <p>
 
-      \mathbf{G}_{f}
+            Matrix cracking evolution is quantified through
+            incompatibility tensors associated with matrix deformation.
 
-      =
+          </p>
 
-      \frac{1}{J_{f}^{d}}
+        </div>
 
-      \mathbf{F}_{f}^{d}
+        <!-- FIBER -->
 
-      \left(
+        <div class="equation-box equal-box">
 
-      \mathrm{Curl}
+          <h3>
+            Fiber Breakage
+          </h3>
 
-      \,
+          <div class="equation">
 
-      \mathbf{F}_{f}^{d}
+          \[
+          \mathbf{G}_{f}
+          =
+          \frac{1}{J_{f}^{d}}
+          \mathbf{F}_{f}^{d}
+          \left(
+          \mathrm{Curl}
+          \,
+          \mathbf{F}_{f}^{d}
+          \right)
+          =
+          J^{-1}_{f}
+          \mathbf{F}^{d}_{f}
+          \,
+          \mathrm{curl}
+          \left(
+          \mathbf{F}^{d-1}_{f}
+          \right)
+          \]
 
-      \right)
+          </div>
 
-      =
+          <p>
 
-      J^{-1}_{f}
+            Fiber rupture mechanisms are characterized through
+            incompatibility measures associated with fiber deformation.
 
-      \mathbf{F}^{d}_{f}
+          </p>
 
-      \,
+        </div>
 
-      \mathrm{curl}
+        <!-- INTERFACE -->
 
-      \left(
+        <div class="equation-box equal-box">
 
-      \mathbf{F}^{d-1}_{f}
+          <h3>
+            Interfacial Slip
+          </h3>
 
-      \right)
+          <div class="equation">
 
-      \]
+          \[
+          \lambda_{m}
+          =
+          \mathbf{F}^{d}_{m}
+          \mathbf{V}_{rel}
+          =
+          \mathbf{v}^{d}_{m}
+          -
+          \mathbf{F}^{d}_{m}
+          \mathbf{F}^{d-1}_{f}
+          \mathbf{v}^{d}_{f}
+          \]
+
+          </div>
+
+          <div class="equation">
+
+          \[
+          \mathbf{V}_{rel}
+          =
+          \mathbf{F}^{d-1}_{m}
+          \mathbf{v}^{d}_{m}
+          -
+          \mathbf{F}^{d-1}_{f}
+          \mathbf{v}^{d}_{f}
+          \]
+
+          </div>
+
+          <p>
+
+            Relative constituent motion governs interfacial slip
+            and debonding evolution in laminated composites.
+
+          </p>
+
+        </div>
+
+        <!-- DELAMINATION -->
+
+        <div class="equation-box equal-box">
+
+          <h3>
+            Delamination
+          </h3>
+
+          <div class="equation">
+
+          \[
+          \tilde{\Sigma}
+          =
+          \llbracket
+          \mathbf{F}^{l}
+          \rrbracket,
+          \qquad
+          \tilde{\Sigma}_{\delta}
+          =
+          \Sigma^{T}
+          \vartheta^{l}_{\delta}
+          =
+          \sigma^{T}
+          \vartheta^{e}_{\delta},
+          \qquad
+          \delta = \xi,\eta
+          \]
+
+          </div>
+
+          <p>
+
+            Delamination is represented through displacement
+            discontinuity measures across the interface manifold.
+
+          </p>
+
+        </div>
 
       </div>
 
-      <p>
+    </section>
 
-        Fiber rupture mechanisms are characterized through
+    <!-- GEOMETRIC -->
 
-        incompatibility measures associated with fiber deformation.
+    <section class="reveal">
+
+      <h2 class="section-title">
+
+        Geometric Interpretation of Incompatibility
+
+      </h2>
+
+      <p class="section-sub">
+
+        Differential geometric measures are employed to establish
+        rigorous incompatibility interpretations associated with
+        constituent-level damage mechanisms.
 
       </p>
 
-    </div>
+      <div class="equation-grid">
 
-    <!-- INTERFACIAL -->
+        <!-- MATRIX -->
 
-    <div class="equation-box equal-box">
+        <div class="equation-box equal-box">
 
-      <h3>
+          <h3>
+            Matrix Configuration
+          </h3>
 
-        Interfacial Slip
+          <div class="equation">
 
-      </h3>
+          \[
+          T^{D}_{mAB}
+          =
+          \frac{1}{2}
+          \left(
+          \Gamma^{D}_{BA}
+          -
+          \Gamma^{D}_{AB}
+          \right)
+          =
+          \frac{1}{2}
+          \mathbf{F}^{d-1}_{m}
+          \left(
+          \partial_{B}\mathbf{F}^{d}_{mA}
+          -
+          \partial_{A}\mathbf{F}^{d}_{mB}
+          \right)
+          \neq 0
+          \]
 
-      <div class="equation">
+          </div>
 
-      \[
+          <p>
 
-      \lambda_{m}
+            The torsion tensor associated with the matrix natural
+            configuration provides the incompatibility measure
+            corresponding to matrix crack evolution.
 
-      =
+          </p>
 
-      \mathbf{F}^{d}_{m}
+        </div>
 
-      \mathbf{V}_{rel}
+        <!-- FIBER -->
 
-      =
+        <div class="equation-box equal-box">
 
-      \mathbf{v}^{d}_{m}
+          <h3>
+            Fiber Configuration
+          </h3>
 
-      -
+          <div class="equation">
 
-      \mathbf{F}^{d}_{m}
+          \[
+          T^{D}_{fAB}
+          =
+          \frac{1}{2}
+          \left(
+          \Gamma^{D}_{BA}
+          -
+          \Gamma^{D}_{AB}
+          \right)
+          =
+          \frac{1}{2}
+          \mathbf{F}^{d-1}_{f}
+          \left(
+          \partial_{B}\mathbf{F}^{d}_{fA}
+          -
+          \partial_{A}\mathbf{F}^{d}_{fB}
+          \right)
+          \neq 0
+          \]
 
-      \mathbf{F}^{d-1}_{f}
+          </div>
 
-      \mathbf{v}^{d}_{f}
+          <p>
 
-      \]
+            Fiber breakage is characterized through the torsion
+            generated in the fiber natural configuration.
+
+          </p>
+
+        </div>
+
+        <!-- INTERFACE -->
+
+        <div class="equation-box equal-box">
+
+          <h3>
+            Interface Contribution
+          </h3>
+
+          <div class="equation">
+
+          \[
+          T^{D}_{IAB}
+          =
+          \frac{1}{2}
+          \left(
+          \mathbf{F}^{l-1}
+          \right)^{D}_{a}
+          \Delta S_{R}
+          \left(
+          n_{B}
+          \llbracket
+          F^{l}
+          \rrbracket^{a}_{A}
+          -
+          n_{A}
+          \llbracket
+          F^{l}
+          \rrbracket^{a}_{B}
+          \right)
+          \]
+
+          </div>
+
+          <p>
+
+            The interface incompatibility term represents the
+            geometric measure corresponding to delamination.
+
+          </p>
+
+        </div>
+
+        <!-- TOTAL -->
+
+        <div class="equation-box equal-box">
+
+          <h3>
+            Delamination Torsion Measure
+          </h3>
+
+          <div class="equation">
+
+          \[
+          T^{D}_{AB}
+          =
+          h_{\xi}T^{D}_{\xi AB}
+          +
+          h_{\eta}T^{D}_{\eta AB}
+          +
+          T^{D}_{IAB}
+          \]
+
+          </div>
+
+          <p>
+
+            The total torsion field incorporates bulk and interface
+            incompatibility contributions corresponding to
+            delamination-induced geometric defects.
+
+          </p>
+
+        </div>
 
       </div>
 
-      <div class="equation">
-
-      \[
-
-      \mathbf{V}_{rel}
-
-      =
-
-      \mathbf{F}^{d-1}_{m}
-
-      \mathbf{v}^{d}_{m}
-
-      -
-
-      \mathbf{F}^{d-1}_{f}
-
-      \mathbf{v}^{d}_{f}
-
-      \]
-
-      </div>
-
-      <p>
-
-        Relative constituent motion governs interfacial slip
-
-        and debonding evolution in laminated composites.
-
-      </p>
-
-    </div>
-
-    <!-- DELAMINATION -->
-
-    <div class="equation-box equal-box">
-
-      <h3>
-
-        Delamination
-
-      </h3>
-
-      <div class="equation">
-
-      \[
-
-      \tilde{\Sigma}
-
-      =
-
-      \llbracket
-
-      \mathbf{F}^{l}
-
-      \rrbracket,
-
-      \qquad
-
-      \tilde{\Sigma}_{\delta}
-
-      =
-
-      \Sigma^{T}
-
-      \vartheta^{l}_{\delta}
-
-      =
-
-      \sigma^{T}
-
-      \vartheta^{e}_{\delta},
-
-      \qquad
-
-      \delta = \xi,\eta
-
-      \]
-
-      </div>
-
-      <p>
-
-        Delamination is represented through displacement
-
-        discontinuity measures across the interface manifold.
-
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-    <!-- GEOMETRIC INTERPRETATION -->
-<section class="reveal">
-
-  <h2 class="section-title">
-
-    Geometric Interpretation of Incompatibility
-
-  </h2>
-
-  <p class="section-sub">
-
-    Differential geometric measures are employed to establish
-
-    rigorous incompatibility interpretations associated with
-
-    constituent-level damage mechanisms in finite deformation
-
-    composite systems.
-
-  </p>
-
-  <div class="equation-grid">
-
-    <!-- MATRIX -->
-
-    <div class="equation-box equal-box">
-
-      <h3>
-
-        Matrix Configuration
-
-      </h3>
-
-      <div class="equation">
-
-      \[
-
-      T^{D}_{mAB}
-
-      =
-
-      \frac{1}{2}
-
-      \left(
-
-      \Gamma^{D}_{BA}
-
-      -
-
-      \Gamma^{D}_{AB}
-
-      \right)
-
-      =
-
-      \frac{1}{2}
-
-      \mathbf{F}^{d-1}_{m}
-
-      \left(
-
-      \partial_{B}\mathbf{F}^{d}_{mA}
-
-      -
-
-      \partial_{A}\mathbf{F}^{d}_{mB}
-
-      \right)
-
-      \neq 0
-
-      \]
-
-      </div>
-
-      <p>
-
-        The torsion tensor associated with the matrix natural
-
-        configuration provides the incompatibility measure
-
-        corresponding to matrix crack evolution.
-
-      </p>
-
-    </div>
-
-    <!-- FIBER -->
-
-    <div class="equation-box equal-box">
-
-      <h3>
-
-        Fiber Configuration
-
-      </h3>
-
-      <div class="equation">
-
-      \[
-
-      T^{D}_{fAB}
-
-      =
-
-      \frac{1}{2}
-
-      \left(
-
-      \Gamma^{D}_{BA}
-
-      -
-
-      \Gamma^{D}_{AB}
-
-      \right)
-
-      =
-
-      \frac{1}{2}
-
-      \mathbf{F}^{d-1}_{f}
-
-      \left(
-
-      \partial_{B}\mathbf{F}^{d}_{fA}
-
-      -
-
-      \partial_{A}\mathbf{F}^{d}_{fB}
-
-      \right)
-
-      \neq 0
-
-      \]
-
-      </div>
-
-      <p>
-
-        Fiber breakage is characterized through the torsion
-
-        generated in the fiber natural configuration arising
-
-        from local incompatibility.
-
-      </p>
-
-    </div>
-
-    <!-- INTERFACE -->
-
-    <div class="equation-box equal-box">
-
-      <h3>
-
-        Interface Contribution
-
-      </h3>
-
-      <div class="equation">
-
-      \[
-
-      T^{D}_{IAB}
-
-      =
-
-      \frac{1}{2}
-
-      \left(
-
-      \mathbf{F}^{l-1}
-
-      \right)^{D}_{a}
-
-      \Delta S_{R}
-
-      \left(
-
-      n_{B}
-
-      \llbracket
-
-      F^{l}
-
-      \rrbracket^{a}_{A}
-
-      -
-
-      n_{A}
-
-      \llbracket
-
-      F^{l}
-
-      \rrbracket^{a}_{B}
-
-      \right)
-
-      \]
-
-      </div>
-
-      <p>
-
-        The interface incompatibility term represents the
-
-        geometric measure corresponding to delamination and
-
-        interfacial discontinuities.
-
-      </p>
-
-    </div>
-
-    <!-- DELAMINATION -->
-
-    <div class="equation-box equal-box">
-
-      <h3>
-
-        Delamination Torsion Measure
-
-      </h3>
-
-      <div class="equation">
-
-      \[
-
-      T^{D}_{AB}
-
-      =
-
-      h_{\xi}
-
-      T^{D}_{\xi AB}
-
-      +
-
-      h_{\eta}
-
-      T^{D}_{\eta AB}
-
-      +
-
-      T^{D}_{IAB}
-
-      \]
-
-      </div>
-
-      <p>
-
-        The total torsion field incorporates bulk and interface
-
-        incompatibility contributions to fully characterize
-
-        delamination-induced geometric defects.
-
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
     <!-- PROJECTS -->
 
     <section class="reveal">
 
       <h2 class="section-title">
+
         Research Activities
+
       </h2>
 
       <div class="project-grid">
-
-        <!-- PROJECT -->
 
         <div class="glass-card project-card">
 
@@ -1467,8 +1005,6 @@ MOBILE
 
         </div>
 
-        <!-- CURRENT -->
-
         <div class="glass-card project-card">
 
           <h3>
@@ -1485,8 +1021,6 @@ MOBILE
 
         </div>
 
-        <!-- COLLAB -->
-
         <div class="glass-card project-card">
 
           <h3>
@@ -1496,8 +1030,8 @@ MOBILE
           <p>
 
             Open for collaborative research in continuum mechanics,
-            constitutive modeling, finite deformation, composite
-            materials, and experimental mechanics.
+            constitutive modeling, finite deformation,
+            composite materials, and experimental mechanics.
 
           </p>
 
@@ -1541,8 +1075,6 @@ MOBILE
 
   <script>
 
-    // MOBILE MENU
-
     const toggle = document.getElementById('navToggle');
 
     const links = document.getElementById('navLinks');
@@ -1552,8 +1084,6 @@ MOBILE
       links.classList.toggle('open');
 
     });
-
-    // REVEAL ANIMATION
 
     function revealElements(){
 
