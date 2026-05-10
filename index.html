@@ -3,16 +3,263 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Home</title>
-  <meta name="description" content="Academic personal website of [Your Name], Researcher at [University]." />
+
+  <title>SHIVAM — Home</title>
+
+  <meta
+    name="description"
+    content="Academic website of SHIVAM, Research Scholar at IIT Roorkee working in theoretical and experimental mechanics of advanced composite materials."
+  />
+
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+
+    /* ===== HERO SECTION ===== */
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 64px;
+      align-items: center;
+      min-height: 85vh;
+      padding-top: 40px;
+    }
+
+    .hero-name {
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      line-height: 1;
+      margin-bottom: 18px;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-title {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    .hero-bio {
+      font-size: 1rem;
+      line-height: 1.95;
+      color: var(--text-muted);
+      max-width: 760px;
+    }
+
+    /* ===== GLASS CARD ===== */
+
+    .glass-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
+
+    /* ===== PHOTO ===== */
+
+    .hero-photo-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .hero-photo {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 28px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+      transition: transform 0.5s ease;
+    }
+
+    .hero-photo:hover {
+      transform: translateY(-8px);
+    }
+
+    /* ===== BUTTONS ===== */
+
+    .hero-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .btn {
+      padding: 13px 22px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.35s ease;
+    }
+
+    .btn-primary {
+      background: #15395b;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #0f2d49;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--text);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .btn-outline:hover {
+      transform: translateY(-3px);
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* ===== SOCIALS ===== */
+
+    .social-icons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .social-icons a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--text);
+      transition: 0.3s ease;
+      font-weight: 600;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.16);
+    }
+
+    /* ===== KEYWORDS ===== */
+
+    .keyword-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .keyword {
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      font-size: 0.9rem;
+      transition: 0.3s ease;
+    }
+
+    .keyword:hover {
+      transform: translateY(-3px);
+    }
+
+    /* ===== NEWS ===== */
+
+    .news-section {
+      margin-top: 80px;
+    }
+
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .news-item {
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: 0.35s ease;
+    }
+
+    .news-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .news-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* ===== FEATURED PAPER ===== */
+
+    .featured-paper {
+      margin-top: 80px;
+    }
+
+    .paper-title {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    /* ===== SCROLL ANIMATION ===== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    @media(max-width: 900px){
+
+      .hero{
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-links{
+        justify-content: center;
+      }
+
+      .hero-bio{
+        margin: 0 auto;
+      }
+
+    }
+
+  </style>
 </head>
+
 <body>
 
   <!-- ===== NAVBAR ===== -->
+
   <nav class="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Your Name</a>
+
+      <a href="index.html" class="nav-logo">
+        SHIVAM
+      </a>
+
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -22,93 +269,288 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+
+      <button class="nav-toggle" id="navToggle">
         <span></span><span></span><span></span>
       </button>
+
     </div>
   </nav>
 
   <!-- ===== MAIN ===== -->
+
   <main class="page-wrapper">
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="section-label">Welcome</div>
-        <h1 class="hero-name">Your Full Name</h1>
-        <p class="hero-title">PhD Researcher · Department of [Your Field] · [University Name]</p>
-        <p class="hero-bio">
-          Brief introduction about yourself — your research focus, institution, and what drives your work.
-          Keep it warm, clear, and human. Mention 1–2 key projects or achievements. You can also add
-          your position, funding, or collaborators here.
-        </p>
-        <div class="hero-links">
-          <a href="about.html" class="btn btn-primary">About Me</a>
-          <a href="publications.html" class="btn btn-outline">Publications</a>
-          <a href="mailto:your@email.com" class="btn btn-outline">Contact</a>
+    <!-- ===== HERO ===== -->
+
+    <section class="hero reveal">
+
+      <div>
+
+        <div class="section-label">
+          Welcome
         </div>
+
+        <h1 class="hero-name">
+          SHIVAM
+        </h1>
+
+        <p class="hero-title">
+          Research Scholar at Indian Institute of Technology Roorkee
+          working in Theoretical and Experimental Mechanics
+        </p>
+
+        <p class="hero-bio">
+
+          I am a research scholar at the Indian Institute of Technology Roorkee
+          engaged in advanced research in the domains of theoretical mechanics
+          and high-performance composite materials.
+
+          My research principally concentrates on constitutive modeling,
+          damage characterization, and the mechanical response of
+          fiber-reinforced laminated composites subjected to finite
+          deformation regimes.
+
+          My work integrates theoretical formulations, computational simulations,
+          and experimental methodologies to investigate nonlinear structural
+          behavior and complex failure mechanisms in advanced composite systems.
+
+          Through my research, I aspire to contribute toward robust multiscale
+          frameworks for predictive damage analysis and mechanics-based
+          modeling of composite materials.
+
+        </p>
+
+        <div class="hero-links">
+
+          <a href="about.html" class="btn btn-primary">
+            About Me
+          </a>
+
+          <a href="publications.html" class="btn btn-outline">
+            Publications
+          </a>
+
+          <a href="resume.pdf" download class="btn btn-outline">
+            Download CV
+          </a>
+
+        </div>
+
+        <!-- KEYWORDS -->
+
+        <div class="keyword-grid">
+
+          <div class="keyword">Finite Deformation</div>
+          <div class="keyword">Composite Materials</div>
+          <div class="keyword">Continuum Mechanics</div>
+          <div class="keyword">Damage Mechanics</div>
+
+        </div>
+
       </div>
 
-      <div class="hero-photo-wrap">
-        <!-- Replace the placeholder below with an <img> tag pointing to your photo -->
-        <div class="hero-photo-placeholder">
-          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#1a3a5c" stroke-width="1.5">
-            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg>
+      <!-- PHOTO -->
+
+      <div class="hero-photo-wrap reveal">
+
+        <div class="glass-card">
+
+          <img
+            src="profilePhoto.jpg"
+            alt="SHIVAM"
+            class="hero-photo"
+          />
+
         </div>
-        <!-- Example: <img src="images/photo.jpg" alt="Your Name" class="hero-photo" /> -->
+
+        <!-- SOCIALS -->
 
         <div class="social-icons">
-          <a href="https://scholar.google.com" target="_blank" title="Google Scholar">GS</a>
-          <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
-          <a href="https://twitter.com" target="_blank" title="Twitter / X">𝕏</a>
-          <a href="https://github.com" target="_blank" title="GitHub">GH</a>
-          <a href="mailto:your@email.com" title="Email">✉</a>
+
+          <a
+            href="https://scholar.google.com/citations?user=T04X1hkAAAAJ&hl=en"
+            target="_blank"
+          >
+            GS
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/shivam-shivam-954297144/"
+            target="_blank"
+          >
+            in
+          </a>
+
+          <a
+            href="https://orcid.org/0000-0003-2962-7600"
+            target="_blank"
+          >
+            OR
+          </a>
+
+          <a
+            href="mailto:shivam1@ce.iitr.ac.in"
+          >
+            ✉
+          </a>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- NEWS & UPDATES -->
-    <section style="margin-top: 16px;">
-      <h2 class="section-title">News & Updates</h2>
-      <ul class="news-list">
-        <li class="news-item">
-          <span class="news-date">May 2025</span>
-          <span class="news-text"><strong>Paper accepted</strong> at [Conference Name 2025] — "Your Paper Title Here".</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Mar 2025</span>
-          <span class="news-text"><strong>Talk given</strong> at [Workshop / Event] on [Topic].</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Jan 2025</span>
-          <span class="news-text">Started PhD at <strong>[University Name]</strong> under <a href="supervisor.html">Prof. [Supervisor Name]</a>.</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Nov 2024</span>
-          <span class="news-text"><strong>Preprint released</strong>: "Your Preprint Title" — available on <a href="#">arXiv</a>.</span>
-        </li>
-        <li class="news-item">
-          <span class="news-date">Sep 2024</span>
-          <span class="news-text">Received <strong>[Scholarship / Grant Name]</strong> for research in [Field].</span>
-        </li>
-      </ul>
+    <!-- ===== FEATURED PAPER ===== -->
+
+    <section class="featured-paper reveal">
+
+      <h2 class="section-title">
+        Featured Publication
+      </h2>
+
+      <div class="glass-card">
+
+        <div class="paper-title">
+
+          “A novel large-strain kinematic framework for
+          fiber-reinforced laminated composites and its
+          application in the characterization of damage”
+
+        </div>
+
+        <p style="color: var(--text-muted); line-height:1.9;">
+
+          Published in the
+          <strong>International Journal of Engineering Science</strong>,
+          March 2026.
+
+        </p>
+
+        <a
+          href="https://www.sciencedirect.com/science/article/pii/S002072252600056X"
+          target="_blank"
+          class="btn btn-primary"
+          style="margin-top:20px; display:inline-block;"
+        >
+          Read Publication
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- ===== NEWS ===== -->
+
+    <section class="news-section reveal">
+
+      <h2 class="section-title">
+        News & Updates
+      </h2>
+
+      <div class="news-list">
+
+        <div class="news-item">
+          <span class="news-date">
+            March 2026
+          </span>
+
+          Published paper titled
+          <strong>
+            “A novel large-strain kinematic framework for
+            fiber-reinforced laminated composites and its
+            application in the characterization of damage”
+          </strong>
+          in the International Journal of Engineering Science.
+        </div>
+
+        <div class="news-item">
+          <span class="news-date">
+            October 2025
+          </span>
+
+          Presented research work titled
+          <strong>
+            “A novel kinematic framework for composite materials
+            undergoing damage using multiple natural configurations”
+          </strong>
+          at IMPLAST 2025.
+        </div>
+
+        <div class="news-item">
+          <span class="news-date">
+            January 2024
+          </span>
+
+          Joined IIT Roorkee as a Junior Research Fellow
+          under the DST-SERB funded project:
+          <strong>
+            “Assessment and modeling of damage in fiber reinforced
+            laminated composites for large deformation processes
+            using multicontinuum theory and experiments.”
+          </strong>
+        </div>
+
+      </div>
+
     </section>
 
   </main>
 
   <!-- ===== FOOTER ===== -->
+
   <footer>
-    <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 32px;">
-      <p>© 2025 Your Name &nbsp;·&nbsp; <a href="mailto:your@email.com">your@email.com</a> &nbsp;·&nbsp; [University, Department]</p>
+
+    <div style="max-width: var(--max-w); margin:0 auto; padding:0 32px;">
+
+      <p>
+
+        © 2026 SHIVAM ·
+
+        <a href="mailto:shivam1@ce.iitr.ac.in">
+          shivam1@ce.iitr.ac.in
+        </a>
+
+        · Indian Institute of Technology Roorkee
+
+      </p>
+
     </div>
+
   </footer>
 
+  <!-- ===== SCRIPT ===== -->
+
   <script>
-    // Mobile nav toggle
+
+    // MOBILE NAV
+
     const toggle = document.getElementById('navToggle');
     const links  = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+
+    // SCROLL REVEAL
+
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+
+      reveals.forEach(reveal => {
+
+        const windowHeight = window.innerHeight;
+        const revealTop = reveal.getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 100){
+          reveal.classList.add('active');
+        }
+
+      });
+
+    });
+
   </script>
 
 </body>
