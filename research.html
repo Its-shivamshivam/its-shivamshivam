@@ -591,9 +591,10 @@ Finite Deformation Mechanics
 
 <p>
 
-My work employs multicontinuum theory proposed by
-Bedford and Stern together with the theory of multiple
-natural configurations developed by Rajagopal and Srinivasa.
+My work employs a novel kinematic framework for fiber-reinforced composite materials. For this
+purpose, we use the theory of multiple natural configurations (Rajagopal and Srinivasa, 1998, International
+Journal of Plasticity, 14, 969-995) in conjunction with the multi-continuum theory (Bedford and Stern,
+1972, Acta Mechanica, 14 (2), 85-102) keeping the underlying physics consistent. 
 
 </p>
 
@@ -611,8 +612,11 @@ Composite Materials
 
 <p>
 
-The framework is applicable to both stiff composite systems
-such as CFRP and GFRP laminates and soft architected systems.
+Depending on their specific constituents, the damage mechanisms of laminated composites may widely
+vary. For example, composite materials made up of glass or carbon fibers and a resin-based matrix, which
+are widely used in civil engineering or aerospace applications, are stiff in nature. These composites show
+brittle failure and cannot sustain large deformation. On the other hand, fiber-reinforced composites that constitute soft matrices such as elastomers or rubbery materials can undergo large deformations without failure
+due to the specific mechanical properties of their constituents as well as their damage mechanisms.
 
 </p>
 
@@ -673,9 +677,9 @@ Damage Characterization
 
 <p class="section-sub">
 
-Constituent-level damage evolution is characterized through
-finite deformation kinematics, incompatibility measures,
-relative constituent motion, and interface discontinuity tensors.
+The mechanical damage in composite materials is distinct from that of single-phase materials owing to
+the different damage mechanisms that these materials exhibit. The primary damage mechanisms considered
+here are fiber breakage, matrix cracking, interfacial debonding, and delamination. 
 
 </p>
 
@@ -692,15 +696,7 @@ Matrix Cracking
 <div class="equation">
 
 \[
-\mathbf{G}_{m}
-=
-\frac{1}{J_{m}^{d}}
-\mathbf{F}_{m}^{d}
-\left(
-\mathrm{Curl}
-\,
-\mathbf{F}_{m}^{d}
-\right)
+\mathbf{G}_m=\dfrac{1}{J^d_m}\,\mathbf{F}^{d}_m\,(\text{Curl}\,\mathbf{F}^d_m)=J^e\,J^r_m\,\mathbf{F}^{e^{-1}}\,\mathbf{F}^{r^{-1}}_m\,\text{curl}\,(\mathbf{F}^{e^{-1}}\,\mathbf{F}^{r^{-1}}_m).
 \]
 
 </div>
@@ -725,22 +721,14 @@ Fiber Breakage
 <div class="equation">
 
 \[
-\mathbf{G}_{f}
-=
-\frac{1}{J_{f}^{d}}
-\mathbf{F}_{f}^{d}
-\left(
-\mathrm{Curl}
-\,
-\mathbf{F}_{f}^{d}
-\right)
+\mathbf{G}_f=\dfrac{1}{J^d_f}\,\mathbf{F}^{d}_f\,(\text{Curl}\,\mathbf{F}^d_f)=J^e\,J^r_f\,\mathbf{F}^{e^{-1}}\,\mathbf{F}^{r^{-1}}_f\,\text{curl}\,(\mathbf{F}^{e^{-1}}\,\mathbf{F}^{r^{-1}}_f).
 \]
 
 </div>
 
 <p>
 
-Fiber rupture mechanisms characterized through
+Fiber breakage mechanisms characterized through
 fiber incompatibility tensors.
 
 </p>
@@ -806,19 +794,7 @@ Delamination
 <div class="equation">
 
 \[
-\tilde{\Sigma}
-=
-\llbracket
-\mathbf{F}^{l}
-\rrbracket,
-\qquad
-\tilde{\Sigma}_{\delta}
-=
-\Sigma^{T}
-\vartheta^{l}_{\delta}
-=
-\sigma^{T}
-\vartheta^{e}_{\delta}
+\mathbf{b}^R= \underbrace{\int_{\Omega}(\text{Curl}\,\mathbf{F}^i)^T\,\mathbf{N}\,dA}_{\text{Bulk}}+\underbrace{\int_\Gamma  \mathbf{\Sigma}^T\tilde{\mathbf{t}}_1d{L}}_{\text{Interface}}.
 \]
 
 </div>
@@ -862,7 +838,7 @@ and delamination in composite systems.
 <div class="equation-box">
 
 <h3>
-Matrix Configuration Torsion
+Matrix Configuration
 </h3>
 
 <div class="equation">
@@ -893,7 +869,7 @@ T^{D}_{mAB}
 
 The torsion tensor associated with the matrix natural
 configuration provides the geometric incompatibility
-corresponding to matrix crack evolution.
+corresponding to matrix crack.
 
 </p>
 
@@ -904,7 +880,7 @@ corresponding to matrix crack evolution.
 <div class="equation-box">
 
 <h3>
-Fiber Configuration Torsion
+Fiber Configuration 
 </h3>
 
 <div class="equation">
@@ -952,24 +928,7 @@ Interface Incompatibility
 <div class="equation">
 
 \[
-T^{D}_{IAB}
-=
-\frac{1}{2}
-\left(
-\mathbf{F}^{l-1}
-\right)^{D}_{a}
-\Delta S_{R}
-\left(
-n_{B}
-\llbracket
-F^{l}
-\rrbracket^{a}_{A}
--
-n_{A}
-\llbracket
-F^{l}
-\rrbracket^{a}_{B}
-\right)
+\nabla_X\mathbf{V}\big|^i_J&=h_m\,\partial_J V^{\,i}_m+h_f\,\partial_J V^{\,i}_f+(\partial_J h_m)\,V^{\,i}_m+(\partial_J h_f)\,V^{\,i}_f\\&=\underbrace{h_m\nabla_X\mathbf{V}_m\big|^i_J\,+\,h_f\nabla_X\mathbf{V}_f\big|^i_J}_{\text{bulk}}\,+\,\underbrace{(V^i_m-V^i_f)}_{\llbracket\mathbf{V}\rrbracket^i}\,{N}_J\,\Delta_{S_p}.
 \]
 
 </div>
@@ -989,19 +948,13 @@ and interfacial damage.
 <div class="equation-box">
 
 <h3>
-Total Delamination Torsion
+Delamination 
 </h3>
 
 <div class="equation">
 
 \[
-T^{D}_{AB}
-=
-h_{\xi}T^{D}_{\xi AB}
-+
-h_{\eta}T^{D}_{\eta AB}
-+
-T^{D}_{IAB}
+ T^D_{AB}=h_\xi\,{T_{\xi}}^{D}_{AB}+h_\eta\,{T_{\eta}}^{D}_{AB}+T^D_{AB}\bigg|_{S_R}
 \]
 
 </div>
