@@ -4,7 +4,7 @@
 <head>
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>SHIVAM — Home</title>
 
@@ -13,7 +13,14 @@
     content="Academic website of SHIVAM, Research Scholar at IIT Roorkee working in theoretical and experimental mechanics of advanced composite materials."
   />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- FONT AWESOME ICONS -->
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 
   <style>
 
@@ -22,33 +29,63 @@
     ========================== */
 
     .hero {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 70px;
+
+      display: flex;
+      justify-content: space-between;
       align-items: center;
+
+      gap: 70px;
+
       min-height: 85vh;
+
       padding-top: 30px;
+
+      flex-wrap: wrap;
+    }
+
+    .hero-left {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .hero-right {
+      flex: 0.9;
+      display: flex;
+      justify-content: center;
     }
 
     .hero-name {
-      font-size: clamp(3.2rem, 8vw, 5.8rem);
+
+      font-size: clamp(3.4rem, 8vw, 5.8rem);
+
       line-height: 1;
+
       margin-bottom: 20px;
+
       letter-spacing: -0.05em;
     }
 
     .hero-title {
+
       font-size: 1.1rem;
+
       color: var(--text-muted);
+
+      line-height: 1.9;
+
       margin-bottom: 24px;
-      line-height: 1.8;
-      font-weight: 500;
+
+      max-width: 700px;
     }
 
     .hero-bio {
+
       font-size: 1rem;
+
       line-height: 2;
+
       color: var(--text-muted);
+
       max-width: 760px;
     }
 
@@ -57,12 +94,14 @@
     ========================== */
 
     .glass-card {
+
       background: rgba(255,255,255,0.08);
+
       backdrop-filter: blur(14px);
 
       border: 1px solid rgba(255,255,255,0.14);
 
-      border-radius: 24px;
+      border-radius: 28px;
 
       padding: 24px;
 
@@ -73,22 +112,19 @@
        HERO PHOTO
     ========================== */
 
-    .hero-photo-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 22px;
-    }
-
     .hero-photo {
+
       width: 100%;
+
       max-width: 360px;
-      border-radius: 28px;
+
+      border-radius: 24px;
+
       object-fit: cover;
 
       border: 1px solid rgba(255,255,255,0.15);
 
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 
       transition: transform 0.5s ease;
     }
@@ -102,42 +138,56 @@
     ========================== */
 
     .hero-links {
+
       display: flex;
+
       gap: 16px;
+
       flex-wrap: wrap;
+
       margin-top: 34px;
     }
 
     .btn {
+
       padding: 13px 22px;
+
       border-radius: 12px;
 
       text-decoration: none;
+
       font-weight: 600;
 
       transition: all 0.35s ease;
     }
 
     .btn-primary {
-      background: #143453;
+
+      background: #12385a;
+
       color: white;
     }
 
     .btn-primary:hover {
+
       background: #0d2740;
+
       transform: translateY(-3px);
     }
 
     .btn-outline {
-      border: 1px solid rgba(255,255,255,0.16);
+
+      border: 1px solid rgba(255,255,255,0.15);
+
+      background: rgba(255,255,255,0.05);
 
       color: var(--text);
-
-      background: rgba(255,255,255,0.04);
     }
 
     .btn-outline:hover {
-      background: rgba(255,255,255,0.1);
+
+      background: rgba(255,255,255,0.12);
+
       transform: translateY(-3px);
     }
 
@@ -146,15 +196,20 @@
     ========================== */
 
     .social-icons {
+
       display: flex;
-      gap: 14px;
+
       justify-content: center;
-      flex-wrap: wrap;
+
+      gap: 16px;
+
+      margin-top: 22px;
     }
 
     .social-icons a {
-      width: 42px;
-      height: 42px;
+
+      width: 46px;
+      height: 46px;
 
       display: flex;
       align-items: center;
@@ -170,14 +225,16 @@
 
       color: var(--text);
 
-      transition: all 0.3s ease;
+      font-size: 1rem;
 
-      font-weight: 600;
+      transition: all 0.35s ease;
     }
 
     .social-icons a:hover {
+
       transform: translateY(-4px);
-      background: rgba(255,255,255,0.14);
+
+      background: rgba(255,255,255,0.12);
     }
 
     /* =========================
@@ -185,25 +242,29 @@
     ========================== */
 
     .keyword-grid {
+
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 14px;
 
-      margin-top: 26px;
+      margin-top: 28px;
     }
 
     .keyword {
+
       padding: 12px 18px;
 
       border-radius: 999px;
 
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.05);
 
-      border: 1px solid rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.15);
 
-      font-size: 0.9rem;
+      font-size: 0.92rem;
 
-      transition: 0.3s ease;
+      transition: all 0.35s ease;
     }
 
     .keyword:hover {
@@ -219,8 +280,11 @@
     }
 
     .paper-title {
-      font-size: 1.15rem;
-      line-height: 1.8;
+
+      font-size: 1.12rem;
+
+      line-height: 1.9;
+
       margin-bottom: 14px;
     }
 
@@ -233,8 +297,11 @@
     }
 
     .news-list {
+
       display: flex;
+
       flex-direction: column;
+
       gap: 18px;
 
       margin-top: 28px;
@@ -243,9 +310,10 @@
     .news-item {
 
       display: grid;
+
       grid-template-columns: 140px 1fr;
 
-      gap: 26px;
+      gap: 24px;
 
       align-items: start;
 
@@ -265,17 +333,22 @@
     }
 
     .news-date {
+
       font-size: 0.92rem;
-      font-weight: 600;
+
       color: var(--text-muted);
+
+      font-weight: 600;
 
       white-space: nowrap;
 
-      padding-top: 3px;
+      padding-top: 4px;
     }
 
     .news-content {
+
       line-height: 1.95;
+
       color: var(--text);
     }
 
@@ -284,14 +357,18 @@
     ========================== */
 
     .reveal {
+
       opacity: 0;
+
       transform: translateY(40px);
 
       transition: all 1s ease;
     }
 
     .reveal.active {
+
       opacity: 1;
+
       transform: translateY(0);
     }
 
@@ -299,10 +376,10 @@
        RESPONSIVE
     ========================== */
 
-    @media(max-width: 900px){
+    @media(max-width: 950px){
 
       .hero{
-        grid-template-columns: 1fr;
+        flex-direction: column-reverse;
         text-align: center;
       }
 
@@ -314,13 +391,13 @@
         margin: 0 auto;
       }
 
+      .keyword-grid{
+        justify-content: center;
+      }
+
       .news-item{
         grid-template-columns: 1fr;
         gap: 10px;
-      }
-
-      .news-date{
-        margin-bottom: 6px;
       }
 
     }
@@ -373,15 +450,19 @@
 
     <section class="hero reveal">
 
-      <div>
+      <!-- LEFT -->
+
+      <div class="hero-left">
 
         <h1 class="hero-name">
           SHIVAM
         </h1>
 
         <p class="hero-title">
+
           Research Scholar at Indian Institute of Technology Roorkee
           working in Theoretical and Experimental Mechanics
+
         </p>
 
         <p class="hero-bio">
@@ -448,50 +529,54 @@
 
       </div>
 
-      <!-- PHOTO -->
+      <!-- RIGHT -->
 
-      <div class="hero-photo-wrap reveal">
+      <div class="hero-right reveal">
 
         <div class="glass-card">
 
           <img
-            src="profilePhoto.jpg"
+            src="images/profilePhoto.jpg"
             alt="SHIVAM"
             class="hero-photo"
           />
 
-        </div>
+          <!-- SOCIALS -->
 
-        <!-- SOCIAL LINKS -->
+          <div class="social-icons">
 
-        <div class="social-icons">
+            <a
+              href="https://scholar.google.com/citations?user=T04X1hkAAAAJ&hl=en"
+              target="_blank"
+              title="Google Scholar"
+            >
+              <i class="fa-brands fa-google-scholar"></i>
+            </a>
 
-          <a
-            href="https://scholar.google.com/citations?user=T04X1hkAAAAJ&hl=en"
-            target="_blank"
-          >
-            GS
-          </a>
+            <a
+              href="https://www.linkedin.com/in/shivam-shivam-954297144/"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
 
-          <a
-            href="https://www.linkedin.com/in/shivam-shivam-954297144/"
-            target="_blank"
-          >
-            in
-          </a>
+            <a
+              href="https://orcid.org/0000-0003-2962-7600"
+              target="_blank"
+              title="ORCID"
+            >
+              <i class="fa-brands fa-orcid"></i>
+            </a>
 
-          <a
-            href="https://orcid.org/0000-0003-2962-7600"
-            target="_blank"
-          >
-            OR
-          </a>
+            <a
+              href="mailto:shivam1@ce.iitr.ac.in"
+              title="Email"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
 
-          <a
-            href="mailto:shivam1@ce.iitr.ac.in"
-          >
-            ✉
-          </a>
+          </div>
 
         </div>
 
@@ -512,13 +597,12 @@
         <div class="paper-title">
 
           <strong>
-            Large-Strain Kinematic Framework for
-            Fiber-Reinforced Laminated Composites
+
+            “A novel large-strain kinematic framework for
+            fiber-reinforced laminated composites and its
+            application in the characterization of damage”
+
           </strong>
-
-          <br>
-
-          Application in Damage Characterization
 
         </div>
 
@@ -567,8 +651,11 @@
             Published paper titled
 
             <strong>
-              “Large-Strain Kinematic Framework for
-              Fiber-Reinforced Laminated Composites”
+
+              “A novel large-strain kinematic framework for
+              fiber-reinforced laminated composites and its
+              application in the characterization of damage”
+
             </strong>
 
             in the International Journal of Engineering Science.
@@ -588,8 +675,10 @@
             Presented research work titled
 
             <strong>
+
               “A novel kinematic framework for composite materials
-              undergoing damage using multiple natural configurations”
+              undergoing damage using multiple natural configurations.”
+
             </strong>
 
             at IMPLAST 2025.
@@ -606,13 +695,15 @@
 
           <div class="news-content">
 
-            Joined IIT Roorkee as a Junior Research Fellow under
-            the DST-SERB funded project:
+            Joined IIT Roorkee as a Junior Research Fellow
+            under the DST-SERB funded project:
 
             <strong>
+
               “Assessment and modeling of damage in fiber reinforced
               laminated composites for large deformation processes
               using multicontinuum theory and experiments.”
+
             </strong>
 
           </div>
@@ -625,9 +716,7 @@
 
   </main>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -655,22 +744,21 @@
 
   </footer>
 
-  <!-- =========================
-       SCRIPT
-  ========================== -->
+  <!-- SCRIPT -->
 
   <script>
 
     // MOBILE MENU
 
     const toggle = document.getElementById('navToggle');
-    const links  = document.getElementById('navLinks');
+
+    const links = document.getElementById('navLinks');
 
     toggle.addEventListener('click', () => {
       links.classList.toggle('open');
     });
 
-    // REVEAL ANIMATION
+    // SCROLL REVEAL
 
     function revealElements(){
 
@@ -690,7 +778,7 @@
 
     }
 
-    // RUN ON PAGE LOAD
+    // RUN ON LOAD
 
     revealElements();
 
