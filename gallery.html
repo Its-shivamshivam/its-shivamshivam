@@ -117,7 +117,6 @@
     @media(max-width:1400px){
 
       .masonry{
-
         column-count: 3;
       }
 
@@ -126,7 +125,6 @@
     @media(max-width:900px){
 
       .masonry{
-
         column-count: 2;
       }
 
@@ -135,7 +133,6 @@
     @media(max-width:650px){
 
       .masonry{
-
         column-count: 1;
       }
 
@@ -145,112 +142,48 @@
        GALLERY CARD
     ========================================= */
 
+    .gallery-item{
 
-.gallery-item{
+      break-inside: avoid;
 
-  break-inside: avoid;
+      margin-bottom: 24px;
 
-  margin-bottom: 24px;
+      position: relative;
 
-  position: relative;
+      overflow: hidden;
 
-  overflow: hidden;
+      border-radius: 28px;
 
-  border-radius: 28px;
+      background: rgba(255,255,255,0.08);
 
-  background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
 
-  backdrop-filter: blur(14px);
+      border: 1px solid rgba(0,0,0,0.08);
 
-  border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
 
-  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
-
-  display: inline-block;
-
-  width: 100%;
-
-  line-height: 0;
-
-}
+      transition: all 0.4s ease;
+    }
 
     .gallery-item:hover{
 
-      transform: translateY(-10px);
+      transform: translateY(-8px);
     }
 
-.gallery-item img{
+    .gallery-item img{
 
-  width: 100%;
+      width: 100%;
 
-  height: auto;
+      display: block;
 
-  display: block;
+      border-radius: 28px;
 
-  object-fit: contain;
-
-  transition: transform 0.7s ease;
-
-  border-radius: 28px;
-
-}
-
-  .gallery-item:hover img{
-
-  transform: scale(1.04);
-
-}
-    /* =========================================
-       CAPTION
-    ========================================= */
-
-.gallery-caption{
-
-  position: absolute;
-
-  left: 0;
-
-  right: 0;
-
-  bottom: 0;
-
-  padding: 24px;
-
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.78),
-    rgba(0,0,0,0)
-  );
-
-  color: white;
-
-  opacity: 0;
-
-  transition: all 0.45s ease;
-
-  line-height: normal;
-
-}
-
-    .gallery-item:hover .gallery-caption{
-
-      opacity: 1;
+      transition: transform 0.7s ease;
     }
 
-    .gallery-caption h3{
+    .gallery-item:hover img{
 
-      font-size: 1rem;
-
-      margin-bottom: 8px;
-    }
-
-    .gallery-caption p{
-
-      font-size: 0.9rem;
-
-      line-height: 1.7;
-
-      opacity: 0.9;
+      transform: scale(1.04);
     }
 
     /* =========================================
@@ -263,7 +196,7 @@
 
       inset: 0;
 
-      background: rgba(0,0,0,0.9);
+      background: rgba(0,0,0,0.92);
 
       display: flex;
 
@@ -295,9 +228,7 @@
 
       max-height: 88vh;
 
-      border-radius: 20px;
-
-      box-shadow: 0 20px 70px rgba(0,0,0,0.4);
+      border-radius: 22px;
 
       animation: zoomIn 0.5s ease;
     }
@@ -330,13 +261,13 @@
 
       color: white;
 
-      font-size: 2rem;
+      font-size: 2.2rem;
 
       cursor: pointer;
     }
 
     /* =========================================
-       REVEAL
+       REVEAL ANIMATION
     ========================================= */
 
     .reveal{
@@ -365,423 +296,372 @@
 
   <nav class="navbar">
 
+    <div class="nav-inner">
 
-<div class="nav-inner">
-
-  <a href="index.html" class="nav-logo">
-    SHIVAM
-  </a>
-
-  <ul class="nav-links" id="navLinks">
-
-    <li><a href="index.html">Home</a></li>
-
-    <li><a href="about.html">About Me</a></li>
-
-    <li><a href="research.html">Research Interest</a></li>
-
-    <li><a href="publications.html">Publication</a></li>
-
-    <li><a href="supervisor.html">Supervisor</a></li>
-
-    <li>
-      <a href="gallery.html" class="active">
-        Gallery
+      <a href="index.html" class="nav-logo">
+        SHIVAM
       </a>
-    </li>
 
-    <li><a href="blog.html">Blog</a></li>
+      <ul class="nav-links" id="navLinks">
 
-  </ul>
+        <li><a href="index.html">Home</a></li>
 
-  <button class="nav-toggle" id="navToggle">
+        <li><a href="about.html">About Me</a></li>
 
-    <span></span>
-    <span></span>
-    <span></span>
+        <li><a href="research.html">Research Interest</a></li>
 
-  </button>
+        <li><a href="publications.html">Publication</a></li>
 
-</div>
+        <li><a href="supervisor.html">Supervisor</a></li>
 
-<!-- HERO -->
+        <li>
+          <a href="gallery.html" class="active">
+            Gallery
+          </a>
+        </li>
 
-<section class="gallery-hero reveal">
+        <li><a href="blog.html">Blog</a></li>
 
-  <div class="section-label">
-    Gallery
-  </div>
+      </ul>
 
-  <h1>
-    Research Journey & Academic Moments
-  </h1>
+      <button class="nav-toggle" id="navToggle">
 
-  <p>
+        <span></span>
+        <span></span>
+        <span></span>
 
-    A collection of conferences, presentations,
-    experimental investigations,
-    IIT Roorkee campus moments,
-    workshops, collaborations,
-    and memorable experiences throughout
-    my academic and research journey.
+      </button>
 
-  </p>
+    </div>
 
-</section>
+  </nav>
 
-<!-- =========================================
-     CONFERENCES
-========================================== -->
+  <!-- MAIN -->
 
-<section class="gallery-section reveal">
+  <main class="page-wrapper">
 
-  <h2 class="gallery-section-title">
-    Conferences & Presentations
-  </h2>
+    <!-- HERO -->
 
-  <p class="gallery-section-sub">
-    Conference presentations, technical discussions,
-    and academic dissemination activities.
-  </p>
+    <section class="gallery-hero reveal">
 
-  <div class="masonry">
+      <div class="section-label">
+        Gallery
+      </div>
 
-    <div class="gallery-item">
+      <h1>
+        Research Journey & Academic Moments
+      </h1>
 
-      <img
-        src="implast_presentation.jpg"
-        alt=""
-        onclick="openLightbox(this)"
-      />
+      <p>
 
-      <div class="gallery-caption">
+        A collection of conferences, presentations,
+        experimental investigations,
+        IIT Roorkee campus life,
+        workshops, collaborations,
+        and memorable experiences throughout
+        my academic and research journey.
 
-        <h3>
-          Caption Here
-        </h3>
+      </p>
 
-        <p>
-          Update caption later
-        </p>
+    </section>
+
+    <!-- CONFERENCES -->
+
+    <section class="gallery-section reveal">
+
+      <h2 class="gallery-section-title">
+        Conferences & Presentations
+      </h2>
+
+      <p class="gallery-section-sub">
+        Conference presentations and academic dissemination activities.
+      </p>
+
+      <div class="masonry">
+
+        <div class="gallery-item">
+          <img src="implast_presentation.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="con1.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="cong2.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="cong3.jpeg" onclick="openLightbox(this)" />
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-    <div class="gallery-item">
+    <!-- EXPERIMENTAL -->
 
-      <img
-        src="con1.jpeg"
-        alt=""
-        onclick="openLightbox(this)"
-      />
+    <section class="gallery-section reveal">
 
-      <div class="gallery-caption">
+      <h2 class="gallery-section-title">
+        Experimental Research
+      </h2>
 
-        <h3>
-          Caption Here
-        </h3>
+      <p class="gallery-section-sub">
+        Composite mechanics experiments and laboratory investigations.
+      </p>
 
-        <p>
-          Update caption later
-        </p>
+      <div class="masonry">
 
-      </div>
+        <div class="gallery-item">
+          <img src="lab1.jpg" onclick="openLightbox(this)" />
+        </div>
 
-    </div>
+        <div class="gallery-item">
+          <img src="lab2.jpg" onclick="openLightbox(this)" />
+        </div>
 
-    <div class="gallery-item">
+        <div class="gallery-item">
+          <img src="lab3.jpg" onclick="openLightbox(this)" />
+        </div>
 
-      <img
-        src="cong2.jpeg"
-        alt=""
-        onclick="openLightbox(this)"
-      />
-
-      <div class="gallery-caption">
-
-        <h3>
-          Caption Here
-        </h3>
-
-        <p>
-          Update caption later
-        </p>
+        <div class="gallery-item">
+          <img src="lab4.jpg" onclick="openLightbox(this)" />
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-    <div class="gallery-item">
+    <!-- IITR -->
 
-      <img
-        src="cong3.jpeg"
-        alt=""
-        onclick="openLightbox(this)"
-      />
+    <section class="gallery-section reveal">
 
-      <div class="gallery-caption">
+      <h2 class="gallery-section-title">
+        IIT Roorkee Campus
+      </h2>
 
-        <h3>
-          Caption Here
-        </h3>
+      <p class="gallery-section-sub">
+        Academic life and memorable moments at IIT Roorkee.
+      </p>
 
-        <p>
-          Update caption later
-        </p>
+      <div class="masonry">
+
+        <div class="gallery-item">
+          <img src="iitr2.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="iitr3.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="iitr4.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="iitr5.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="iitr6.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="iitr7.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="iitr8.jpeg" onclick="openLightbox(this)" />
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </div>
+    <!-- WORKSHOPS -->
 
-</section>
+    <section class="gallery-section reveal">
 
-<!-- =========================================
-     EXPERIMENTAL RESEARCH
-========================================== -->
+      <h2 class="gallery-section-title">
+        Workshops & Events
+      </h2>
 
-<section class="gallery-section reveal">
+      <p class="gallery-section-sub">
+        Technical workshops, academic events, and social activities.
+      </p>
 
-  <h2 class="gallery-section-title">
-    Experimental Research
-  </h2>
+      <div class="masonry">
 
-  <p class="gallery-section-sub">
-    Experimental investigations involving
-    composite materials,
-    deformation mechanisms,
-    tensile testing,
-    and laboratory activities.
-  </p>
+        <div class="gallery-item">
+          <img src="cong2.jpeg" onclick="openLightbox(this)" />
+        </div>
 
-  <div class="masonry">
+        <div class="gallery-item">
+          <img src="chess1.jpeg" onclick="openLightbox(this)" />
+        </div>
 
-    <div class="gallery-item">
-      <img src="lab1.jpg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption">
-        <h3>Caption Here</h3>
-        <p>Update caption later</p>
+        <div class="gallery-item">
+          <img src="teachers-day.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="party_journal.jpg" onclick="openLightbox(this)" />
+        </div>
+
       </div>
-    </div>
 
-    <div class="gallery-item">
-      <img src="lab2.jpg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption">
-        <h3>Caption Here</h3>
-        <p>Update caption later</p>
+    </section>
+
+    <!-- TRAVEL -->
+
+    <section class="gallery-section reveal">
+
+      <h2 class="gallery-section-title">
+        Travel & Visits
+      </h2>
+
+      <p class="gallery-section-sub">
+        Personal travel moments during the academic journey.
+      </p>
+
+      <div class="masonry">
+
+        <div class="gallery-item">
+          <img src="Trip1.jpeg" onclick="openLightbox(this)" />
+        </div>
+
+        <div class="gallery-item">
+          <img src="Trip2.jpeg" onclick="openLightbox(this)" />
+        </div>
+
       </div>
-    </div>
 
-    <div class="gallery-item">
-      <img src="lab3.jpg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption">
-        <h3>Caption Here</h3>
-        <p>Update caption later</p>
-      </div>
-    </div>
+    </section>
 
-    <div class="gallery-item">
-      <img src="lab4.jpg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption">
-        <h3>Caption Here</h3>
-        <p>Update caption later</p>
-      </div>
-    </div>
+  </main>
 
-  </div>
+  <!-- LIGHTBOX -->
 
-</section>
+  <div class="lightbox" id="lightbox">
 
-<!-- =========================================
-     IITR CAMPUS
-========================================== -->
+    <span
+      class="lightbox-close"
+      onclick="closeLightbox()"
+    >
+      &times;
+    </span>
 
-<section class="gallery-section reveal">
-
-  <h2 class="gallery-section-title">
-    IIT Roorkee Campus
-  </h2>
-
-  <p class="gallery-section-sub">
-    Academic life and memorable moments
-    at the Indian Institute of Technology Roorkee.
-  </p>
-
-  <div class="masonry">
-
-    <div class="gallery-item">
-      <img src="iitr2.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="iitr3.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="iitr4.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="iitr5.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="iitr6.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="iitr7.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="iitr8.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- =========================================
-     WORKSHOPS
-========================================== -->
-
-<section class="gallery-section reveal">
-
-  <h2 class="gallery-section-title">
-    Workshops & Events
-  </h2>
-
-  <p class="gallery-section-sub">
-    Technical events, workshops,
-    social gatherings,
-    and academic interactions.
-  </p>
-
-  <div class="masonry">
-
-    <div class="gallery-item">
-      <img src="cong2.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="chess1.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="teachers-day.jpeg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="party_journal.jpg" alt="" onclick="openLightbox(this)" />
-      <div class="gallery-caption"><h3>Caption Here</h3></div>
-    </div>
+    <img
+      id="lightbox-img"
+      src=""
+      alt=""
+    />
 
   </div>
 
-</section>
+  <!-- FOOTER -->
 
-<!-- =========================================
-     TRAVEL
-========================================== -->
+  <footer>
 
-<section class="gallery-section reveal">
+    <div
+      style="
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 32px;
+    "
+    >
 
-  <h2 class="gallery-section-title">
-    Travel & Visits
-  </h2>
+      <p>
 
-  <p class="gallery-section-sub">
-    Personal travel moments and visits
-    during the academic journey.
-  </p>
+        © 2026 SHIVAM ·
 
-  <div class="masonry">
+        <a href="mailto:shivam1@ce.iitr.ac.in">
+          shivam1@ce.iitr.ac.in
+        </a>
 
-    <div class="gallery-item">
+        · IIT Roorkee
 
-      <img
-        src="Trip1.jpeg"
-        alt=""
-        onclick="openLightbox(this)"
-      />
-
-      <div class="gallery-caption">
-
-        <h3>
-          Caption Here
-        </h3>
-
-      </div>
+      </p>
 
     </div>
 
-    <div class="gallery-item">
+  </footer>
 
-      <img
-        src="Trip2.jpeg"
-        alt=""
-        onclick="openLightbox(this)"
-      />
+  <!-- SCRIPT -->
 
-      <div class="gallery-caption">
+  <script>
 
-        <h3>
-          Caption Here
-        </h3>
+    // MOBILE MENU
 
-      </div>
+    const toggle = document.getElementById('navToggle');
 
-    </div>
+    const links = document.getElementById('navLinks');
 
-  </div>
+    toggle.addEventListener('click', () => {
 
-</section>
+      links.classList.toggle('open');
 
-<span
-  class="lightbox-close"
-  onclick="closeLightbox()"
->
-  &times;
-</span>
+    });
 
-<img
-  id="lightbox-img"
-  src=""
-  alt=""
-/>
+    // REVEAL
 
-<div
-  style="
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 32px;
-"
->
+    function revealElements(){
 
-  <p>
+      const reveals = document.querySelectorAll('.reveal');
 
-    © 2026 SHIVAM ·
+      reveals.forEach(reveal => {
 
-    <a href="mailto:shivam1@ce.iitr.ac.in">
-      shivam1@ce.iitr.ac.in
-    </a>
+        const windowHeight = window.innerHeight;
 
-    · IIT Roorkee
+        const revealTop = reveal.getBoundingClientRect().top;
 
-  </p>
+        if(revealTop < windowHeight - 100){
 
-</div>
-   
+          reveal.classList.add('active');
+
+        }
+
+      });
+
+    }
+
+    revealElements();
+
+    window.addEventListener('scroll', revealElements);
+
+    // LIGHTBOX
+
+    const lightbox = document.getElementById('lightbox');
+
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(img){
+
+      lightbox.classList.add('open');
+
+      lightboxImg.src = img.src;
+
+    }
+
+    function closeLightbox(){
+
+      lightbox.classList.remove('open');
+
+    }
+
+    lightbox.addEventListener('click', (e) => {
+
+      if(e.target === lightbox){
+
+        closeLightbox();
+
+      }
+
+    });
+
+  </script>
+
+</body>
+
 </html>
