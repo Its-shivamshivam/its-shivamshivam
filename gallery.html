@@ -166,6 +166,12 @@
 
   box-shadow: 0 10px 40px rgba(0,0,0,0.06);
 
+  display: inline-block;
+
+  width: 100%;
+
+  line-height: 0;
+
 }
 
     .gallery-item:hover{
@@ -198,30 +204,33 @@
        CAPTION
     ========================================= */
 
-    .gallery-caption{
+.gallery-caption{
 
-      position: absolute;
+  position: absolute;
 
-      left: 0;
+  left: 0;
 
-      right: 0;
+  right: 0;
 
-      bottom: 0;
+  bottom: 0;
 
-      padding: 24px;
+  padding: 24px;
 
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.78),
-        rgba(0,0,0,0)
-      );
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.78),
+    rgba(0,0,0,0)
+  );
 
-      color: white;
+  color: white;
 
-      opacity: 0;
+  opacity: 0;
 
-      transition: all 0.45s ease;
-    }
+  transition: all 0.45s ease;
+
+  line-height: normal;
+
+}
 
     .gallery-item:hover .gallery-caption{
 
