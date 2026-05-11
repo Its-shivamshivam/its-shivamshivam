@@ -145,15 +145,17 @@
        GALLERY CARD
     ========================================= */
 
-    .gallery-item{
+.gallery-item{
 
-      break-inside: avoid;
+  break-inside: avoid;
 
-      margin-bottom: 24px;
+  margin-bottom: 24px;
 
-      position: relative;
+  position: relative;
 
-      overflow: hidden;
+  overflow: hidden;
+
+  height: auto;
 
       border-radius: 28px;
 
@@ -175,14 +177,19 @@
       transform: translateY(-10px);
     }
 
-    .gallery-item img{
+.gallery-item img{
 
-      width: 100%;
+  width: 100%;
 
-      display: block;
+  height: auto;
 
-      transition: transform 0.7s ease;
-    }
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.7s ease;
+
+}
 
     .gallery-item:hover img{
 
