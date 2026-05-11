@@ -79,7 +79,7 @@
     }
 
     /* =========================================
-       SECTION TITLE
+       SECTION
     ========================================= */
 
     .gallery-section{
@@ -163,12 +163,18 @@
       box-shadow: 0 10px 40px rgba(0,0,0,0.06);
 
       transition: all 0.4s ease;
+
+      cursor: pointer;
     }
 
     .gallery-item:hover{
 
       transform: translateY(-8px);
     }
+
+    /* =========================================
+       IMAGE
+    ========================================= */
 
     .gallery-item img{
 
@@ -183,7 +189,66 @@
 
     .gallery-item:hover img{
 
-      transform: scale(1.04);
+      transform: scale(1.06);
+    }
+
+    /* =========================================
+       OVERLAY
+    ========================================= */
+
+    .gallery-overlay{
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+
+      linear-gradient(
+        to top,
+        rgba(0,0,0,0.82),
+        rgba(0,0,0,0.25),
+        transparent
+      );
+
+      opacity: 0;
+
+      transition: all 0.45s ease;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      padding: 28px;
+    }
+
+    .gallery-item:hover .gallery-overlay{
+
+      opacity: 1;
+    }
+
+    /* =========================================
+       CAPTION
+    ========================================= */
+
+    .gallery-caption{
+
+      color: white;
+
+      font-size: 1rem;
+
+      font-weight: 600;
+
+      line-height: 1.7;
+
+      transform: translateY(24px);
+
+      transition: all 0.45s ease;
+    }
+
+    .gallery-item:hover .gallery-caption{
+
+      transform: translateY(0);
     }
 
     /* =========================================
@@ -261,7 +326,7 @@
 
       color: white;
 
-      font-size: 2.2rem;
+      font-size: 2.5rem;
 
       cursor: pointer;
     }
@@ -374,25 +439,85 @@
       </h2>
 
       <p class="gallery-section-sub">
-        Conference presentations and academic dissemination activities.
+        Academic presentations and conference participation.
       </p>
 
       <div class="masonry">
 
         <div class="gallery-item">
-          <img src="implast_presentation.jpeg" onclick="openLightbox(this)" />
+
+          <img
+            src="implast_presentation.jpg"
+            onclick="openLightbox(this)"
+          />
+
+          <div class="gallery-overlay">
+
+            <div class="gallery-caption">
+
+              IMPLAST 2025 Presentation
+
+            </div>
+
+          </div>
+
         </div>
 
         <div class="gallery-item">
-          <img src="con1.jpeg" onclick="openLightbox(this)" />
+
+          <img
+            src="con1.jpeg"
+            onclick="openLightbox(this)"
+          />
+
+          <div class="gallery-overlay">
+
+            <div class="gallery-caption">
+
+              Conference Session
+
+            </div>
+
+          </div>
+
         </div>
 
         <div class="gallery-item">
-          <img src="cong2.jpeg" onclick="openLightbox(this)" />
+
+          <img
+            src="cong2.jpeg"
+            onclick="openLightbox(this)"
+          />
+
+          <div class="gallery-overlay">
+
+            <div class="gallery-caption">
+
+              Research Interaction
+
+            </div>
+
+          </div>
+
         </div>
 
         <div class="gallery-item">
-          <img src="cong3.jpeg" onclick="openLightbox(this)" />
+
+          <img
+            src="cong3.jpeg"
+            onclick="openLightbox(this)"
+          />
+
+          <div class="gallery-overlay">
+
+            <div class="gallery-caption">
+
+              Academic Conference Event
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
@@ -408,25 +533,85 @@
       </h2>
 
       <p class="gallery-section-sub">
-        Composite mechanics experiments and laboratory investigations.
+        Experimental mechanics and composite material investigations.
       </p>
 
       <div class="masonry">
 
         <div class="gallery-item">
-          <img src="lab1.jpg" onclick="openLightbox(this)" />
+
+          <img
+            src="lab1.jpg"
+            onclick="openLightbox(this)"
+          />
+
+          <div class="gallery-overlay">
+
+            <div class="gallery-caption">
+
+              Composite Testing Setup
+
+            </div>
+
+          </div>
+
         </div>
 
         <div class="gallery-item">
-          <img src="lab2.jpg" onclick="openLightbox(this)" />
+
+          <img
+            src="lab2.jpg"
+            onclick="openLightbox(this)"
+          />
+
+          <div class="gallery-overlay">
+
+            <div class="gallery-caption">
+
+              Experimental Investigation
+
+            </div>
+
+          </div>
+
         </div>
 
         <div class="gallery-item">
-          <img src="lab3.jpg" onclick="openLightbox(this)" />
+
+          <img
+            src="lab3.jpg"
+            onclick="openLightbox(this)"
+          />
+
+          <div class="gallery-overlay">
+
+            <div class="gallery-caption">
+
+              Laboratory Research Work
+
+            </div>
+
+          </div>
+
         </div>
 
         <div class="gallery-item">
-          <img src="lab4.jpg" onclick="openLightbox(this)" />
+
+          <img
+            src="lab4.jpg"
+            onclick="openLightbox(this)"
+          />
+
+          <div class="gallery-overlay">
+
+            <div class="gallery-caption">
+
+              Composite Material Experiment
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
@@ -442,37 +627,72 @@
       </h2>
 
       <p class="gallery-section-sub">
-        Academic life and memorable moments at IIT Roorkee.
+        Academic life and campus moments at IIT Roorkee.
       </p>
 
       <div class="masonry">
 
         <div class="gallery-item">
           <img src="iitr2.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              IIT Roorkee Campus
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="iitr3.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Campus Life
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="iitr4.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              IITR Academic Environment
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="iitr5.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Research Scholar Life
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="iitr6.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              IIT Roorkee Heritage
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="iitr7.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Campus Experience
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="iitr8.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              IITR Moments
+            </div>
+          </div>
         </div>
 
       </div>
@@ -488,25 +708,45 @@
       </h2>
 
       <p class="gallery-section-sub">
-        Technical workshops, academic events, and social activities.
+        Technical workshops and academic events.
       </p>
 
       <div class="masonry">
 
         <div class="gallery-item">
           <img src="cong2.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Workshop Participation
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="chess1.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Chess Activity
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="teachers-day.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Teachers Day Celebration
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="party_journal.jpg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Journal Celebration Event
+            </div>
+          </div>
         </div>
 
       </div>
@@ -522,17 +762,27 @@
       </h2>
 
       <p class="gallery-section-sub">
-        Personal travel moments during the academic journey.
+        Personal travel and memorable experiences.
       </p>
 
       <div class="masonry">
 
         <div class="gallery-item">
           <img src="Trip1.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Travel Moment
+            </div>
+          </div>
         </div>
 
         <div class="gallery-item">
           <img src="Trip2.jpeg" onclick="openLightbox(this)" />
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              Academic Visit & Travel
+            </div>
+          </div>
         </div>
 
       </div>
