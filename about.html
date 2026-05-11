@@ -27,18 +27,20 @@
 
   <style>
 
-    /* =========================
-       PAGE WIDTH
-    ========================== */
+/* =========================
+   PAGE WIDTH
+========================== */
 
-    .page-wrapper{
+.page-wrapper{
 
-      max-width: var(--max-w);
+  width: 100%;
 
-      margin: 0 auto;
+  max-width: 1500px;
 
-      padding: 0 32px;
-    }
+  margin: 0 auto;
+
+  padding: 0 60px;
+}
 
     /* =========================
        PAGE HEADER
@@ -393,37 +395,45 @@
        RESPONSIVE
     ========================== */
 
-    @media(max-width: 1100px){
+  @media(max-width: 1100px){
 
-      .about-grid{
+  .page-wrapper{
+    padding: 0 32px;
+  }
 
-        grid-template-columns: 1fr;
+  .about-grid{
 
-        gap: 60px;
-      }
+    grid-template-columns: 1fr;
 
-      .about-photo img{
+    gap: 60px;
+  }
 
-        height: auto;
-      }
+  .about-photo img{
 
-    }
+    height: auto;
+  }
 
-    @media(max-width: 768px){
+}
 
-      .info-row{
+@media(max-width: 768px){
 
-        flex-direction: column;
+  .page-wrapper{
+    padding: 0 20px;
+  }
 
-        gap: 4px;
-      }
+  .info-row{
 
-      .info-val{
+    flex-direction: column;
 
-        text-align: left;
-      }
+    gap: 4px;
+  }
 
-    }
+  .info-val{
+
+    text-align: left;
+  }
+
+}
 
   </style>
 
