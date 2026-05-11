@@ -224,14 +224,14 @@
        BLOG GRID
     ========================================= */
 
-    .blog-grid{
+.blog-grid{
 
-      display: grid;
+  display: flex;
 
-      grid-template-columns: repeat(2,1fr);
+  flex-direction: column;
 
-      gap: 34px;
-    }
+  gap: 34px;
+}
 
     @media(max-width:950px){
 
@@ -426,52 +426,7 @@
        INSIGHT CARDS
     ========================================= */
 
-    .insight-grid{
 
-      display: grid;
-
-      grid-template-columns: repeat(3,1fr);
-
-      gap: 26px;
-
-      margin-bottom: 90px;
-    }
-
-    @media(max-width:1000px){
-
-      .insight-grid{
-
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-    .insight-card{
-
-      padding: 30px;
-
-      border-radius: 28px;
-
-      background: rgba(255,255,255,0.08);
-
-      backdrop-filter: blur(14px);
-
-      border: 1px solid rgba(0,0,0,0.08);
-
-      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-    }
-
-    .insight-card h3{
-
-      margin-bottom: 16px;
-    }
-
-    .insight-card p{
-
-      line-height: 2;
-
-      color: var(--text-muted);
-    }
 
     /* =========================================
        REVEAL
@@ -612,71 +567,8 @@
       <div class="equation">
 
       \[
-      \mathbf{F}
-      =
-      \mathbf{F}^{e}
-      \mathbf{F}^{d}
+      \mathbf{F}=\mathbf{F}^e\,\mathbf{F}^r_{\alpha}\,\mathbf{F}^d_{\alpha}
       \]
-
-      </div>
-
-    </section>
-
-    <!-- INSIGHTS -->
-
-    <section class="reveal">
-
-      <h2 class="section-title">
-        Research Insights
-      </h2>
-
-      <div class="insight-grid">
-
-        <div class="insight-card">
-
-          <h3>
-            Finite Deformation
-          </h3>
-
-          <p>
-
-            Understanding large deformation kinematics
-            in composite systems through multicontinuum theory.
-
-          </p>
-
-        </div>
-
-        <div class="insight-card">
-
-          <h3>
-            Damage Mechanics
-          </h3>
-
-          <p>
-
-            Characterization of matrix cracking,
-            delamination,
-            and interfacial incompatibility.
-
-          </p>
-
-        </div>
-
-        <div class="insight-card">
-
-          <h3>
-            Experimental Mechanics
-          </h3>
-
-          <p>
-
-            Integrating experiments with constitutive modeling
-            for predictive mechanics frameworks.
-
-          </p>
-
-        </div>
 
       </div>
 
