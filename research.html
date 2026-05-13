@@ -4,13 +4,8 @@
 <head>
 
 <meta charset="UTF-8" />
-
 <link rel="icon" type="image/png" href="./favicon.png" />
-
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
-/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>
 Research Interest | SHIVAM | IIT Roorkee
@@ -20,20 +15,6 @@ Research Interest | SHIVAM | IIT Roorkee
 name="description"
 content="Research interests of SHIVAM in finite deformation mechanics, continuum mechanics, damage mechanics, composite materials, and experimental investigation."
 />
-
-<!-- PRECONNECT -->
-
-<link
-rel="preconnect"
-href="https://cdnjs.cloudflare.com"
-/>
-
-<link
-rel="preconnect"
-href="https://cdn.jsdelivr.net"
-/>
-
-<!-- MAIN CSS -->
 
 <link rel="stylesheet" href="style.css" />
 
@@ -47,21 +28,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <!-- MATHJAX -->
 
 <script>
-
 window.MathJax = {
-
 tex: {
-
 inlineMath: [['$', '$'], ['\\(', '\\)']]
-
 }
-
 };
-
 </script>
 
 <script
-async
 src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
@@ -149,7 +123,7 @@ align-items: center;
 
 overflow: visible;
 
-box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+box-shadow: 0 10px 35px rgba(0,0,0,0.05);
 
 }
 
@@ -165,6 +139,12 @@ display: block;
 
 }
 
+object-fit: contain;
+
+display: block;
+
+}
+
 /* =========================================
 GLASS CARD
 ========================================= */
@@ -173,23 +153,21 @@ GLASS CARD
 
 background: rgba(255,255,255,0.92);
 
-backdrop-filter: blur(5px);
-
 border: 1px solid rgba(0,0,0,0.08);
 
 border-radius: 24px;
 
 padding: 28px;
 
-box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+box-shadow: 0 10px 35px rgba(0,0,0,0.05);
 
-transition: all 0.4s ease;
+transition: all 0.45s ease;
 
 }
 
 .glass-card:hover{
 
-transform: translateY(-5px);
+transform: translateY(-6px);
 
 }
 
@@ -209,7 +187,7 @@ margin-bottom: 22px;
 
 .section-sub{
 
-max-width: 1200px;
+max-width: 1000px;
 
 margin: 0 auto 60px auto;
 
@@ -246,7 +224,7 @@ flex-direction: column;
 }
 
 /* =========================================
-IMAGE
+IMAGE FIX
 ========================================= */
 
 .research-card img{
@@ -265,15 +243,27 @@ background: white;
 
 border-radius: 18px;
 
+padding: 8px;
+
+margin-bottom: 20px;
+
+}
+
+object-fit: contain;
+
+object-position: center;
+
+display: block;
+
+background: white;
+
+border-radius: 18px;
+
 padding: 10px;
 
 margin-bottom: 22px;
 
 }
-
-/* =========================================
-CARD TEXT
-========================================= */
 
 .research-card h3{
 
@@ -297,17 +287,17 @@ EQUATION GRID
 
 .equation-grid{
 
-width: 100%;
+  width: 100%;
 
-display: grid;
+  display: grid;
 
-grid-template-columns: repeat(2,minmax(0,1fr));
+  grid-template-columns: repeat(2,1fr);
 
-gap: 32px;
+  gap: 24px;
 
-align-items: stretch;
+  align-items: stretch;
 
-margin: 50px auto 90px auto;
+  margin: 40px auto 70px auto;
 
 }
 
@@ -317,33 +307,25 @@ EQUATION BOX
 
 .equation-box{
 
-width: 100%;
+  width: 100%;
 
-display: flex;
+  display: flex;
 
-flex-direction: column;
+  flex-direction: column;
 
-justify-content: flex-start;
+  justify-content: center;
 
-text-align: center;
+  text-align: center;
 
-padding: 34px;
+  padding: 26px;
 
-border-radius: 28px;
+  border-radius: 24px;
 
-background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.92);
 
-border: 1px solid rgba(0,0,0,0.07);
+  border: 1px solid rgba(0,0,0,0.07);
 
-box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-
-transition: all 0.4s ease;
-
-}
-
-.equation-box:hover{
-
-transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.04);
 
 }
 
@@ -358,54 +340,46 @@ text-align: center;
 }
 
 /* =========================================
-EQUATION
+EQUATIONS
 ========================================= */
 
 .equation{
 
-width: 100%;
+  width: 100%;
 
-overflow-x: auto;
+  overflow-x: auto;
 
-display: flex;
+  display: flex;
 
-justify-content: center;
+  justify-content: center;
 
-align-items: center;
+  align-items: center;
 
-text-align: center;
+  text-align: center;
 
-padding: 24px;
+  padding: 18px;
 
-margin: 18px 0;
+  margin: 16px 0;
 
-border-radius: 18px;
+  border-radius: 16px;
 
-background: rgba(0,0,0,0.025);
-
-border: 1px solid rgba(0,0,0,0.05);
+  background: rgba(0,0,0,0.025);
 
 }
 
 .equation mjx-container{
 
-font-size: 135% !important;
+  font-size: 125% !important;
 
 }
 
-/* =========================================
-TEXT
-========================================= */
-
 .equation-box p{
 
-line-height: 1.9;
+  line-height: 1.7;
 
-font-size: 0.96rem;
+  font-size: 0.95rem;
 
-color: var(--text-muted);
-
-margin-top: auto;
+  color: var(--text-muted);
 
 }
 
@@ -446,18 +420,16 @@ color: var(--text-muted);
 }
 
 /* =========================================
-REVEAL
+REVEAL ANIMATION
 ========================================= */
 
 .reveal{
 
 opacity: 0;
 
-transform: translateY(30px);
+transform: translateY(40px);
 
-transition:
-opacity 0.8s ease,
-transform 0.8s ease;
+transition: all 1s ease;
 
 }
 
@@ -589,10 +561,7 @@ subjected to finite strain regimes.
 <div class="hero-image">
 
 <img
-src="fig1.webp"
-loading="eager"
-fetchpriority="high"
-decoding="async"
+src="fig1.jpg"
 alt="Research Interest"
 />
 
@@ -614,12 +583,7 @@ Core Themes of My Research
 
 <div class="glass-card research-card">
 
-<img
-src="fig2.webp"
-loading="lazy"
-decoding="async"
-alt="Finite Deformation"
-/>
+<img src="fig2.jpg" alt="Finite Deformation" />
 
 <h3>
 Finite Deformation Mechanics
@@ -627,7 +591,10 @@ Finite Deformation Mechanics
 
 <p>
 
-My work employs a novel kinematic framework for fiber-reinforced composite materials using the theory of multiple natural configurations together with multicontinuum theory while preserving the underlying physical consistency governing nonlinear finite deformation processes.
+My work employs a novel kinematic framework for fiber-reinforced composite materials. For this
+purpose, we use the theory of multiple natural configurations (Rajagopal and Srinivasa, 1998, International
+Journal of Plasticity, 14, 969-995) in conjunction with the multi-continuum theory (Bedford and Stern,
+1972, Acta Mechanica, 14 (2), 85-102) keeping the underlying physics consistent. 
 
 </p>
 
@@ -637,12 +604,7 @@ My work employs a novel kinematic framework for fiber-reinforced composite mater
 
 <div class="glass-card research-card">
 
-<img
-src="fig3.webp"
-loading="lazy"
-decoding="async"
-alt="Composite Materials"
-/>
+<img src="fig3.jpg" alt="Composite Materials" />
 
 <h3>
 Composite Materials
@@ -650,7 +612,11 @@ Composite Materials
 
 <p>
 
-The proposed constitutive framework is applicable to both stiff and soft composite systems including CFRP, GFRP, biological tissues, elastomeric composites, and origami-inspired architected materials undergoing complex deformation mechanisms.
+Depending on their specific constituents, the damage mechanisms of laminated composites may widely
+vary. For example, composite materials made up of glass or carbon fibers and a resin-based matrix, which
+are widely used in civil engineering or aerospace applications, are stiff in nature. These composites show
+brittle failure and cannot sustain large deformation. On the other hand, fiber-reinforced composites that constitute soft matrices such as elastomers or rubbery materials can undergo large deformations without failure
+due to the specific mechanical properties of their constituents as well as their damage mechanisms.
 
 </p>
 
@@ -660,12 +626,7 @@ The proposed constitutive framework is applicable to both stiff and soft composi
 
 <div class="glass-card research-card">
 
-<img
-src="fig4.webp"
-loading="lazy"
-decoding="async"
-alt="Damage Mechanics"
-/>
+<img src="fig4.jpg" alt="Damage Mechanics" />
 
 <h3>
 Damage Mechanics
@@ -674,10 +635,7 @@ Damage Mechanics
 <p>
 
 Damage evolution is characterized through matrix cracking,
-fiber breakage,
-interfacial slip,
-debonding,
-and delamination using constituent-level incompatibility measures.
+fiber breakage, interfacial slip, debonding, and delamination.
 
 </p>
 
@@ -687,12 +645,7 @@ and delamination using constituent-level incompatibility measures.
 
 <div class="glass-card research-card">
 
-<img
-src="fig5.webp"
-loading="lazy"
-decoding="async"
-alt="Experimental Investigation"
-/>
+<img src="fig5.jpg" alt="Experimental Investigation" />
 
 <h3>
 Experimental Investigation
@@ -700,10 +653,9 @@ Experimental Investigation
 
 <p>
 
-Experimental investigations involve tensile testing,
+Experimental studies involve tensile testing,
 mixed-mode bending experiments,
-and progressive damage characterization
-in advanced laminated composites.
+and progressive damage characterization.
 
 </p>
 
@@ -715,6 +667,8 @@ in advanced laminated composites.
 
 <!-- DAMAGE -->
 
+<!-- DAMAGE CHARACTERIZATION -->
+
 <section class="reveal">
 
 <h2 class="section-title">
@@ -723,7 +677,9 @@ Damage Characterization
 
 <p class="section-sub">
 
-The mechanical damage in composite materials is distinct from that of single-phase materials owing to the different damage mechanisms exhibited by constituent phases including fiber breakage, matrix cracking, interfacial debonding, and delamination.
+The mechanical damage in composite materials is distinct from that of single-phase materials owing to
+the different damage mechanisms that these materials exhibit. The primary damage mechanisms considered
+here are fiber breakage, matrix cracking, interfacial debonding, and delamination. 
 
 </p>
 
@@ -747,7 +703,8 @@ Matrix Cracking
 
 <p>
 
-Matrix crack density tensor representing incompatibility associated with matrix damage evolution.
+Matrix crack density tensor representing incompatibility
+associated with matrix damage evolution.
 
 </p>
 
@@ -771,7 +728,8 @@ Fiber Breakage
 
 <p>
 
-Fiber breakage mechanisms characterized through fiber incompatibility tensors.
+Fiber breakage mechanisms characterized through
+fiber incompatibility tensors.
 
 </p>
 
@@ -818,7 +776,8 @@ Interfacial Slip & Debonding
 
 <p>
 
-Relative constituent motion governs interface slip, debonding, and constituent separation mechanisms.
+Relative constituent motion governs interface slip,
+debonding, and constituent separation mechanisms.
 
 </p>
 
@@ -835,27 +794,15 @@ Delamination
 <div class="equation">
 
 \[
-\mathbf{b}^R=
-\underbrace{
-\int_{\Omega}
-(\text{Curl}\,\mathbf{F}^i)^T
-\mathbf{N}
-\,dA
-}_{\text{Bulk}}
-+
-\underbrace{
-\int_\Gamma
-\mathbf{\Sigma}^T
-\tilde{\mathbf{t}}_1
-\,dL
-}_{\text{Interface}}
+\mathbf{b}^R= \underbrace{\int_{\Omega}(\text{Curl}\,\mathbf{F}^i)^T\,\mathbf{N}\,dA}_{\text{Bulk}}+\underbrace{\int_\Gamma  \mathbf{\Sigma}^T\tilde{\mathbf{t}}_1d{L}}_{\text{Interface}}.
 \]
 
 </div>
 
 <p>
 
-Delamination is represented through displacement discontinuity measures across the interface manifold.
+Delamination is represented through displacement
+discontinuity measures across the interface manifold.
 
 </p>
 
@@ -867,6 +814,8 @@ Delamination is represented through displacement discontinuity measures across t
 
 <!-- GEOMETRIC -->
 
+<!-- GEOMETRIC INTERPRETATION -->
+
 <section class="reveal">
 
 <h2 class="section-title">
@@ -875,7 +824,10 @@ Geometric Interpretation of Damage
 
 <p class="section-sub">
 
-Differential geometric tools are employed to establish rigorous incompatibility interpretations associated with matrix cracking, fiber breakage, interfacial slip, and delamination in composite systems.
+Differential geometric tools are employed to establish
+rigorous incompatibility interpretations associated with
+matrix cracking, fiber breakage, interfacial slip,
+and delamination in composite systems.
 
 </p>
 
@@ -915,7 +867,9 @@ T^{D}_{mAB}
 
 <p>
 
-The torsion tensor associated with the matrix natural configuration provides the geometric incompatibility corresponding to matrix cracking.
+The torsion tensor associated with the matrix natural
+configuration provides the geometric incompatibility
+corresponding to matrix crack.
 
 </p>
 
@@ -926,7 +880,7 @@ The torsion tensor associated with the matrix natural configuration provides the
 <div class="equation-box">
 
 <h3>
-Fiber Configuration
+Fiber Configuration 
 </h3>
 
 <div class="equation">
@@ -955,11 +909,15 @@ T^{D}_{fAB}
 
 <p>
 
-Fiber breakage induces torsion within the fiber natural configuration and acts as a geometric measure of incompatibility.
+Fiber breakage induces torsion within the fiber
+natural configuration and acts as a geometric
+measure of incompatibility.
 
 </p>
 
 </div>
+
+<!-- INTERFACE -->
 
 <!-- INTERFACE -->
 
@@ -986,11 +944,15 @@ h_f\,\partial_J V^{\,i}_f
 \\[8pt]
 
 &=
+\underbrace{
 h_m\nabla_X\mathbf{V}_m\big|^i_J
 +
 h_f\nabla_X\mathbf{V}_f\big|^i_J
+}_{\text{bulk}}
 +
+\underbrace{
 (V^i_m-V^i_f)
+}_{[\![\mathbf{V}]\!]^i}
 N_J\,\Delta_{S_p}
 
 \end{aligned}
@@ -1000,7 +962,9 @@ N_J\,\Delta_{S_p}
 
 <p>
 
-Interface incompatibility describes the geometric discontinuity associated with interfacial damage and constituent separation.
+Interface incompatibility describes the geometric
+discontinuity associated with interfacial damage,
+debonding, and delamination evolution.
 
 </p>
 
@@ -1011,43 +975,30 @@ Interface incompatibility describes the geometric discontinuity associated with 
 <div class="equation-box">
 
 <h3>
-Delamination
+Delamination 
 </h3>
 
 <div class="equation">
 
 \[
-T^D_{AB}
-=
-h_\xi\,{T_{\xi}}^{D}_{AB}
-+
-h_\eta\,{T_{\eta}}^{D}_{AB}
-+
-T^D_{AB}\bigg|_{S_R}
+ T^D_{AB}=h_\xi\,{T_{\xi}}^{D}_{AB}+h_\eta\,{T_{\eta}}^{D}_{AB}+T^D_{AB}\bigg|_{S_R}
 \]
 
 </div>
 
-<div class="equation">
+
+ <div class="equation">
 
 \[
-T^D_{AB}\Bigg|_{S_R}
-=
-\frac{1}{2}
-({F}^{i^{-1}})^D_a
-\Delta_{S_R}
-\Bigg(
-n_B[[{F}^{i}]]\,^a_A
--
-n_A[[{F}^{i}]]\,^a_B
-\Bigg)
+    T^D_{AB}\Bigg|_{S_R}=\frac{1}{2}({F}^{i^{-1}})^D_a\,\Delta_{S_R}\Bigg(\,\,n_B\,[[{F}^{i}]]\,^a_A-\,n_A\,[[{F}^{i}]]\,^a_B\,\Bigg).
 \]
 
-</div>
-
+</div> 
 <p>
 
-The total torsion field combines bulk and interface incompatibility contributions corresponding to delamination-induced geometric defects.
+The total torsion field combines bulk and interface
+incompatibility contributions corresponding to
+delamination-induced geometric defects.
 
 </p>
 
@@ -1075,7 +1026,8 @@ Completed DST-SERB Project
 
 <p>
 
-Assessment and modeling of damage in fiber reinforced laminated composites.
+Assessment and modeling of damage in
+fiber reinforced laminated composites.
 
 </p>
 
@@ -1089,7 +1041,8 @@ Current Work
 
 <p>
 
-Current investigations focus on microfiber buckling and nonlinear instability mechanisms.
+Current investigations focus on microfiber buckling
+and nonlinear instability mechanisms.
 
 </p>
 
@@ -1103,7 +1056,8 @@ Collaboration
 
 <p>
 
-Open for collaboration in continuum mechanics, finite deformation, and composite materials.
+Open for collaboration in continuum mechanics,
+finite deformation, and composite materials.
 
 </p>
 
@@ -1147,11 +1101,9 @@ shivam1@ce.iitr.ac.in
 
 <script>
 
-const toggle =
-document.getElementById('navToggle');
+const toggle = document.getElementById('navToggle');
 
-const links =
-document.getElementById('navLinks');
+const links = document.getElementById('navLinks');
 
 toggle.addEventListener('click', () => {
 
@@ -1159,32 +1111,29 @@ links.classList.toggle('open');
 
 });
 
-// OPTIMIZED REVEAL
+function revealElements(){
 
-const observer =
-new IntersectionObserver((entries) => {
+const reveals = document.querySelectorAll('.reveal');
 
-entries.forEach((entry) => {
+reveals.forEach(reveal => {
 
-if(entry.isIntersecting){
+const windowHeight = window.innerHeight;
 
-entry.target.classList.add('active');
+const revealTop = reveal.getBoundingClientRect().top;
+
+if(revealTop < windowHeight - 100){
+
+reveal.classList.add('active');
 
 }
 
 });
 
-}, {
-threshold: 0.12
-});
+}
 
-document
-.querySelectorAll('.reveal')
-.forEach((el) => {
+revealElements();
 
-observer.observe(el);
-
-});
+window.addEventListener('scroll', revealElements);
 
 </script>
 
