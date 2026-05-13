@@ -3,871 +3,834 @@
 
 <head>
 
-<meta charset="UTF-8" />
-
+  <meta charset="UTF-8" />
 <link rel="icon" type="image/png" href="./favicon.png" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
-/>
+  <title>
+    Supervisor | SHIVAM | IIT Roorkee
+  </title>
 
-<title>
-Supervisor | SHIVAM | IIT Roorkee
-</title>
+  <meta
+    name="description"
+    content="Academic supervision and research guidance under Prof. Sandipan Paul at IIT Roorkee in the domain of nonlinear mechanics and advanced composite materials."
+  />
 
-<meta
-name="description"
-content="Academic supervision and research guidance under Prof. Sandipan Paul at IIT Roorkee in the domain of nonlinear mechanics and advanced composite materials."
-/>
+  <link rel="stylesheet" href="style.css" />
 
-<!-- PRECONNECT -->
+  <!-- FONT AWESOME -->
 
-<link
-rel="preconnect"
-href="https://cdnjs.cloudflare.com"
-/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 
-<!-- MAIN CSS -->
+  <style>
 
-<link rel="stylesheet" href="style.css" />
+    /* =========================================
+       PAGE WIDTH
+    ========================================= */
 
-<!-- FONT AWESOME -->
+    .page-wrapper{
 
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
+      width: 96%;
 
-<style>
+      max-width: 1800px;
 
-/* =========================================
-PAGE WIDTH
-========================================= */
+      margin: 0 auto;
 
-.page-wrapper{
+      padding: 0 18px;
+    }
 
-width: 96%;
-
-max-width: 1800px;
-
-margin: 0 auto;
-
-padding: 0 18px;
-
-}
-
-/* =========================================
-HERO
-========================================= */
+    /* =========================================
+       HERO
+    ========================================= */
 
 .supervisor-hero{
 
-width: 100%;
+  width: 100%;
 
-padding-top: 60px;
+  padding-top: 60px;
 
-margin-bottom: 100px;
-
+  margin-bottom: 100px;
 }
 
-.supervisor-hero h1{
+    .supervisor-hero h1{
 
-font-size: clamp(3.3rem,7vw,5.8rem);
+      font-size: clamp(3.3rem,7vw,5.8rem);
 
-line-height: 1;
+      line-height: 1;
 
-margin-bottom: 28px;
+      margin-bottom: 28px;
 
-letter-spacing: -0.05em;
+      letter-spacing: -0.05em;
+    }
 
-}
+    .supervisor-hero p{
 
-.supervisor-hero p{
+      line-height: 2;
 
-line-height: 2;
+      color: var(--text-muted);
 
-color: var(--text-muted);
+      font-size: 1.05rem;
+    }
 
-font-size: 1.05rem;
+    /* =========================================
+       IMAGE
+    ========================================= */
 
-}
+    .hero-image{
 
-/* =========================================
-GLASS CARD
-========================================= */
+      overflow: hidden;
 
-.glass-card{
+      border-radius: 30px;
 
-background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.08);
 
-backdrop-filter: blur(8px);
+      border: 1px solid rgba(0,0,0,0.08);
 
-border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+    }
 
-border-radius: 30px;
+    .hero-image img{
 
-padding: 38px;
+      width: 100%;
 
-box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+      display: block;
 
-transition: all 0.35s ease;
+      transition: transform 0.6s ease;
+    }
 
-}
+    .hero-image:hover img{
 
-.glass-card:hover{
+      transform: scale(1.04);
+    }
 
-transform: translateY(-5px);
+    /* =========================================
+       GLASS CARD
+    ========================================= */
 
-}
+    .glass-card{
 
-/* =========================================
-SUPERVISOR CARD
-========================================= */
+      background: rgba(255,255,255,0.08);
 
-.supervisor-main{
+      backdrop-filter: blur(14px);
 
-display: grid;
+      border: 1px solid rgba(0,0,0,0.08);
 
-grid-template-columns: 320px 1fr;
+      border-radius: 30px;
 
-gap: 45px;
+      padding: 38px;
 
-align-items: start;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.05);
 
-margin-bottom: 90px;
+      transition: all 0.4s ease;
+    }
 
-}
+    .glass-card:hover{
 
-.supervisor-photo{
+      transform: translateY(-8px);
+    }
 
-width: 100%;
+    /* =========================================
+       SUPERVISOR CARD
+    ========================================= */
 
-border-radius: 26px;
+    .supervisor-main{
 
-overflow: hidden;
+      display: grid;
 
-border: 1px solid rgba(0,0,0,0.08);
+      grid-template-columns: 320px 1fr;
 
-background: white;
+      gap: 45px;
 
-}
+      align-items: start;
 
-.supervisor-photo img{
+      margin-bottom: 90px;
+    }
 
-width: 100%;
+    .supervisor-photo{
 
-display: block;
+      width: 100%;
 
-object-fit: cover;
+      border-radius: 26px;
 
-}
+      overflow: hidden;
 
-.supervisor-info h2{
+      border: 1px solid rgba(0,0,0,0.08);
+    }
 
-font-size: 2.2rem;
+    .supervisor-photo img{
 
-margin-bottom: 12px;
+      width: 100%;
 
-}
+      display: block;
+    }
 
-.designation{
+    .supervisor-info h2{
 
-font-size: 1rem;
+      font-size: 2.2rem;
 
-color: #12385a;
+      margin-bottom: 12px;
+    }
 
-font-weight: 700;
+    .designation{
 
-margin-bottom: 8px;
+      font-size: 1rem;
 
-}
+      color: #12385a;
 
-.department{
+      font-weight: 700;
 
-color: var(--text-muted);
+      margin-bottom: 8px;
+    }
 
-margin-bottom: 25px;
+    .department{
 
-}
+      color: var(--text-muted);
 
-.supervisor-info p{
+      margin-bottom: 25px;
+    }
 
-line-height: 2;
+    .supervisor-info p{
 
-color: var(--text-muted);
+      line-height: 2;
 
-margin-bottom: 20px;
+      color: var(--text-muted);
 
-}
+      margin-bottom: 20px;
+    }
 
-/* =========================================
-BUTTONS
-========================================= */
+    /* =========================================
+       BUTTONS
+    ========================================= */
 
-.hero-links{
+    .hero-links{
 
-display: flex;
+      display: flex;
 
-gap: 16px;
+      gap: 16px;
 
-flex-wrap: wrap;
+      flex-wrap: wrap;
 
-margin-top: 24px;
+      margin-top: 24px;
+    }
 
-}
+    .btn{
 
-.btn{
+      padding: 13px 22px;
 
-padding: 13px 22px;
+      border-radius: 12px;
 
-border-radius: 12px;
+      text-decoration: none;
 
-text-decoration: none;
+      font-weight: 600;
 
-font-weight: 600;
+      transition: all 0.35s ease;
+    }
 
-transition: all 0.3s ease;
+    .btn-primary{
 
-}
+      background: #12385a;
 
-.btn-primary{
+      color: white;
+    }
 
-background: #12385a;
+    .btn-primary:hover{
 
-color: white;
+      transform: translateY(-4px);
+    }
 
-}
+    .btn-outline{
 
-.btn-primary:hover{
+      border: 1px solid rgba(0,0,0,0.08);
 
-transform: translateY(-3px);
+      background: rgba(255,255,255,0.08);
 
-}
+      color: var(--text);
+    }
 
-.btn-outline{
+    .btn-outline:hover{
 
-border: 1px solid rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+    }
 
-background: rgba(255,255,255,0.08);
+    /* =========================================
+       LAB SECTION
+    ========================================= */
 
-color: var(--text);
+    .lab-grid{
 
-}
+      display: grid;
 
-.btn-outline:hover{
+      grid-template-columns: repeat(2,1fr);
 
-transform: translateY(-3px);
+      gap: 36px;
 
-}
+      margin-bottom: 100px;
+    }
 
-/* =========================================
-LAB GRID
-========================================= */
+    .lab-card img{
 
-.lab-grid{
+      width: 100%;
 
-display: grid;
+      border-radius: 22px;
 
-grid-template-columns: repeat(2,1fr);
+      margin-bottom: 22px;
+    }
 
-gap: 36px;
+    .lab-card h3{
 
-margin-bottom: 100px;
+      font-size: 1.5rem;
 
-}
+      margin-bottom: 18px;
+    }
 
-.lab-card img{
+    .lab-card p{
 
-width: 100%;
+      line-height: 2;
 
-height: 280px;
+      color: var(--text-muted);
+    }
 
-object-fit: cover;
+    /* =========================================
+       HIGHLIGHTS
+    ========================================= */
 
-border-radius: 22px;
+    .highlight-grid{
 
-margin-bottom: 22px;
+      display: grid;
 
-display: block;
+      grid-template-columns: repeat(3,1fr);
 
-}
+      gap: 30px;
 
-.lab-card h3{
+      margin-top: 50px;
 
-font-size: 1.5rem;
+      margin-bottom: 90px;
+    }
 
-margin-bottom: 18px;
+    .highlight-card{
 
-}
+      text-align: center;
+    }
 
-.lab-card p{
+    .highlight-card i{
 
-line-height: 2;
+      font-size: 2rem;
 
-color: var(--text-muted);
+      color: #12385a;
 
-}
+      margin-bottom: 20px;
+    }
 
-/* =========================================
-HIGHLIGHTS
-========================================= */
+    .highlight-card h3{
 
-.highlight-grid{
+      margin-bottom: 18px;
+    }
 
-display: grid;
+    .highlight-card p{
 
-grid-template-columns: repeat(3,1fr);
+      color: var(--text-muted);
 
-gap: 30px;
+      line-height: 1.9;
+    }
 
-margin-top: 50px;
+    /* =========================================
+       SECTION TITLE
+    ========================================= */
 
-margin-bottom: 90px;
+    .section-title{
 
-}
+      text-align: center;
 
-.highlight-card{
+      font-size: 2.4rem;
 
-text-align: center;
+      margin-bottom: 18px;
+    }
 
-}
+    .section-sub{
 
-.highlight-card i{
+      text-align: center;
 
-font-size: 2rem;
+      max-width: 900px;
 
-color: #12385a;
+      margin: 0 auto 60px auto;
 
-margin-bottom: 20px;
+      line-height: 2;
 
-}
+      color: var(--text-muted);
+    }
 
-.highlight-card h3{
+    /* =========================================
+       REVEAL
+    ========================================= */
 
-margin-bottom: 18px;
+    .reveal{
 
-}
+      opacity: 0;
 
-.highlight-card p{
+      transform: translateY(40px);
 
-color: var(--text-muted);
+      transition: all 1s ease;
+    }
 
-line-height: 1.9;
+    .reveal.active{
 
-}
+      opacity: 1;
 
-/* =========================================
-SECTION TITLE
-========================================= */
+      transform: translateY(0);
+    }
 
-.section-title{
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
 
-text-align: center;
+    @media(max-width:1100px){
 
-font-size: 2.4rem;
+      .supervisor-hero{
 
-margin-bottom: 18px;
+        grid-template-columns: 1fr;
+      }
 
-}
+      .supervisor-main{
 
-.section-sub{
+        grid-template-columns: 1fr;
+      }
 
-text-align: center;
+      .lab-grid{
 
-max-width: 900px;
+        grid-template-columns: 1fr;
+      }
 
-margin: 0 auto 60px auto;
+      .highlight-grid{
 
-line-height: 2;
+        grid-template-columns: 1fr;
+      }
 
-color: var(--text-muted);
+    }
 
-}
-
-/* =========================================
-REVEAL
-========================================= */
-
-.reveal{
-
-opacity: 0;
-
-transform: translateY(30px);
-
-transition:
-opacity 0.8s ease,
-transform 0.8s ease;
-
-}
-
-.reveal.active{
-
-opacity: 1;
-
-transform: translateY(0);
-
-}
-
-/* =========================================
-RESPONSIVE
-========================================= */
-
-@media(max-width:1100px){
-
-.supervisor-main{
-
-grid-template-columns: 1fr;
-
-}
-
-.lab-grid{
-
-grid-template-columns: 1fr;
-
-}
-
-.highlight-grid{
-
-grid-template-columns: 1fr;
-
-}
-
-}
-
-</style>
+  </style>
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+  <!-- NAVBAR -->
 
-<nav class="navbar">
+  <nav class="navbar">
 
-<div class="nav-inner">
+    <div class="nav-inner">
 
-<a href="index.html" class="nav-logo">
-SHIVAM
-</a>
+      <a href="index.html" class="nav-logo">
+        SHIVAM
+      </a>
 
-<ul class="nav-links" id="navLinks">
+      <ul class="nav-links" id="navLinks">
 
-<li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
 
-<li><a href="about.html">About Me</a></li>
+        <li><a href="about.html">About Me</a></li>
 
-<li><a href="research.html">Research Interest</a></li>
+        <li><a href="research.html">Research Interest</a></li>
 
-<li><a href="publications.html">Publication</a></li>
+        <li><a href="publications.html">Publication</a></li>
 
-<li>
-<a href="supervisor.html" class="active">
-Supervisor
-</a>
-</li>
+        <li>
+          <a href="supervisor.html" class="active">
+            Supervisor
+          </a>
+        </li>
 
-<li><a href="gallery.html">Gallery</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
 
-<li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
 
-</ul>
+      </ul>
 
-<button class="nav-toggle" id="navToggle">
+      <button class="nav-toggle" id="navToggle">
 
-<span></span>
-<span></span>
-<span></span>
+        <span></span>
+        <span></span>
+        <span></span>
 
-</button>
+      </button>
 
-</div>
+    </div>
 
-</nav>
+  </nav>
 
-<!-- MAIN -->
+  <!-- MAIN -->
 
-<main class="page-wrapper">
+  <main class="page-wrapper">
 
-<!-- HERO -->
+    <!-- HERO -->
 
-<section class="supervisor-hero reveal">
+    <section class="supervisor-hero reveal">
 
-<div>
+      <div>
 
-<div class="section-label">
-Supervision
-</div>
+        <div class="section-label">
+          Supervision
+        </div>
 
-<h1>
-Research Guidance & Mentorship
-</h1>
+        <h1>
+          Research Guidance & Mentorship
+        </h1>
 
-<p>
+        <p>
 
-My doctoral research at the Indian Institute of Technology
-Roorkee is conducted under the supervision of
-Prof. Sandipan Paul, whose expertise spans nonlinear
-continuum mechanics, finite deformation theory,
-constitutive modeling, and advanced composite systems.
+          My doctoral research at the Indian Institute of Technology
+          Roorkee is conducted under the supervision of
+          Prof. Sandipan Paul, whose expertise spans nonlinear
+          continuum mechanics, finite deformation theory,
+          constitutive modeling, and advanced composite systems.
 
-I am also an active member of the
-Nonlinear Mechanics Laboratory (NLM Lab),
-where current research activities integrate
-theoretical developments,
-multicontinuum formulations,
-and experimental investigations
-in advanced materials.
+          I am also an active member of the
+          Nonlinear Mechanics Laboratory (NLM Lab),
+          where current research activities integrate
+          theoretical developments, computational mechanics,
+          and experimental investigations in advanced materials.
 
-</p>
+        </p>
 
-</div>
+      </div>
 
-</section>
 
-<!-- PRIMARY SUPERVISOR -->
 
-<section class="glass-card supervisor-main reveal">
+    </section>
 
-<div class="supervisor-photo">
+    <!-- PRIMARY SUPERVISOR -->
 
-<img
-src="sandipan-paul.webp"
-loading="eager"
-fetchpriority="high"
-decoding="async"
-alt="Prof. Sandipan Paul"
-/>
+    <section class="glass-card supervisor-main reveal">
 
-</div>
+      <div class="supervisor-photo">
 
-<div class="supervisor-info">
+        <!-- SAME IMAGE -->
+        <img
+          src="sandipan-paul.jpg"
+          alt="Prof. Sandipan Paul"
+        />
 
-<div class="section-label">
-Primary Supervisor
-</div>
+      </div>
 
-<h2>
-Prof. Sandipan Paul
-</h2>
+      <div class="supervisor-info">
 
-<div class="designation">
+        <div class="section-label">
+          Primary Supervisor
+        </div>
 
-Assistant Professor
+        <h2>
+          Prof. Sandipan Paul
+        </h2>
 
-</div>
+        <div class="designation">
 
-<div class="department">
+          Assistant Professor
 
-Department of Civil Engineering,
-Indian Institute of Technology Roorkee,
-Roorkee, India
+        </div>
 
-</div>
+        <div class="department">
 
-<p>
+          Department of Civil Engineering,
+          Indian Institute of Technology Roorkee,
+          Roorkee, India
 
-Prof. Sandipan Paul specializes in nonlinear mechanics,
-finite deformation theory,
-constitutive modeling,
-continuum mechanics,
-and multiscale modeling of advanced composite materials.
+        </div>
 
-His research group develops rigorous theoretical
-frameworks for understanding complex deformation,
-instability,
-incompatibility,
-and damage evolution phenomena
-in engineering materials subjected
-to nonlinear loading environments.
+        <p>
 
-</p>
+          Prof. Sandipan Paul specializes in nonlinear mechanics,
+          finite deformation theory, constitutive modeling,
+          continuum mechanics, and multiscale modeling
+          of advanced composite materials.
 
-<p>
+          His research group develops rigorous theoretical
+          frameworks for understanding complex deformation,
+          instability, incompatibility, and damage evolution
+          phenomena in engineering materials subjected
+          to nonlinear loading environments.
 
-Under his supervision,
-my research focuses on multicontinuum formulations,
-geometric interpretations of incompatibility,
-and experimentally validated
-damage characterization frameworks
-for fiber-reinforced laminated composites.
+        </p>
 
-</p>
+        <p>
 
-<div class="hero-links">
+          Under his supervision, my research focuses on
+          multicontinuum formulations, geometric interpretations
+          of incompatibility, and experimentally validated
+          damage characterization frameworks for
+          fiber-reinforced laminated composites.
 
-<a
-href="https://civil.iitr.ac.in/CE?Uid=sandipan.paul"
-target="_blank"
-class="btn btn-primary"
->
-Official Profile
-</a>
+        </p>
 
-<a
-href="https://www.nlmlab-iitr.in/"
-target="_blank"
-class="btn btn-outline"
->
-NLM Lab
-</a>
+        <div class="hero-links">
 
-<a
-href="mailto:sandipan.paul@ce.iitr.ac.in"
-class="btn btn-outline"
->
-Email
-</a>
+          <a
+            href="https://civil.iitr.ac.in/CE?Uid=sandipan.paul"
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Official Profile
+          </a>
 
-</div>
+          <a
+            href="https://www.nlmlab-iitr.in/"
+            target="_blank"
+            class="btn btn-outline"
+          >
+            NLM Lab
+          </a>
 
-</div>
+          <a
+            href="mailto:sandipan.paul@ce.iitr.ac.in"
+            class="btn btn-outline"
+          >
+            Email
+          </a>
 
-</section>
+        </div>
 
-<!-- LAB -->
+      </div>
 
-<section class="reveal">
+    </section>
 
-<h2 class="section-title">
-Nonlinear Mechanics Laboratory
-</h2>
+    <!-- LAB -->
 
-<p class="section-sub">
+    <section class="reveal">
 
-The Nonlinear Mechanics Laboratory (NLM Lab)
-at IIT Roorkee focuses on nonlinear continuum mechanics,
-constitutive modeling,
-finite deformation mechanics,
-instability analysis,
-advanced composite systems,
-and experimentally validated multiscale formulations.
+      <h2 class="section-title">
+        Nonlinear Mechanics Laboratory
+      </h2>
 
-</p>
+      <p class="section-sub">
 
-<div class="lab-grid">
+        The Nonlinear Mechanics Laboratory (NLM Lab)
+        at IIT Roorkee focuses on nonlinear continuum mechanics,
+        constitutive modeling, finite deformation mechanics,
+        instability analysis, advanced composite systems,
+        and experimentally validated multiscale formulations.
 
-<!-- LAB -->
+      </p>
 
-<div class="glass-card lab-card">
+      <div class="lab-grid">
 
-<img
-src="nlmlab.webp"
-loading="lazy"
-decoding="async"
-alt="NLM Laboratory"
-/>
+        <!-- LAB -->
 
-<h3>
-Research Environment
-</h3>
+        <div class="glass-card lab-card">
 
-<p>
+          <!-- DOWNLOAD FROM LAB WEBSITE -->
+          <img
+            src="nlmlab.jpg"
+            alt="NLM Laboratory"
+          />
 
-The laboratory integrates rigorous theoretical
+          <h3>
+            Research Environment
+          </h3>
+
+          <p>
+
+            The laboratory integrates rigorous theoretical
 mechanics and advanced experimental
 investigations to study nonlinear material
-behavior,
-deformation mechanisms,
-damage evolution,
-and composite instability phenomena.
+behavior, deformation mechanisms,
+damage evolution, and composite
+instability phenomena.
 
-</p>
+          </p>
 
-</div>
+        </div>
 
-<!-- MEMBER -->
+        <!-- MEMBER -->
 
-<div class="glass-card lab-card">
+        <div class="glass-card lab-card">
 
-<img
-src="fig6.webp"
-loading="lazy"
-decoding="async"
-alt="Composite Mechanics Research"
-/>
+          <img
+            src="fig6.png"
+            alt="Composite Mechanics Research"
+          />
 
-<h3>
-My Role in the Lab
-</h3>
+          <h3>
+            My Role in the Lab
+          </h3>
 
-<p>
+          <p>
 
-As a member of the NLM Lab,
-I contribute toward the development
-of multicontinuum constitutive frameworks,
-geometric incompatibility formulations,
-finite deformation modeling,
-and experimental investigations
-involving advanced laminated composites.
+            As a member of the NLM Lab,
+            I contribute toward the development
+            of multicontinuum constitutive frameworks,
+            geometric incompatibility formulations,
+            finite deformation modeling,
+            and experimental investigations
+            involving advanced laminated composites.
 
-</p>
+          </p>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </section>
 
-<!-- HIGHLIGHTS -->
+    <!-- HIGHLIGHTS -->
 
-<section class="reveal">
+    <section class="reveal">
 
-<h2 class="section-title">
-Research Highlights
-</h2>
+      <h2 class="section-title">
+        Research Highlights
+      </h2>
 
-<p class="section-sub">
+      <p class="section-sub">
 
 The current research environment combines
 theoretical mechanics,
 constitutive modeling,
 and experimental characterization.
 
-</p>
+      </p>
 
-<div class="highlight-grid">
+      <div class="highlight-grid">
 
-<!-- H1 -->
+        <!-- H1 -->
 
-<div class="glass-card highlight-card">
+        <div class="glass-card highlight-card">
 
-<i class="fa-solid fa-cubes"></i>
+          <i class="fa-solid fa-cubes"></i>
 
-<h3>
-Continuum Mechanics
-</h3>
+          <h3>
+            Continuum Mechanics
+          </h3>
 
-<p>
+          <p>
 
-Nonlinear constitutive modeling and finite
-deformation formulations for advanced composites.
+            Nonlinear constitutive modeling and finite
+            deformation formulations for advanced composites.
 
-</p>
+          </p>
 
-</div>
+        </div>
 
-<!-- H2 -->
+        <!-- H2 -->
 
-<div class="glass-card highlight-card">
+        <div class="glass-card highlight-card">
 
-<i class="fa-solid fa-diagram-project"></i>
+          <i class="fa-solid fa-diagram-project"></i>
 
-<h3>
-Multicontinuum Theory
-</h3>
+          <h3>
+            Multicontinuum Theory
+          </h3>
 
-<p>
+          <p>
 
-Development of constituent-level formulations
-for matrix cracking,
-fiber breakage,
-and delamination mechanisms.
+            Development of constituent-level formulations
+            for matrix cracking,
+            fiber breakage,
+            and delamination mechanisms.
 
-</p>
+          </p>
 
-</div>
+        </div>
 
-<!-- H3 -->
+        <!-- H3 -->
 
-<div class="glass-card highlight-card">
+        <div class="glass-card highlight-card">
 
-<i class="fa-solid fa-flask"></i>
+          <i class="fa-solid fa-flask"></i>
 
-<h3>
-Experimental Mechanics
-</h3>
+          <h3>
+            Experimental Mechanics
+          </h3>
 
-<p>
+          <p>
 
-Experimental characterization through tensile,
-mixed-mode bending,
-and damage evolution investigations.
+            Experimental characterization through tensile,
+            mixed-mode bending,
+            and damage evolution investigations.
 
-</p>
+          </p>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</section>
+    </section>
 
-</main>
+  </main>
 
-<!-- FOOTER -->
+  <!-- FOOTER -->
 
-<footer>
+  <footer>
 
-<div
-style="
-max-width: var(--max-w);
-margin: 0 auto;
-padding: 0 32px;
-"
->
+    <div
+      style="
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 32px;
+    "
+    >
 
-<p>
+      <p>
 
-© 2026 SHIVAM ·
+        © 2026 SHIVAM ·
 
-<a href="mailto:shivam1@ce.iitr.ac.in">
-shivam1@ce.iitr.ac.in
-</a>
+        <a href="mailto:shivam1@ce.iitr.ac.in">
+          shivam1@ce.iitr.ac.in
+        </a>
 
-· IIT Roorkee
+        · IIT Roorkee
 
-</p>
+      </p>
 
-</div>
+    </div>
 
-</footer>
+  </footer>
 
-<!-- SCRIPT -->
+  <!-- SCRIPT -->
 
-<script>
+  <script>
 
-// MOBILE MENU
+    // MOBILE MENU
 
-const toggle =
-document.getElementById('navToggle');
+    const toggle = document.getElementById('navToggle');
 
-const links =
-document.getElementById('navLinks');
+    const links = document.getElementById('navLinks');
 
-toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', () => {
 
-links.classList.toggle('open');
+      links.classList.toggle('open');
 
-});
+    });
 
-// OPTIMIZED REVEAL
+    // REVEAL ANIMATION
 
-const observer =
-new IntersectionObserver((entries) => {
+    function revealElements(){
 
-entries.forEach((entry) => {
+      const reveals = document.querySelectorAll('.reveal');
 
-if(entry.isIntersecting){
+      reveals.forEach(reveal => {
 
-entry.target.classList.add('active');
+        const windowHeight = window.innerHeight;
 
-}
+        const revealTop = reveal.getBoundingClientRect().top;
 
-});
+        if(revealTop < windowHeight - 100){
 
-}, {
-threshold: 0.12
-});
+          reveal.classList.add('active');
 
-document
-.querySelectorAll('.reveal')
-.forEach((el) => {
+        }
 
-observer.observe(el);
+      });
 
-});
+    }
 
-</script>
+    revealElements();
+
+    window.addEventListener('scroll', revealElements);
+
+  </script>
 
 </body>
 
