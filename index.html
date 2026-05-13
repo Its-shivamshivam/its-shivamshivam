@@ -5,49 +5,79 @@
 
   <meta charset="UTF-8" />
 
-<link rel="icon" type="image/png" href="./favicon.png" />
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>SHIVAM | IIT Roorkee | Composite Materials Research</title>
+  <link rel="icon" type="image/png" href="./favicon.png" />
 
   <meta
-  name="description"
-  content="SHIVAM is a Research Scholar at IIT Roorkee working in theoretical mechanics, continuum mechanics, finite deformation, and composite materials research."
-/>
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    SHIVAM | IIT Roorkee | Composite Materials Research
+  </title>
 
   <meta
-  name="keywords"
-  content="SHIVAM IIT Roorkee, Composite Materials, Finite Deformation, Continuum Mechanics, Damage Mechanics, IITR Research Scholar"
-/>
+    name="description"
+    content="SHIVAM is a Research Scholar at IIT Roorkee working in theoretical mechanics, continuum mechanics, finite deformation, and composite materials research."
+  />
 
-  <!-- Open Graph Meta Tags -->
+  <meta
+    name="keywords"
+    content="SHIVAM IIT Roorkee, Composite Materials, Finite Deformation, Continuum Mechanics, Damage Mechanics, IITR Research Scholar"
+  />
 
-  <meta property="og:title"
-  content="SHIVAM | PhD Scholar | Composite Materials Research" />
+  <!-- OPEN GRAPH -->
 
-  <meta property="og:description"
-  content="Research Scholar at IIT Roorkee working in computational and experimental mechanics of advanced composite materials." />
+  <meta
+    property="og:title"
+    content="SHIVAM | Research Scholar | Composite Materials Research"
+  />
 
-  <meta property="og:image"
-  content="https://its-shivamshivam.github.io/profilePhoto.webp" />
+  <meta
+    property="og:description"
+    content="Research Scholar at IIT Roorkee working in theoretical and experimental mechanics of advanced composite materials."
+  />
 
-  <meta property="og:url"
-  content="https://its-shivamshivam.github.io/" />
+  <meta
+    property="og:image"
+    content="https://its-shivamshivam.github.io/profilePhoto.webp"
+  />
 
-  <meta property="og:type"
-  content="website" />
+  <meta
+    property="og:url"
+    content="https://its-shivamshivam.github.io/"
+  />
 
-  <!-- Twitter Preview -->
+  <meta
+    property="og:type"
+    content="website"
+  />
 
-  <meta name="twitter:card"
-  content="summary_large_image" />
+  <!-- TWITTER -->
 
-  <link rel="stylesheet" href="style.css"/>
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
 
-</head>
+  <!-- PRELOAD MAIN IMAGE -->
 
-  <!-- FONT AWESOME ICONS -->
+  <link
+    rel="preload"
+    as="image"
+    href="profilePhoto.webp"
+  />
+
+  <!-- MAIN CSS -->
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- FONT AWESOME -->
+
+  <link
+    rel="preconnect"
+    href="https://cdnjs.cloudflare.com"
+  />
 
   <link
     rel="stylesheet"
@@ -56,40 +86,44 @@
 
   <style>
 
-    /* =========================
+    /* =========================================
        HERO SECTION
-    ========================== */
+    ========================================= */
 
-    .hero {
+    .hero{
 
-  display: flex;
+      display: flex;
 
-  justify-content: space-between;
+      justify-content: space-between;
 
-  align-items: flex-start;
+      align-items: flex-start;
 
-  gap: 70px;
+      gap: 70px;
 
-  padding-top: 40px;
+      padding-top: 40px;
 
-  flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
 
-}
+    .hero-left{
 
-    .hero-left {
       flex: 1;
+
       min-width: 320px;
     }
 
-    .hero-right {
-      flex: 0.9;
+    .hero-right{
+
+      flex: 0.95;
+
       display: flex;
+
       justify-content: center;
     }
 
-    .hero-name {
+    .hero-name{
 
-      font-size: clamp(3.4rem, 8vw, 5.8rem);
+      font-size: clamp(3.4rem,8vw,5.8rem);
 
       line-height: 1;
 
@@ -98,7 +132,7 @@
       letter-spacing: -0.05em;
     }
 
-    .hero-title {
+    .hero-title{
 
       font-size: 1.1rem;
 
@@ -111,7 +145,7 @@
       max-width: 700px;
     }
 
-    .hero-bio {
+    .hero-bio{
 
       font-size: 1rem;
 
@@ -122,15 +156,15 @@
       max-width: 760px;
     }
 
-    /* =========================
+    /* =========================================
        GLASS CARD
-    ========================== */
+    ========================================= */
 
-    .glass-card {
+    .glass-card{
 
       background: rgba(255,255,255,0.08);
 
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(5px);
 
       border: 1px solid rgba(255,255,255,0.14);
 
@@ -138,18 +172,25 @@
 
       padding: 24px;
 
-      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+      transition: all 0.35s ease;
     }
 
-    /* =========================
-       HERO PHOTO
-    ========================== */
+    .glass-card:hover{
 
-    .hero-photo {
+      transform: translateY(-6px);
+    }
+
+    /* =========================================
+       HERO PHOTO
+    ========================================= */
+
+    .hero-photo{
 
       width: 100%;
 
-      max-width: 360px;
+      max-width: 460px;
 
       border-radius: 24px;
 
@@ -157,20 +198,27 @@
 
       border: 1px solid rgba(255,255,255,0.15);
 
-      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 
-      transition: transform 0.5s ease;
+      transition: transform 0.45s ease;
+
+      will-change: transform;
+
+      transform: translateZ(0);
+
+      display: block;
     }
 
-    .hero-photo:hover {
-      transform: translateY(-8px);
+    .hero-photo:hover{
+
+      transform: translateY(-6px);
     }
 
-    /* =========================
+    /* =========================================
        BUTTONS
-    ========================== */
+    ========================================= */
 
-    .hero-links {
+    .hero-links{
 
       display: flex;
 
@@ -181,7 +229,7 @@
       margin-top: 34px;
     }
 
-    .btn {
+    .btn{
 
       padding: 13px 22px;
 
@@ -194,21 +242,21 @@
       transition: all 0.35s ease;
     }
 
-    .btn-primary {
+    .btn-primary{
 
       background: #12385a;
 
       color: white;
     }
 
-    .btn-primary:hover {
+    .btn-primary:hover{
 
       background: #0d2740;
 
       transform: translateY(-3px);
     }
 
-    .btn-outline {
+    .btn-outline{
 
       border: 1px solid rgba(255,255,255,0.15);
 
@@ -217,18 +265,18 @@
       color: var(--text);
     }
 
-    .btn-outline:hover {
+    .btn-outline:hover{
 
       background: rgba(255,255,255,0.12);
 
       transform: translateY(-3px);
     }
 
-    /* =========================
+    /* =========================================
        SOCIAL ICONS
-    ========================== */
+    ========================================= */
 
-    .social-icons {
+    .social-icons{
 
       display: flex;
 
@@ -239,13 +287,16 @@
       margin-top: 22px;
     }
 
-    .social-icons a {
+    .social-icons a{
 
       width: 46px;
+
       height: 46px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       border-radius: 50%;
@@ -263,18 +314,18 @@
       transition: all 0.35s ease;
     }
 
-    .social-icons a:hover {
+    .social-icons a:hover{
 
       transform: translateY(-4px);
 
       background: rgba(255,255,255,0.12);
     }
 
-    /* =========================
+    /* =========================================
        KEYWORDS
-    ========================== */
+    ========================================= */
 
-    .keyword-grid {
+    .keyword-grid{
 
       display: flex;
 
@@ -285,7 +336,7 @@
       margin-top: 28px;
     }
 
-    .keyword {
+    .keyword{
 
       padding: 12px 18px;
 
@@ -300,19 +351,21 @@
       transition: all 0.35s ease;
     }
 
-    .keyword:hover {
+    .keyword:hover{
+
       transform: translateY(-3px);
     }
 
-    /* =========================
+    /* =========================================
        FEATURED PAPER
-    ========================== */
+    ========================================= */
 
-    .featured-paper {
+    .featured-paper{
+
       margin-top: 90px;
     }
 
-    .paper-title {
+    .paper-title{
 
       font-size: 1.12rem;
 
@@ -321,15 +374,16 @@
       margin-bottom: 14px;
     }
 
-    /* =========================
-       NEWS SECTION
-    ========================== */
+    /* =========================================
+       NEWS
+    ========================================= */
 
-    .news-section {
+    .news-section{
+
       margin-top: 90px;
     }
 
-    .news-list {
+    .news-list{
 
       display: flex;
 
@@ -340,7 +394,7 @@
       margin-top: 28px;
     }
 
-    .news-item {
+    .news-item{
 
       display: grid;
 
@@ -361,11 +415,12 @@
       transition: 0.35s ease;
     }
 
-    .news-item:hover {
+    .news-item:hover{
+
       transform: translateY(-5px);
     }
 
-    .news-date {
+    .news-date{
 
       font-size: 0.92rem;
 
@@ -378,59 +433,73 @@
       padding-top: 4px;
     }
 
-    .news-content {
+    .news-content{
 
       line-height: 1.95;
 
       color: var(--text);
     }
 
-    /* =========================
-       REVEAL ANIMATION
-    ========================== */
+    /* =========================================
+       OPTIMIZED REVEAL
+    ========================================= */
 
-    .reveal {
+    .reveal{
 
       opacity: 0;
 
-      transform: translateY(40px);
+      transform: translateY(30px);
 
-      transition: all 1s ease;
+      transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
     }
 
-    .reveal.active {
+    .reveal.active{
 
       opacity: 1;
 
       transform: translateY(0);
     }
 
-    /* =========================
+    /* =========================================
        RESPONSIVE
-    ========================== */
+    ========================================= */
 
-    @media(max-width: 950px){
+    @media(max-width:950px){
 
       .hero{
+
         flex-direction: column-reverse;
+
         text-align: center;
       }
 
       .hero-links{
+
         justify-content: center;
       }
 
       .hero-bio{
+
         margin: 0 auto;
       }
 
       .keyword-grid{
+
         justify-content: center;
       }
 
       .news-item{
+
         grid-template-columns: 1fr;
+
         gap: 10px;
+      }
+
+      .hero-photo{
+
+        max-width: 380px;
       }
 
     }
@@ -441,9 +510,7 @@
 
 <body>
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
+  <!-- NAVBAR -->
 
   <nav class="navbar">
 
@@ -455,27 +522,63 @@
 
       <ul class="nav-links" id="navLinks">
 
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="research.html">Research Interest</a></li>
-        <li><a href="publications.html">Publication</a></li>
-        <li><a href="supervisor.html">Supervisor</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li>
+          <a href="index.html" class="active">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About Me
+          </a>
+        </li>
+
+        <li>
+          <a href="research.html">
+            Research Interest
+          </a>
+        </li>
+
+        <li>
+          <a href="publications.html">
+            Publication
+          </a>
+        </li>
+
+        <li>
+          <a href="supervisor.html">
+            Supervisor
+          </a>
+        </li>
+
+        <li>
+          <a href="gallery.html">
+            Gallery
+          </a>
+        </li>
+
+        <li>
+          <a href="blog.html">
+            Blog
+          </a>
+        </li>
 
       </ul>
 
       <button class="nav-toggle" id="navToggle">
-        <span></span><span></span><span></span>
+
+        <span></span>
+        <span></span>
+        <span></span>
+
       </button>
 
     </div>
 
   </nav>
 
-  <!-- =========================
-       MAIN
-  ========================== -->
+  <!-- MAIN -->
 
   <main class="page-wrapper">
 
@@ -501,21 +604,29 @@
         <p class="hero-bio">
 
           I am working in the domains of
-          theoretical mechanics and experimental mechanics of composite materials.
+          theoretical mechanics and experimental mechanics
+          of composite materials.
 
-          My research principally concentrates on damage characterization, constitutive modeling,
+          My research principally concentrates on
+          damage characterization,
+          constitutive modeling,
           and the mechanical response of
-          fiber-reinforced laminated composites subjected to finite
-          deformation regimes.
+          fiber-reinforced laminated composites
+          subjected to finite deformation regimes.
 
           My work integrates theoretical formulations,
-          numerical simulations, and experimental methodologies
-          to investigate nonlinear structural behavior and complex
-          failure mechanisms in advanced composite systems.
+          numerical simulations,
+          and experimental methodologies
+          to investigate nonlinear structural behavior
+          and complex failure mechanisms
+          in advanced composite systems.
 
-          Through my research, I aspire to contribute toward
-          robust multiscale frameworks for predictive damage
-          analysis and mechanics-based modeling of composite materials.
+          Through my research,
+          I aspire to contribute toward
+          robust multiscale frameworks
+          for predictive damage analysis
+          and mechanics-based modeling
+          of composite materials.
 
         </p>
 
@@ -531,7 +642,11 @@
             Publications
           </a>
 
-          <a href="resume.pdf" download class="btn btn-outline">
+          <a
+            href="resume.pdf"
+            download
+            class="btn btn-outline"
+          >
             Download CV
           </a>
 
@@ -571,6 +686,9 @@
             src="profilePhoto.webp"
             alt="SHIVAM"
             class="hero-photo"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
           />
 
           <!-- SOCIALS -->
@@ -616,7 +734,7 @@
 
     </section>
 
-    <!-- FEATURED PAPER -->
+    <!-- FEATURED PUBLICATION -->
 
     <section class="featured-paper reveal">
 
@@ -638,9 +756,15 @@
 
         </div>
 
-        <p style="line-height:1.9; color: var(--text-muted);">
+        <p
+          style="
+          line-height:1.9;
+          color: var(--text-muted);
+        "
+        >
 
           Published in the
+
           <strong>
             International Journal of Engineering Science
           </strong>
@@ -653,7 +777,10 @@
           href="https://www.sciencedirect.com/science/article/pii/S002072252600056X"
           target="_blank"
           class="btn btn-primary"
-          style="margin-top:20px; display:inline-block;"
+          style="
+          margin-top:20px;
+          display:inline-block;
+        "
         >
           Read Publication
         </a>
@@ -671,6 +798,8 @@
       </h2>
 
       <div class="news-list">
+
+        <!-- NEWS ITEM -->
 
         <div class="news-item">
 
@@ -696,6 +825,8 @@
 
         </div>
 
+        <!-- NEWS ITEM -->
+
         <div class="news-item">
 
           <div class="news-date">
@@ -718,6 +849,8 @@
           </div>
 
         </div>
+
+        <!-- NEWS ITEM -->
 
         <div class="news-item">
 
@@ -782,41 +915,44 @@
 
     // MOBILE MENU
 
-    const toggle = document.getElementById('navToggle');
+    const toggle =
+    document.getElementById('navToggle');
 
-    const links = document.getElementById('navLinks');
+    const links =
+    document.getElementById('navLinks');
 
     toggle.addEventListener('click', () => {
+
       links.classList.toggle('open');
+
     });
 
-    // SCROLL REVEAL
+    // OPTIMIZED REVEAL
 
-    function revealElements(){
+    const observer =
+    new IntersectionObserver((entries) => {
 
-      const reveals = document.querySelectorAll('.reveal');
+      entries.forEach((entry) => {
 
-      reveals.forEach(reveal => {
+        if(entry.isIntersecting){
 
-        const windowHeight = window.innerHeight;
+          entry.target.classList.add('active');
 
-        const revealTop = reveal.getBoundingClientRect().top;
-
-        if(revealTop < windowHeight - 100){
-          reveal.classList.add('active');
         }
 
       });
 
-    }
+    }, {
+      threshold: 0.12
+    });
 
-    // RUN ON LOAD
+    document
+    .querySelectorAll('.reveal')
+    .forEach((el) => {
 
-    revealElements();
+      observer.observe(el);
 
-    // RUN ON SCROLL
-
-    window.addEventListener('scroll', revealElements);
+    });
 
   </script>
 
