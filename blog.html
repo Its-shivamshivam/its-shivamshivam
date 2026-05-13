@@ -4,7 +4,9 @@
 <head>
 
   <meta charset="UTF-8" />
-<link rel="icon" type="image/png" href="./favicon.png" />
+
+  <link rel="icon" type="image/png" href="./favicon.png" />
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
@@ -19,9 +21,16 @@
     content="Research blog and academic thoughts of SHIVAM on finite deformation mechanics, composite materials, conferences, and academic life."
   />
 
+  <!-- MAIN CSS -->
+
   <link rel="stylesheet" href="style.css" />
 
   <!-- FONT AWESOME -->
+
+  <link
+    rel="preconnect"
+    href="https://cdnjs.cloudflare.com"
+  />
 
   <link
     rel="stylesheet"
@@ -31,14 +40,19 @@
   <!-- MATHJAX -->
 
   <script>
+
     window.MathJax = {
+
       tex: {
         inlineMath: [['$', '$']]
       }
+
     };
+
   </script>
 
   <script
+    async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 
@@ -116,6 +130,21 @@
     }
 
     /* =========================================
+       GLASS
+    ========================================= */
+
+    .glass{
+
+      background: rgba(255,255,255,0.08);
+
+      backdrop-filter: blur(5px);
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    /* =========================================
        QUOTE
     ========================================= */
 
@@ -126,14 +155,6 @@
       padding: 40px;
 
       border-radius: 30px;
-
-      background: rgba(255,255,255,0.08);
-
-      backdrop-filter: blur(14px);
-
-      border: 1px solid rgba(0,0,0,0.08);
-
-      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
     }
 
     .quote-box p{
@@ -157,15 +178,14 @@
 
       border-radius: 32px;
 
-      background: rgba(255,255,255,0.08);
-
-      backdrop-filter: blur(14px);
-
-      border: 1px solid rgba(0,0,0,0.08);
-
-      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-
       margin-bottom: 90px;
+
+      transition: all 0.35s ease;
+    }
+
+    .featured-card:hover{
+
+      transform: translateY(-6px);
     }
 
     .featured-card h2{
@@ -224,22 +244,13 @@
        BLOG GRID
     ========================================= */
 
-.blog-grid{
+    .blog-grid{
 
-  display: flex;
+      display: flex;
 
-  flex-direction: column;
+      flex-direction: column;
 
-  gap: 34px;
-}
-
-    @media(max-width:950px){
-
-      .blog-grid{
-
-        grid-template-columns: 1fr;
-      }
-
+      gap: 34px;
     }
 
     /* =========================================
@@ -252,20 +263,12 @@
 
       border-radius: 30px;
 
-      background: rgba(255,255,255,0.08);
-
-      backdrop-filter: blur(14px);
-
-      border: 1px solid rgba(0,0,0,0.08);
-
-      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-
       transition: all 0.4s ease;
     }
 
     .blog-card:hover{
 
-      transform: translateY(-8px);
+      transform: translateY(-6px);
     }
 
     .blog-meta{
@@ -319,7 +322,7 @@
     }
 
     /* =========================================
-       EXPAND BUTTON
+       EXPAND
     ========================================= */
 
     .expand-btn{
@@ -423,12 +426,6 @@
     }
 
     /* =========================================
-       INSIGHT CARDS
-    ========================================= */
-
-
-
-    /* =========================================
        REVEAL
     ========================================= */
 
@@ -436,9 +433,11 @@
 
       opacity: 0;
 
-      transform: translateY(40px);
+      transform: translateY(30px);
 
-      transition: all 1s ease;
+      transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
     }
 
     .reveal.active{
@@ -446,6 +445,24 @@
       opacity: 1;
 
       transform: translateY(0);
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media(max-width:950px){
+
+      .blog-card{
+
+        padding: 28px;
+      }
+
+      .featured-card{
+
+        padding: 30px;
+      }
+
     }
 
   </style>
@@ -456,7 +473,10 @@
 
   <!-- PROGRESS BAR -->
 
-  <div class="progress-bar" id="progressBar"></div>
+  <div
+    class="progress-bar"
+    id="progressBar"
+  ></div>
 
   <!-- NAVBAR -->
 
@@ -470,17 +490,41 @@
 
       <ul class="nav-links" id="navLinks">
 
-        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
 
-        <li><a href="about.html">About Me</a></li>
+        <li>
+          <a href="about.html">
+            About Me
+          </a>
+        </li>
 
-        <li><a href="research.html">Research Interest</a></li>
+        <li>
+          <a href="research.html">
+            Research Interest
+          </a>
+        </li>
 
-        <li><a href="publications.html">Publication</a></li>
+        <li>
+          <a href="publications.html">
+            Publication
+          </a>
+        </li>
 
-        <li><a href="supervisor.html">Supervisor</a></li>
+        <li>
+          <a href="supervisor.html">
+            Supervisor
+          </a>
+        </li>
 
-        <li><a href="gallery.html">Gallery</a></li>
+        <li>
+          <a href="gallery.html">
+            Gallery
+          </a>
+        </li>
 
         <li>
           <a href="blog.html" class="active">
@@ -518,11 +562,14 @@
         Writing & Thoughts
       </h1>
 
-      <p class="typing-text" id="typingText"></p>
+      <p
+        class="typing-text"
+        id="typingText"
+      ></p>
 
       <!-- QUOTE -->
 
-      <div class="quote-box">
+      <div class="quote-box glass">
 
         <p>
 
@@ -538,7 +585,7 @@
 
     <!-- FEATURED -->
 
-    <section class="featured-card reveal">
+    <section class="featured-card glass reveal">
 
       <div class="section-label">
         Featured Reflection
@@ -554,20 +601,22 @@
       <p>
 
         A personal reflection on the rigorous journey
-        from repeated rejection, revisions,
+        from repeated rejection,
+        revisions,
         and critical reviewer comments
-        toward the eventual acceptance of my first journal paper.
-
-        The article discusses the emotional,
-        intellectual, and technical lessons learned
-        during the publication process.
+        toward the eventual acceptance
+        of my first journal paper.
 
       </p>
 
       <div class="equation">
 
       \[
-      \mathbf{F}=\mathbf{F}^e\,\mathbf{F}^r_{\alpha}\,\mathbf{F}^d_{\alpha}
+      \mathbf{F}
+      =
+      \mathbf{F}^{e}
+      \mathbf{F}^{r}_{\alpha}
+      \mathbf{F}^{d}_{\alpha}
       \]
 
       </div>
@@ -578,15 +627,24 @@
 
     <div class="pub-filters reveal">
 
-      <button class="filter-btn active" data-filter="all">
+      <button
+        class="filter-btn active"
+        data-filter="all"
+      >
         All
       </button>
 
-      <button class="filter-btn" data-filter="research">
+      <button
+        class="filter-btn"
+        data-filter="research"
+      >
         Research
       </button>
 
-      <button class="filter-btn" data-filter="life">
+      <button
+        class="filter-btn"
+        data-filter="life"
+      >
         Life
       </button>
 
@@ -594,12 +652,12 @@
 
     <!-- BLOG GRID -->
 
-    <div class="blog-grid reveal" id="blogList">
+    <div class="blog-grid reveal">
 
       <!-- BLOG 1 -->
 
       <article
-        class="blog-card"
+        class="blog-card glass"
         data-cat="research"
       >
 
@@ -629,8 +687,8 @@
           A detailed reflection on navigating peer review,
           technical criticism,
           manuscript revisions,
-          and the intellectual growth associated with
-          publishing research for the first time.
+          and the intellectual growth associated
+          with publishing research for the first time.
 
         </p>
 
@@ -667,7 +725,7 @@
 
         </div>
 
-        <!-- LIKE & COMMENT -->
+        <!-- INTERACTION -->
 
         <div class="interaction">
 
@@ -691,7 +749,7 @@
       <!-- BLOG 2 -->
 
       <article
-        class="blog-card"
+        class="blog-card glass"
         data-cat="life"
       >
 
@@ -738,7 +796,7 @@
 
         </div>
 
-        <!-- LIKE & COMMENT -->
+        <!-- INTERACTION -->
 
         <div class="interaction">
 
@@ -797,9 +855,11 @@
 
     // MOBILE NAV
 
-    const toggle = document.getElementById('navToggle');
+    const toggle =
+    document.getElementById('navToggle');
 
-    const links = document.getElementById('navLinks');
+    const links =
+    document.getElementById('navLinks');
 
     toggle.addEventListener('click', () => {
 
@@ -807,43 +867,48 @@
 
     });
 
-    // REVEAL
+    // OPTIMIZED REVEAL
 
-    function revealElements(){
+    const observer =
+    new IntersectionObserver((entries) => {
 
-      const reveals = document.querySelectorAll('.reveal');
+      entries.forEach((entry) => {
 
-      reveals.forEach(reveal => {
+        if(entry.isIntersecting){
 
-        const windowHeight = window.innerHeight;
-
-        const revealTop = reveal.getBoundingClientRect().top;
-
-        if(revealTop < windowHeight - 100){
-
-          reveal.classList.add('active');
+          entry.target.classList.add('active');
 
         }
 
       });
 
-    }
+    }, {
+      threshold: 0.12
+    });
 
-    revealElements();
+    document
+    .querySelectorAll('.reveal')
+    .forEach((el) => {
 
-    window.addEventListener('scroll', revealElements);
+      observer.observe(el);
+
+    });
 
     // FILTER
 
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    const filterBtns =
+    document.querySelectorAll('.filter-btn');
 
-    const blogCards = document.querySelectorAll('.blog-card');
+    const blogCards =
+    document.querySelectorAll('.blog-card');
 
     filterBtns.forEach(btn => {
 
       btn.addEventListener('click', () => {
 
-        filterBtns.forEach(b => b.classList.remove('active'));
+        filterBtns.forEach(b =>
+          b.classList.remove('active')
+        );
 
         btn.classList.add('active');
 
@@ -852,8 +917,10 @@
         blogCards.forEach(card => {
 
           card.style.display =
-          (filter === 'all' ||
-          card.dataset.cat === filter)
+          (
+            filter === 'all' ||
+            card.dataset.cat === filter
+          )
           ? ''
           : 'none';
 
@@ -879,7 +946,7 @@
 
     }
 
-    // TYPING EFFECT
+    // TYPING
 
     const text = `
     Reflections on research,
@@ -895,25 +962,28 @@
 
       if(i < text.length){
 
-        document.getElementById("typingText")
+        document
+        .getElementById("typingText")
         .innerHTML += text.charAt(i);
 
         i++;
 
-        setTimeout(typing, 28);
+        setTimeout(typing, 24);
 
       }
 
     }
 
-    typing();
+    window.addEventListener('load', typing);
 
     // PROGRESS BAR
+
+    const progressBar =
+    document.getElementById('progressBar');
 
     window.addEventListener('scroll', () => {
 
       const winScroll =
-      document.body.scrollTop ||
       document.documentElement.scrollTop;
 
       const height =
@@ -923,8 +993,8 @@
       const scrolled =
       (winScroll / height) * 100;
 
-      document.getElementById("progressBar")
-      .style.width = scrolled + "%";
+      progressBar.style.width =
+      scrolled + "%";
 
     });
 
