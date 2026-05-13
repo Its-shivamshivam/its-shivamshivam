@@ -3,765 +3,832 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+<meta charset="UTF-8" />
+
 <link rel="icon" type="image/png" href="./favicon.png" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
 
-  <title>
-    Publications | SHIVAM | IIT Roorkee
-  </title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+/>
 
-  <meta
-    name="description"
-    content="Academic publications and conference presentations of SHIVAM in finite deformation mechanics, damage mechanics, and advanced composite materials."
-  />
+<title>
+Publications | SHIVAM | IIT Roorkee
+</title>
 
-  <link rel="stylesheet" href="style.css" />
+<meta
+name="description"
+content="Academic publications and conference presentations of SHIVAM in finite deformation mechanics, damage mechanics, and advanced composite materials."
+/>
 
-  <!-- FONT AWESOME -->
+<!-- PRECONNECT -->
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+<link
+rel="preconnect"
+href="https://cdnjs.cloudflare.com"
+/>
 
-  <style>
+<!-- MAIN CSS -->
 
-    /* =========================================
-       PAGE WIDTH
-    ========================================= */
+<link rel="stylesheet" href="style.css" />
 
-    .page-wrapper{
+<!-- FONT AWESOME -->
 
-      width: 96%;
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
 
-      max-width: 1800px;
+<style>
 
-      margin: 0 auto;
+/* =========================================
+PAGE WIDTH
+========================================= */
 
-      padding: 0 18px;
-    }
+.page-wrapper{
 
-    /* =========================================
-       HERO
-    ========================================= */
+width: 96%;
 
-    .pub-hero{
+max-width: 1800px;
 
-      padding-top: 60px;
+margin: 0 auto;
 
-      margin-bottom: 90px;
-    }
+padding: 0 18px;
 
-    .pub-hero h1{
+}
 
-      font-size: clamp(3.2rem,7vw,5.8rem);
+/* =========================================
+HERO
+========================================= */
 
-      line-height: 1;
+.pub-hero{
 
-      margin-bottom: 26px;
+padding-top: 60px;
 
-      letter-spacing: -0.05em;
-    }
+margin-bottom: 90px;
 
-    .pub-hero p{
+}
 
-      max-width: 1000px;
+.pub-hero h1{
 
-      line-height: 2;
+font-size: clamp(3.2rem,7vw,5.8rem);
 
-      color: var(--text-muted);
+line-height: 1;
 
-      font-size: 1.05rem;
-    }
+margin-bottom: 26px;
 
-    /* =========================================
-       STATS
-    ========================================= */
+letter-spacing: -0.05em;
 
-    .stats-row{
+}
 
-      display: flex;
+.pub-hero p{
 
-      gap: 30px;
+max-width: 1000px;
 
-      flex-wrap: wrap;
+line-height: 2;
 
-      margin-top: 50px;
+color: var(--text-muted);
 
-      margin-bottom: 70px;
-    }
+font-size: 1.05rem;
 
-    .stat-card{
+}
 
-      min-width: 180px;
+/* =========================================
+STATS
+========================================= */
 
-      padding: 28px;
+.stats-row{
 
-      border-radius: 26px;
+display: flex;
 
-      background: rgba(255,255,255,0.08);
+gap: 30px;
 
-      backdrop-filter: blur(14px);
+flex-wrap: wrap;
 
-      border: 1px solid rgba(0,0,0,0.06);
+margin-top: 50px;
 
-      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+margin-bottom: 70px;
 
-      text-align: center;
+}
 
-      transition: all 0.4s ease;
-    }
+.stat-card{
 
-    .stat-card:hover{
+min-width: 180px;
 
-      transform: translateY(-8px);
-    }
+padding: 28px;
 
-    .stat-number{
+border-radius: 26px;
 
-      font-size: 2.6rem;
+background: rgba(255,255,255,0.92);
 
-      font-weight: 700;
+backdrop-filter: blur(6px);
 
-      color: #12385a;
+border: 1px solid rgba(0,0,0,0.06);
 
-      margin-bottom: 10px;
-    }
+box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 
-    .stat-label{
+text-align: center;
 
-      color: var(--text-muted);
+transition: all 0.35s ease;
 
-      font-size: 0.9rem;
-    }
+}
 
-    /* =========================================
-       BUTTONS
-    ========================================= */
+.stat-card:hover{
 
-    .hero-links{
+transform: translateY(-6px);
 
-      display: flex;
+}
 
-      gap: 16px;
+.stat-number{
 
-      flex-wrap: wrap;
+font-size: 2.6rem;
 
-      margin-top: 25px;
-    }
+font-weight: 700;
 
-    .btn{
+color: #12385a;
 
-      padding: 13px 22px;
+margin-bottom: 10px;
 
-      border-radius: 12px;
+}
 
-      text-decoration: none;
+.stat-label{
 
-      font-weight: 600;
+color: var(--text-muted);
 
-      transition: all 0.35s ease;
-    }
+font-size: 0.9rem;
 
-    .btn-primary{
+}
 
-      background: #12385a;
+/* =========================================
+BUTTONS
+========================================= */
 
-      color: white;
-    }
+.hero-links{
 
-    .btn-primary:hover{
+display: flex;
 
-      transform: translateY(-4px);
-    }
+gap: 16px;
 
-    .btn-outline{
+flex-wrap: wrap;
 
-      border: 1px solid rgba(0,0,0,0.08);
+margin-top: 25px;
 
-      background: rgba(255,255,255,0.08);
+}
 
-      color: var(--text);
-    }
+.btn{
 
-    .btn-outline:hover{
+padding: 13px 22px;
 
-      transform: translateY(-4px);
-    }
+border-radius: 12px;
 
-    /* =========================================
-       FILTERS
-    ========================================= */
+text-decoration: none;
 
-    .pub-filters{
+font-weight: 600;
 
-      display: flex;
+transition: all 0.3s ease;
 
-      gap: 16px;
+}
 
-      flex-wrap: wrap;
+.btn-primary{
 
-      margin-bottom: 50px;
-    }
+background: #12385a;
 
-    .filter-btn{
+color: white;
 
-      border: none;
+}
 
-      padding: 12px 22px;
+.btn-primary:hover{
 
-      border-radius: 999px;
+transform: translateY(-3px);
 
-      background: rgba(255,255,255,0.08);
+}
 
-      border: 1px solid rgba(0,0,0,0.08);
+.btn-outline{
 
-      cursor: pointer;
+border: 1px solid rgba(0,0,0,0.08);
 
-      transition: all 0.35s ease;
+background: rgba(255,255,255,0.08);
 
-      font-weight: 600;
-    }
+color: var(--text);
 
-    .filter-btn.active{
+}
 
-      background: #12385a;
+.btn-outline:hover{
 
-      color: white;
-    }
+transform: translateY(-3px);
 
-    .filter-btn:hover{
+}
 
-      transform: translateY(-3px);
-    }
+/* =========================================
+FILTERS
+========================================= */
 
-    /* =========================================
-       PUBLICATION LIST
-    ========================================= */
+.pub-filters{
 
-    .pub-list{
+display: flex;
 
-      display: flex;
+gap: 16px;
 
-      flex-direction: column;
+flex-wrap: wrap;
 
-      gap: 34px;
+margin-bottom: 50px;
 
-      margin-bottom: 100px;
-    }
+}
 
-    .pub-item{
+.filter-btn{
 
-      display: grid;
+border: none;
 
-      grid-template-columns: 140px 1fr;
+padding: 12px 22px;
 
-      gap: 36px;
+border-radius: 999px;
 
-      padding: 40px;
+background: rgba(255,255,255,0.9);
 
-      border-radius: 32px;
+border: 1px solid rgba(0,0,0,0.08);
 
-      background: rgba(255,255,255,0.08);
+cursor: pointer;
 
-      backdrop-filter: blur(16px);
+transition: all 0.3s ease;
 
-      border: 1px solid rgba(0,0,0,0.07);
+font-weight: 600;
 
-      box-shadow: 0 12px 45px rgba(0,0,0,0.05);
+}
 
-      transition: all 0.45s ease;
-    }
+.filter-btn.active{
 
-    .pub-item:hover{
+background: #12385a;
 
-      transform: translateY(-8px);
-    }
+color: white;
 
-    .pub-year{
+}
 
-      font-size: 1.2rem;
+.filter-btn:hover{
 
-      font-weight: 700;
+transform: translateY(-3px);
 
-      color: #12385a;
-    }
+}
 
-    .pub-title{
+/* =========================================
+PUBLICATION LIST
+========================================= */
 
-      font-size: 1.45rem;
+.pub-list{
 
-      font-weight: 700;
+display: flex;
 
-      line-height: 1.6;
+flex-direction: column;
 
-      margin-bottom: 16px;
-    }
+gap: 34px;
 
-    .pub-authors{
+margin-bottom: 100px;
 
-      color: var(--text-muted);
+}
 
-      line-height: 1.9;
+.pub-item{
 
-      margin-bottom: 10px;
-    }
+display: grid;
 
-    .pub-venue{
+grid-template-columns: 140px 1fr;
 
-      color: var(--text-muted);
+gap: 36px;
 
-      line-height: 1.9;
+padding: 40px;
 
-      margin-bottom: 24px;
-    }
+border-radius: 30px;
 
-    .pub-links{
+background: rgba(255,255,255,0.92);
 
-      display: flex;
+backdrop-filter: blur(8px);
 
-      gap: 14px;
+border: 1px solid rgba(0,0,0,0.07);
 
-      flex-wrap: wrap;
-    }
+box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 
-    .pub-link{
+transition: all 0.4s ease;
 
-      padding: 10px 18px;
+}
 
-      border-radius: 999px;
+.pub-item:hover{
 
-      text-decoration: none;
+transform: translateY(-6px);
 
-      background: rgba(255,255,255,0.08);
+}
 
-      border: 1px solid rgba(0,0,0,0.08);
+.pub-year{
 
-      color: var(--text);
+font-size: 1.25rem;
 
-      transition: all 0.35s ease;
-    }
+font-weight: 700;
 
-    .pub-link:hover{
+color: #12385a;
 
-      transform: translateY(-3px);
+}
 
-      background: #12385a;
+.pub-title{
 
-      color: white;
-    }
+font-size: 1.45rem;
 
-    /* =========================================
-       REVEAL
-    ========================================= */
+font-weight: 700;
 
-    .reveal{
+line-height: 1.6;
 
-      opacity: 0;
+margin-bottom: 16px;
 
-      transform: translateY(40px);
+}
 
-      transition: all 1s ease;
-    }
+.pub-authors{
 
-    .reveal.active{
+color: var(--text-muted);
 
-      opacity: 1;
+line-height: 1.9;
 
-      transform: translateY(0);
-    }
+margin-bottom: 10px;
 
-    /* =========================================
-       RESPONSIVE
-    ========================================= */
+}
 
-    @media(max-width:1000px){
+.pub-venue{
 
-      .pub-item{
+color: var(--text-muted);
 
-        grid-template-columns: 1fr;
-      }
+line-height: 1.9;
 
-    }
+margin-bottom: 24px;
 
-  </style>
+}
+
+.pub-links{
+
+display: flex;
+
+gap: 14px;
+
+flex-wrap: wrap;
+
+}
+
+.pub-link{
+
+padding: 10px 18px;
+
+border-radius: 999px;
+
+text-decoration: none;
+
+background: rgba(255,255,255,0.08);
+
+border: 1px solid rgba(0,0,0,0.08);
+
+color: var(--text);
+
+transition: all 0.3s ease;
+
+}
+
+.pub-link:hover{
+
+transform: translateY(-3px);
+
+background: #12385a;
+
+color: white;
+
+}
+
+/* =========================================
+REVEAL
+========================================= */
+
+.reveal{
+
+opacity: 0;
+
+transform: translateY(30px);
+
+transition:
+opacity 0.8s ease,
+transform 0.8s ease;
+
+}
+
+.reveal.active{
+
+opacity: 1;
+
+transform: translateY(0);
+
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:1000px){
+
+.pub-item{
+
+grid-template-columns: 1fr;
+
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
+<!-- NAVBAR -->
 
-  <nav class="navbar">
+<nav class="navbar">
 
-    <div class="nav-inner">
+<div class="nav-inner">
 
-      <a href="index.html" class="nav-logo">
-        SHIVAM
-      </a>
+<a href="index.html" class="nav-logo">
+SHIVAM
+</a>
 
-      <ul class="nav-links" id="navLinks">
+<ul class="nav-links" id="navLinks">
 
-        <li><a href="index.html">Home</a></li>
+<li><a href="index.html">Home</a></li>
 
-        <li><a href="about.html">About Me</a></li>
+<li><a href="about.html">About Me</a></li>
 
-        <li><a href="research.html">Research Interest</a></li>
+<li><a href="research.html">Research Interest</a></li>
 
-        <li>
-          <a href="publications.html" class="active">
-            Publication
-          </a>
-        </li>
+<li>
+<a href="publications.html" class="active">
+Publication
+</a>
+</li>
 
-        <li><a href="supervisor.html">Supervisor</a></li>
+<li><a href="supervisor.html">Supervisor</a></li>
 
-        <li><a href="gallery.html">Gallery</a></li>
+<li><a href="gallery.html">Gallery</a></li>
 
-        <li><a href="blog.html">Blog</a></li>
+<li><a href="blog.html">Blog</a></li>
 
-      </ul>
+</ul>
 
-      <button class="nav-toggle" id="navToggle">
+<button class="nav-toggle" id="navToggle">
 
-        <span></span>
-        <span></span>
-        <span></span>
+<span></span>
+<span></span>
+<span></span>
 
-      </button>
+</button>
 
-    </div>
+</div>
 
-  </nav>
+</nav>
 
-  <!-- MAIN -->
+<!-- MAIN -->
 
-  <main class="page-wrapper">
+<main class="page-wrapper">
 
-    <!-- HERO -->
+<!-- HERO -->
 
-    <section class="pub-hero reveal">
+<section class="pub-hero reveal">
 
-      <div class="section-label">
-        Publications
-      </div>
+<div class="section-label">
+Publications
+</div>
 
-      <h1>
-        Academic Publications
-      </h1>
+<h1>
+Academic Publications
+</h1>
 
-      <p>
+<p>
 
-        My scholarly contributions primarily focus on finite deformation
-        mechanics, multicontinuum constitutive modeling,
-        geometric incompatibility theory,
-        and damage characterization in advanced fiber-reinforced
-        composite materials subjected to nonlinear loading conditions.
+My scholarly contributions primarily focus on finite deformation mechanics,
+multicontinuum constitutive modeling,
+geometric incompatibility theory,
+and damage characterization in advanced fiber-reinforced composite materials subjected to nonlinear loading conditions.
 
-      </p>
+</p>
 
-      <div class="hero-links">
+<div class="hero-links">
 
-        <a
-          href="https://scholar.google.com/citations?user=T04X1hkAAAAJ&hl=en"
-          target="_blank"
-          class="btn btn-primary"
-        >
-          Google Scholar
-        </a>
+<a
+href="https://scholar.google.com/citations?user=T04X1hkAAAAJ&hl=en"
+target="_blank"
+class="btn btn-primary"
+>
+Google Scholar
+</a>
 
-        <a
-          href="resume.pdf"
-          download
-          class="btn btn-outline"
-        >
-          Download CV
-        </a>
+<a
+href="resume.pdf"
+download
+class="btn btn-outline"
+>
+Download CV
+</a>
 
-      </div>
+</div>
 
-    </section>
+</section>
 
-    <!-- STATS -->
+<!-- STATS -->
 
-    <section class="stats-row reveal">
+<section class="stats-row reveal">
 
-      <div class="stat-card">
+<div class="stat-card">
 
-        <div class="stat-number">
-          2
-        </div>
+<div class="stat-number">
+2
+</div>
 
-        <div class="stat-label">
-          Publications
-        </div>
+<div class="stat-label">
+Publications
+</div>
 
-      </div>
+</div>
 
-      <div class="stat-card">
+<div class="stat-card">
 
-        <div class="stat-number">
-          1
-        </div>
+<div class="stat-number">
+1
+</div>
 
-        <div class="stat-label">
-          Journal Paper
-        </div>
+<div class="stat-label">
+Journal Paper
+</div>
 
-      </div>
+</div>
 
-      <div class="stat-card">
+<div class="stat-card">
 
-        <div class="stat-number">
-          1
-        </div>
+<div class="stat-number">
+1
+</div>
 
-        <div class="stat-label">
-          Conference Presentation
-        </div>
+<div class="stat-label">
+Conference Presentation
+</div>
 
-      </div>
+</div>
 
-    </section>
+</section>
 
-    <!-- FILTERS -->
+<!-- FILTERS -->
 
-    <section class="reveal">
+<section class="reveal">
 
-      <div class="pub-filters">
+<div class="pub-filters">
 
-        <button class="filter-btn active" data-filter="all">
-          All
-        </button>
+<button
+class="filter-btn active"
+data-filter="all"
+>
+All
+</button>
 
-        <button class="filter-btn" data-filter="journal">
-          Journal
-        </button>
+<button
+class="filter-btn"
+data-filter="journal"
+>
+Journal
+</button>
 
-        <button class="filter-btn" data-filter="conference">
-          Conference
-        </button>
+<button
+class="filter-btn"
+data-filter="conference"
+>
+Conference
+</button>
 
-      </div>
+</div>
 
-    </section>
+</section>
 
-    <!-- PUBLICATIONS -->
+<!-- PUBLICATIONS -->
 
-    <ul class="pub-list reveal" id="pubList">
+<ul class="pub-list reveal" id="pubList">
 
-      <!-- JOURNAL -->
+<!-- JOURNAL -->
 
-      <li class="pub-item" data-type="journal">
+<li class="pub-item" data-type="journal">
 
-        <span class="pub-year">
-          2026
-        </span>
+<span class="pub-year">
+2026
+</span>
 
-        <div>
+<div>
 
-          <div class="pub-title">
+<div class="pub-title">
 
-            A novel large-strain kinematic framework for
-            fiber-reinforced laminated composites and its
-            application in the characterization of damage
+A novel large-strain kinematic framework for
+fiber-reinforced laminated composites and its
+application in the characterization of damage
 
-          </div>
+</div>
 
-          <div class="pub-authors">
+<div class="pub-authors">
 
-            <strong>SHIVAM</strong>,
-            Sandipan Paul
+<strong>SHIVAM</strong>,
+Sandipan Paul
 
-          </div>
+</div>
 
-          <div class="pub-venue">
+<div class="pub-venue">
 
-            International Journal of Engineering Science,
-            March 2026.
+International Journal of Engineering Science,
+March 2026.
 
-          </div>
+</div>
 
-          <div class="pub-links">
+<div class="pub-links">
 
-            <a
-              href="https://www.sciencedirect.com/science/article/pii/S002072252600056X"
-              target="_blank"
-              class="pub-link"
-            >
-              Paper
-            </a>
+<a
+href="https://www.sciencedirect.com/science/article/pii/S002072252600056X"
+target="_blank"
+class="pub-link"
+>
+Paper
+</a>
 
-            <a
-              href="https://www.sciencedirect.com/science/article/pii/S002072252600056X"
-              target="_blank"
-              class="pub-link"
-            >
-              DOI
-            </a>
+<a
+href="https://www.sciencedirect.com/science/article/pii/S002072252600056X"
+target="_blank"
+class="pub-link"
+>
+DOI
+</a>
 
-          </div>
+</div>
 
-        </div>
+</div>
 
-      </li>
+</li>
 
-      <!-- CONFERENCE -->
+<!-- CONFERENCE -->
 
-      <li class="pub-item" data-type="conference">
+<li class="pub-item" data-type="conference">
 
-        <span class="pub-year">
-          2025
-        </span>
+<span class="pub-year">
+2025
+</span>
 
-        <div>
+<div>
 
-          <div class="pub-title">
+<div class="pub-title">
 
-            A novel kinematic framework for composite materials
-            undergoing damage using multiple natural configurations
+A novel kinematic framework for composite materials
+undergoing damage using multiple natural configurations
 
-          </div>
+</div>
 
-          <div class="pub-authors">
+<div class="pub-authors">
 
-            <strong>SHIVAM</strong>,
-            Sandipan Paul
+<strong>SHIVAM</strong>,
+Sandipan Paul
 
-          </div>
+</div>
 
-          <div class="pub-venue">
+<div class="pub-venue">
 
-            Presented at IMPLAST 2025.
+Presented at IMPLAST 2025.
 
-          </div>
+</div>
 
-          <div class="pub-links">
+<div class="pub-links">
 
-            <a
-              href="#"
-              class="pub-link"
-            >
-              Presentation
-            </a>
+<a
+href="#"
+class="pub-link"
+>
+Presentation
+</a>
 
-          </div>
+</div>
 
-        </div>
+</div>
 
-      </li>
+</li>
 
-    </ul>
+</ul>
 
-  </main>
+</main>
 
-  <!-- FOOTER -->
+<!-- FOOTER -->
 
-  <footer>
+<footer>
 
-    <div
-      style="
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 32px;
-    "
-    >
+<div
+style="
+max-width: var(--max-w);
+margin: 0 auto;
+padding: 0 32px;
+"
+>
 
-      <p>
+<p>
 
-        © 2026 SHIVAM ·
+© 2026 SHIVAM ·
 
-        <a href="mailto:shivam1@ce.iitr.ac.in">
-          shivam1@ce.iitr.ac.in
-        </a>
+<a href="mailto:shivam1@ce.iitr.ac.in">
+shivam1@ce.iitr.ac.in
+</a>
 
-        · IIT Roorkee
+· IIT Roorkee
 
-      </p>
+</p>
 
-    </div>
+</div>
 
-  </footer>
+</footer>
 
-  <!-- SCRIPT -->
+<!-- SCRIPT -->
 
-  <script>
+<script>
 
-    // MOBILE NAV
+// MOBILE NAV
 
-    const toggle = document.getElementById('navToggle');
+const toggle =
+document.getElementById('navToggle');
 
-    const links = document.getElementById('navLinks');
+const links =
+document.getElementById('navLinks');
 
-    toggle.addEventListener('click', () => {
+toggle.addEventListener('click', () => {
 
-      links.classList.toggle('open');
+links.classList.toggle('open');
 
-    });
+});
 
-    // FILTERS
+// FILTERS
 
-    const filterBtns = document.querySelectorAll('.filter-btn');
+const filterBtns =
+document.querySelectorAll('.filter-btn');
 
-    const pubItems = document.querySelectorAll('.pub-item');
+const pubItems =
+document.querySelectorAll('.pub-item');
 
-    filterBtns.forEach(btn => {
+filterBtns.forEach(btn => {
 
-      btn.addEventListener('click', () => {
+btn.addEventListener('click', () => {
 
-        filterBtns.forEach(b => b.classList.remove('active'));
+filterBtns.forEach(b => {
 
-        btn.classList.add('active');
+b.classList.remove('active');
 
-        const filter = btn.dataset.filter;
+});
 
-        pubItems.forEach(item => {
+btn.classList.add('active');
 
-          item.style.display =
-          (
-            filter === 'all' ||
-            item.dataset.type === filter
-          )
-          ? ''
-          : 'none';
+const filter = btn.dataset.filter;
 
-        });
+pubItems.forEach(item => {
 
-      });
+item.style.display =
 
-    });
+(
+filter === 'all' ||
+item.dataset.type === filter
+)
 
-    // REVEAL ANIMATION
+? ''
 
-    function revealElements(){
+: 'none';
 
-      const reveals = document.querySelectorAll('.reveal');
+});
 
-      reveals.forEach(reveal => {
+});
 
-        const windowHeight = window.innerHeight;
+});
 
-        const revealTop = reveal.getBoundingClientRect().top;
+// OPTIMIZED REVEAL
 
-        if(revealTop < windowHeight - 100){
+const observer =
+new IntersectionObserver((entries) => {
 
-          reveal.classList.add('active');
+entries.forEach((entry) => {
 
-        }
+if(entry.isIntersecting){
 
-      });
+entry.target.classList.add('active');
 
-    }
+}
 
-    revealElements();
+});
 
-    window.addEventListener('scroll', revealElements);
+}, {
 
-  </script>
+threshold: 0.12
+
+});
+
+document
+.querySelectorAll('.reveal')
+.forEach((el) => {
+
+observer.observe(el);
+
+});
+
+</script>
 
 </body>
 
