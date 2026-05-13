@@ -4,8 +4,13 @@
 <head>
 
   <meta charset="UTF-8" />
-<link rel="icon" type="image/png" href="./favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="./favicon.png" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
   <title>
     SHIVAM | About Me | IIT Roorkee
@@ -16,9 +21,24 @@
     content="About SHIVAM, Research Scholar at IIT Roorkee working in theoretical mechanics, continuum mechanics, finite deformation, and composite materials research."
   />
 
+  <!-- PRELOAD PROFILE IMAGE -->
+
+  <link
+    rel="preload"
+    as="image"
+    href="profilePhoto.webp"
+  />
+
+  <!-- MAIN CSS -->
+
   <link rel="stylesheet" href="style.css" />
 
   <!-- FONT AWESOME -->
+
+  <link
+    rel="preconnect"
+    href="https://cdnjs.cloudflare.com"
+  />
 
   <link
     rel="stylesheet"
@@ -27,24 +47,24 @@
 
   <style>
 
-/* =========================
-   PAGE WIDTH
-========================== */
+    /* =========================================
+       PAGE WIDTH
+    ========================================= */
 
-.page-wrapper{
+    .page-wrapper{
 
-  width: 100%;
+      width: 100%;
 
-  max-width: 1800px;
+      max-width: 1800px;
 
-  margin: 0 auto;
+      margin: 0 auto;
 
-  padding: 0 60px;
-}
+      padding: 0 60px;
+    }
 
-    /* =========================
+    /* =========================================
        PAGE HEADER
-    ========================== */
+    ========================================= */
 
     .page-header{
 
@@ -55,7 +75,7 @@
 
     .page-header h1{
 
-      font-size: clamp(3rem, 6vw, 5rem);
+      font-size: clamp(3rem,6vw,5rem);
 
       line-height: 1.05;
 
@@ -75,9 +95,9 @@
       color: var(--text-muted);
     }
 
-    /* =========================
+    /* =========================================
        ABOUT GRID
-    ========================== */
+    ========================================= */
 
     .about-grid{
 
@@ -90,9 +110,9 @@
       align-items: start;
     }
 
-    /* =========================
+    /* =========================================
        BIOGRAPHY
-    ========================== */
+    ========================================= */
 
     .bio-block p{
 
@@ -105,9 +125,9 @@
       margin-bottom: 28px;
     }
 
-    /* =========================
+    /* =========================================
        SECTION TITLES
-    ========================== */
+    ========================================= */
 
     .section-title{
 
@@ -120,9 +140,9 @@
       border-bottom: 1px solid rgba(0,0,0,0.08);
     }
 
-    /* =========================
+    /* =========================================
        EDUCATION
-    ========================== */
+    ========================================= */
 
     .edu-list{
 
@@ -198,9 +218,9 @@
       font-weight: 600;
     }
 
-    /* =========================
+    /* =========================================
        TAGS
-    ========================== */
+    ========================================= */
 
     .tag-row{
 
@@ -227,12 +247,13 @@
     }
 
     .tag:hover{
+
       transform: translateY(-3px);
     }
 
-    /* =========================
+    /* =========================================
        RIGHT COLUMN
-    ========================== */
+    ========================================= */
 
     .right-column{
 
@@ -243,45 +264,50 @@
       gap: 26px;
     }
 
-    /* =========================
+    /* =========================================
        PROFILE PHOTO
-    ========================== */
+    ========================================= */
 
-.about-photo{
+    .about-photo{
 
-  border-radius: 30px;
+      border-radius: 30px;
 
-  overflow: hidden;
+      overflow: hidden;
 
-  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+      background: transparent;
 
-  background: transparent;
-}
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
 
-.about-photo img{
+    .about-photo img{
 
-  width: 100%;
+      width: 100%;
 
-  height: 100%;
+      display: block;
 
-  display: block;
+      object-fit: cover;
 
-  object-fit: cover;
+      transition: transform 0.45s ease;
 
-  margin: 0;
+      will-change: transform;
 
-  padding: 0;
-}
+      transform: translateZ(0);
+    }
 
-    /* =========================
+    .about-photo:hover img{
+
+      transform: scale(1.02);
+    }
+
+    /* =========================================
        INFO CARDS
-    ========================== */
+    ========================================= */
 
     .info-card{
 
       background: rgba(255,255,255,0.08);
 
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(5px);
 
       border: 1px solid rgba(0,0,0,0.08);
 
@@ -289,7 +315,14 @@
 
       padding: 28px;
 
-      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+
+      transition: all 0.35s ease;
+    }
+
+    .info-card:hover{
+
+      transform: translateY(-5px);
     }
 
     .info-card h3{
@@ -339,46 +372,19 @@
       text-align: right;
     }
 
-    /* =========================
-       LINKS
-    ========================== */
-
-    .profile-links{
-
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 14px;
-    }
-
-    .profile-links a{
-
-      text-decoration: none;
-
-      color: var(--text-muted);
-
-      transition: 0.3s ease;
-    }
-
-    .profile-links a:hover{
-
-      color: #12385a;
-
-      transform: translateX(5px);
-    }
-
-    /* =========================
+    /* =========================================
        REVEAL ANIMATION
-    ========================== */
+    ========================================= */
 
     .reveal{
 
       opacity: 0;
 
-      transform: translateY(40px);
+      transform: translateY(30px);
 
-      transition: all 1s ease;
+      transition:
+      opacity 0.8s ease,
+      transform 0.8s ease;
     }
 
     .reveal.active{
@@ -388,49 +394,46 @@
       transform: translateY(0);
     }
 
-    /* =========================
+    /* =========================================
        RESPONSIVE
-    ========================== */
+    ========================================= */
 
-  @media(max-width: 1100px){
+    @media(max-width:1100px){
 
-  .page-wrapper{
-    padding: 0 32px;
-  }
+      .page-wrapper{
 
-  .about-grid{
+        padding: 0 32px;
+      }
 
-    grid-template-columns: 1fr;
+      .about-grid{
 
-    gap: 60px;
-  }
+        grid-template-columns: 1fr;
 
-  .about-photo img{
+        gap: 60px;
+      }
 
-    height: auto;
-  }
+    }
 
-}
+    @media(max-width:768px){
 
-@media(max-width: 768px){
+      .page-wrapper{
 
-  .page-wrapper{
-    padding: 0 20px;
-  }
+        padding: 0 20px;
+      }
 
-  .info-row{
+      .info-row{
 
-    flex-direction: column;
+        flex-direction: column;
 
-    gap: 4px;
-  }
+        gap: 4px;
+      }
 
-  .info-val{
+      .info-val{
 
-    text-align: left;
-  }
+        text-align: left;
+      }
 
-}
+    }
 
   </style>
 
@@ -450,7 +453,11 @@
 
       <ul class="nav-links" id="navLinks">
 
-        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
 
         <li>
           <a href="about.html" class="active">
@@ -458,15 +465,35 @@
           </a>
         </li>
 
-        <li><a href="research.html">Research Interest</a></li>
+        <li>
+          <a href="research.html">
+            Research Interest
+          </a>
+        </li>
 
-        <li><a href="publications.html">Publication</a></li>
+        <li>
+          <a href="publications.html">
+            Publication
+          </a>
+        </li>
 
-        <li><a href="supervisor.html">Supervisor</a></li>
+        <li>
+          <a href="supervisor.html">
+            Supervisor
+          </a>
+        </li>
 
-        <li><a href="gallery.html">Gallery</a></li>
+        <li>
+          <a href="gallery.html">
+            Gallery
+          </a>
+        </li>
 
-        <li><a href="blog.html">Blog</a></li>
+        <li>
+          <a href="blog.html">
+            Blog
+          </a>
+        </li>
 
       </ul>
 
@@ -511,7 +538,7 @@
 
       <div class="reveal">
 
-        <!-- BIOGRAPHY -->
+        <!-- BIO -->
 
         <div class="bio-block">
 
@@ -521,37 +548,40 @@
 
           <p>
 
-            I am SHIVAM, a Research Scholar in the Department of Civil Engineering
-            at the Indian Institute of Technology Roorkee, India. I am originally
-            from Ghaziabad and currently reside in Haridwar, India.
+            I am SHIVAM, a Research Scholar in the Department
+            of Civil Engineering at the Indian Institute of
+            Technology Roorkee, India. I am originally from
+            Ghaziabad and currently reside in Haridwar, India.
 
           </p>
 
           <p>
 
-            My research focuses on computational and experimental mechanics of
-            advanced composite materials, particularly fiber-reinforced laminate
-            composites subjected to large deformation loading conditions. My work
-            combines theoretical modeling, computational simulations, and
-            experimental investigations to understand damage evolution,
-            failure mechanisms, and structural behavior in advanced composite systems.
+            My research focuses on computational and experimental
+            mechanics of advanced composite materials,
+            particularly fiber-reinforced laminated composites
+            subjected to large deformation loading conditions.
 
           </p>
 
           <p>
 
-            I am deeply interested in solid mechanics, fracture and damage mechanics,
-            composite materials, multi-continuum modeling, and multidisciplinary
-            engineering research. My long-term goal is to contribute to the
-            advancement of composite material mechanics through research that bridges
-            theoretical understanding and practical experimentation.
+            My work combines theoretical modeling,
+            computational simulations,
+            and experimental investigations
+            to understand damage evolution,
+            failure mechanisms,
+            and nonlinear structural behavior
+            in advanced composite systems.
 
           </p>
 
           <p>
 
-            Outside academics and research, I enjoy gardening and playing chess,
-            which help me maintain creativity, focus, and strategic thinking.
+            Outside academics and research,
+            I enjoy gardening and playing chess,
+            which help me maintain creativity,
+            focus, and strategic thinking.
 
           </p>
 
@@ -559,7 +589,10 @@
 
         <!-- EDUCATION -->
 
-        <h2 class="section-title" style="margin-top: 55px;">
+        <h2
+          class="section-title"
+          style="margin-top:55px;"
+        >
           Education
         </h2>
 
@@ -579,13 +612,26 @@
 
             <div>
 
-              <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+              <div
+                style="
+                display:flex;
+                align-items:center;
+                gap:14px;
+                flex-wrap:wrap;
+              "
+              >
 
                 <img
-  src="iitr.jpg"
-  alt="IIT Roorkee Logo"
-  style="width:42px; height:42px; object-fit:contain;"
-/>
+                  src="iitr.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="IIT Roorkee Logo"
+                  style="
+                  width:42px;
+                  height:42px;
+                  object-fit:contain;
+                "
+                />
 
                 <div>
 
@@ -594,7 +640,7 @@
                   </div>
 
                   <div class="edu-inst">
-                    Indian Institute of Technology Roorkee, India
+                    Indian Institute of Technology Roorkee
                   </div>
 
                   <div class="edu-year">
@@ -623,13 +669,26 @@
 
             <div>
 
-              <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+              <div
+                style="
+                display:flex;
+                align-items:center;
+                gap:14px;
+                flex-wrap:wrap;
+              "
+              >
 
                 <img
-  src="NITJ.jpg"
-  alt="NIT Jalandhar Logo"
-  style="width:42px; height:42px; object-fit:contain;"
-/>
+                  src="NITJ.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="NITJ Logo"
+                  style="
+                  width:42px;
+                  height:42px;
+                  object-fit:contain;
+                "
+                />
 
                 <div>
 
@@ -667,13 +726,26 @@
 
             <div>
 
-              <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+              <div
+                style="
+                display:flex;
+                align-items:center;
+                gap:14px;
+                flex-wrap:wrap;
+              "
+              >
 
                 <img
-  src="AKTU.jpg"
-  alt="AKTU Logo"
-  style="width:42px; height:42px; object-fit:contain;"
-/>
+                  src="AKTU.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="AKTU Logo"
+                  style="
+                  width:42px;
+                  height:42px;
+                  object-fit:contain;
+                "
+                />
 
                 <div>
 
@@ -709,13 +781,26 @@
 
             <div>
 
-              <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+              <div
+                style="
+                display:flex;
+                align-items:center;
+                gap:14px;
+                flex-wrap:wrap;
+              "
+              >
 
                 <img
-  src="SVSU.jpg"
-  alt="SVSU Logo"
-  style="width:42px; height:42px; object-fit:contain;"
-/>
+                  src="SVSU.webp"
+                  loading="lazy"
+                  decoding="async"
+                  alt="SVSU Logo"
+                  style="
+                  width:42px;
+                  height:42px;
+                  object-fit:contain;
+                "
+                />
 
                 <div>
 
@@ -743,7 +828,10 @@
 
         <!-- SKILLS -->
 
-        <h2 class="section-title" style="margin-top: 55px;">
+        <h2
+          class="section-title"
+          style="margin-top:55px;"
+        >
           Technical Skills
         </h2>
 
@@ -767,11 +855,19 @@
 
       <div class="right-column reveal">
 
-        <!-- PHOTO -->
+        <!-- PROFILE PHOTO -->
 
-       <div class="about-photo">
-  <img src="profilePhoto.jpeg" alt="SHIVAM">
-</div>
+        <div class="about-photo">
+
+          <img
+            src="profilePhoto.webp"
+            alt="SHIVAM"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+
+        </div>
 
         <!-- QUICK INFO -->
 
@@ -889,9 +985,11 @@
 
     // MOBILE MENU
 
-    const toggle = document.getElementById('navToggle');
+    const toggle =
+    document.getElementById('navToggle');
 
-    const links = document.getElementById('navLinks');
+    const links =
+    document.getElementById('navLinks');
 
     toggle.addEventListener('click', () => {
 
@@ -899,31 +997,32 @@
 
     });
 
-    // SCROLL REVEAL
+    // OPTIMIZED REVEAL
 
-    function revealElements(){
+    const observer =
+    new IntersectionObserver((entries) => {
 
-      const reveals = document.querySelectorAll('.reveal');
+      entries.forEach((entry) => {
 
-      reveals.forEach(reveal => {
+        if(entry.isIntersecting){
 
-        const windowHeight = window.innerHeight;
-
-        const revealTop = reveal.getBoundingClientRect().top;
-
-        if(revealTop < windowHeight - 100){
-
-          reveal.classList.add('active');
+          entry.target.classList.add('active');
 
         }
 
       });
 
-    }
+    }, {
+      threshold: 0.12
+    });
 
-    revealElements();
+    document
+    .querySelectorAll('.reveal')
+    .forEach((el) => {
 
-    window.addEventListener('scroll', revealElements);
+      observer.observe(el);
+
+    });
 
   </script>
 
