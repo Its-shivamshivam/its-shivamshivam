@@ -4,9 +4,7 @@
 <head>
 
   <meta charset="UTF-8" />
-
-  <link rel="icon" type="image/png" href="./favicon.png" />
-
+<link rel="icon" type="image/png" href="./favicon.png" />
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
@@ -21,16 +19,9 @@
     content="Research gallery of SHIVAM including conferences, experiments, IIT Roorkee campus life, workshops, and travel moments."
   />
 
-  <!-- MAIN CSS -->
-
   <link rel="stylesheet" href="style.css" />
 
   <!-- FONT AWESOME -->
-
-  <link
-    rel="preconnect"
-    href="https://cdnjs.cloudflare.com"
-  />
 
   <link
     rel="stylesheet"
@@ -113,7 +104,7 @@
     }
 
     /* =========================================
-       MASONRY
+       MASONRY GRID
     ========================================= */
 
     .masonry{
@@ -126,7 +117,6 @@
     @media(max-width:1400px){
 
       .masonry{
-
         column-count: 3;
       }
 
@@ -135,7 +125,6 @@
     @media(max-width:900px){
 
       .masonry{
-
         column-count: 2;
       }
 
@@ -144,14 +133,13 @@
     @media(max-width:650px){
 
       .masonry{
-
         column-count: 1;
       }
 
     }
 
     /* =========================================
-       GALLERY ITEM
+       GALLERY CARD
     ========================================= */
 
     .gallery-item{
@@ -168,20 +156,20 @@
 
       background: rgba(255,255,255,0.08);
 
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(14px);
 
       border: 1px solid rgba(0,0,0,0.08);
 
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.06);
 
-      transition: all 0.35s ease;
+      transition: all 0.4s ease;
 
       cursor: pointer;
     }
 
     .gallery-item:hover{
 
-      transform: translateY(-6px);
+      transform: translateY(-8px);
     }
 
     /* =========================================
@@ -192,16 +180,16 @@
 
       width: 100%;
 
-      height: auto;
-
       display: block;
+
+      border-radius: 28px;
 
       transition: transform 0.7s ease;
     }
 
     .gallery-item:hover img{
 
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
 
     /* =========================================
@@ -215,6 +203,7 @@
       inset: 0;
 
       background:
+
       linear-gradient(
         to top,
         rgba(0,0,0,0.82),
@@ -272,7 +261,7 @@
 
       inset: 0;
 
-      background: rgba(0,0,0,0.94);
+      background: rgba(0,0,0,0.92);
 
       display: flex;
 
@@ -286,9 +275,9 @@
 
       pointer-events: none;
 
-      transition: all 0.35s ease;
+      transition: all 0.4s ease;
 
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
     }
 
     .lightbox.open{
@@ -304,16 +293,16 @@
 
       max-height: 88vh;
 
-      border-radius: 20px;
+      border-radius: 22px;
 
-      animation: zoomIn 0.45s ease;
+      animation: zoomIn 0.5s ease;
     }
 
     @keyframes zoomIn{
 
       from{
 
-        transform: scale(0.85);
+        transform: scale(0.8);
 
         opacity: 0;
       }
@@ -331,30 +320,28 @@
 
       position: absolute;
 
-      top: 24px;
+      top: 30px;
 
-      right: 36px;
+      right: 40px;
 
       color: white;
 
-      font-size: 2.6rem;
+      font-size: 2.5rem;
 
       cursor: pointer;
     }
 
     /* =========================================
-       REVEAL
+       REVEAL ANIMATION
     ========================================= */
 
     .reveal{
 
       opacity: 0;
 
-      transform: translateY(30px);
+      transform: translateY(40px);
 
-      transition:
-      opacity 0.8s ease,
-      transform 0.8s ease;
+      transition: all 1s ease;
     }
 
     .reveal.active{
@@ -432,13 +419,11 @@
 
       <p>
 
-        A collection of conferences,
-        presentations,
+        A collection of conferences, presentations,
         experimental investigations,
         IIT Roorkee campus life,
-        workshops,
-        collaborations,
-        and memorable moments throughout
+        workshops, collaborations,
+        and memorable experiences throughout
         my academic and research journey.
 
       </p>
@@ -462,15 +447,16 @@
         <div class="gallery-item">
 
           <img
-            src="implast_presentation.jpeg"
-            loading="lazy"
+            src="implast_presentation.jpg"
             onclick="openLightbox(this)"
           />
 
           <div class="gallery-overlay">
 
             <div class="gallery-caption">
+
               IMPLAST 2025 Presentation
+
             </div>
 
           </div>
@@ -481,14 +467,15 @@
 
           <img
             src="con1.jpeg"
-            loading="lazy"
             onclick="openLightbox(this)"
           />
 
           <div class="gallery-overlay">
 
             <div class="gallery-caption">
+
               Conference Session
+
             </div>
 
           </div>
@@ -499,14 +486,15 @@
 
           <img
             src="cong2.jpeg"
-            loading="lazy"
             onclick="openLightbox(this)"
           />
 
           <div class="gallery-overlay">
 
             <div class="gallery-caption">
+
               Research Interaction
+
             </div>
 
           </div>
@@ -517,14 +505,15 @@
 
           <img
             src="cong3.jpeg"
-            loading="lazy"
             onclick="openLightbox(this)"
           />
 
           <div class="gallery-overlay">
 
             <div class="gallery-caption">
+
               Academic Conference Event
+
             </div>
 
           </div>
@@ -544,7 +533,7 @@
       </h2>
 
       <p class="gallery-section-sub">
-        Experimental mechanics and composite investigations.
+        Experimental mechanics and composite material investigations.
       </p>
 
       <div class="masonry">
@@ -553,14 +542,17 @@
 
           <img
             src="lab1.jpg"
-            loading="lazy"
             onclick="openLightbox(this)"
           />
 
           <div class="gallery-overlay">
+
             <div class="gallery-caption">
+
               Composite Testing Setup
+
             </div>
+
           </div>
 
         </div>
@@ -569,14 +561,17 @@
 
           <img
             src="lab2.jpg"
-            loading="lazy"
             onclick="openLightbox(this)"
           />
 
           <div class="gallery-overlay">
+
             <div class="gallery-caption">
+
               Experimental Investigation
+
             </div>
+
           </div>
 
         </div>
@@ -585,14 +580,17 @@
 
           <img
             src="lab3.jpg"
-            loading="lazy"
             onclick="openLightbox(this)"
           />
 
           <div class="gallery-overlay">
+
             <div class="gallery-caption">
+
               Laboratory Research Work
+
             </div>
+
           </div>
 
         </div>
@@ -601,14 +599,17 @@
 
           <img
             src="lab4.jpg"
-            loading="lazy"
             onclick="openLightbox(this)"
           />
 
           <div class="gallery-overlay">
+
             <div class="gallery-caption">
+
               Composite Material Experiment
+
             </div>
+
           </div>
 
         </div>
@@ -632,51 +633,65 @@
       <div class="masonry">
 
         <div class="gallery-item">
-          <img src="iitr2.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="iitr2.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">IIT Roorkee Campus</div>
+            <div class="gallery-caption">
+              IIT Roorkee Campus
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="iitr3.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="iitr3.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">Campus Life</div>
+            <div class="gallery-caption">
+              Campus Life
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="iitr4.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="iitr4.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">IITR Academic Environment</div>
+            <div class="gallery-caption">
+              IITR Academic Environment
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="iitr5.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="iitr5.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">Research Scholar Life</div>
+            <div class="gallery-caption">
+              Research Scholar Life
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="iitr6.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="iitr6.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">IIT Roorkee Heritage</div>
+            <div class="gallery-caption">
+              IIT Roorkee Heritage
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="iitr7.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="iitr7.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">Campus Experience</div>
+            <div class="gallery-caption">
+              Campus Experience
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="iitr8.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="iitr8.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">IITR Moments</div>
+            <div class="gallery-caption">
+              IITR Moments
+            </div>
           </div>
         </div>
 
@@ -699,30 +714,38 @@
       <div class="masonry">
 
         <div class="gallery-item">
-          <img src="cong2.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="cong2.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">Workshop Participation</div>
+            <div class="gallery-caption">
+              Workshop Participation
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="chess1.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="chess1.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">Chess Activity</div>
+            <div class="gallery-caption">
+              Chess Activity
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="teachers-day.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="teachers-day.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">Teachers Day Celebration</div>
+            <div class="gallery-caption">
+              Teachers Day Celebration
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="party_journal.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="party_journal.jpg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">Journal Celebration Event</div>
+            <div class="gallery-caption">
+              Journal Celebration Event
+            </div>
           </div>
         </div>
 
@@ -745,16 +768,20 @@
       <div class="masonry">
 
         <div class="gallery-item">
-          <img src="Trip1.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="Trip1.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">Travel Moment</div>
+            <div class="gallery-caption">
+              Travel Moment
+            </div>
           </div>
         </div>
 
         <div class="gallery-item">
-          <img src="Trip2.jpeg" loading="lazy" onclick="openLightbox(this)" />
+          <img src="Trip2.jpeg" onclick="openLightbox(this)" />
           <div class="gallery-overlay">
-            <div class="gallery-caption">Academic Visit & Travel</div>
+            <div class="gallery-caption">
+              Academic Visit & Travel
+            </div>
           </div>
         </div>
 
@@ -817,11 +844,9 @@
 
     // MOBILE MENU
 
-    const toggle =
-    document.getElementById('navToggle');
+    const toggle = document.getElementById('navToggle');
 
-    const links =
-    document.getElementById('navLinks');
+    const links = document.getElementById('navLinks');
 
     toggle.addEventListener('click', () => {
 
@@ -829,40 +854,37 @@
 
     });
 
-    // OPTIMIZED REVEAL
+    // REVEAL
 
-    const observer =
-    new IntersectionObserver((entries) => {
+    function revealElements(){
 
-      entries.forEach((entry) => {
+      const reveals = document.querySelectorAll('.reveal');
 
-        if(entry.isIntersecting){
+      reveals.forEach(reveal => {
 
-          entry.target.classList.add('active');
+        const windowHeight = window.innerHeight;
+
+        const revealTop = reveal.getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 100){
+
+          reveal.classList.add('active');
 
         }
 
       });
 
-    }, {
-      threshold: 0.12
-    });
+    }
 
-    document
-    .querySelectorAll('.reveal')
-    .forEach((el) => {
+    revealElements();
 
-      observer.observe(el);
-
-    });
+    window.addEventListener('scroll', revealElements);
 
     // LIGHTBOX
 
-    const lightbox =
-    document.getElementById('lightbox');
+    const lightbox = document.getElementById('lightbox');
 
-    const lightboxImg =
-    document.getElementById('lightbox-img');
+    const lightboxImg = document.getElementById('lightbox-img');
 
     function openLightbox(img){
 
