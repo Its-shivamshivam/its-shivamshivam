@@ -360,12 +360,23 @@
       margin-top: 0;
     }
 
-    .expand-content.open{
+.expand-content{
 
-      max-height: 700px;
+  max-height: 0;
 
-      margin-top: 24px;
-    }
+  overflow: hidden;
+
+  transition: max-height 0.6s ease;
+
+  margin-top: 0;
+}
+
+.expand-content.open{
+
+  max-height: 5000px;
+
+  margin-top: 24px;
+}
 
     /* =========================================
        LIKE & COMMENT
